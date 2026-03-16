@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="RoofMatch Advisory">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b5f8a" />
+      <stop offset="100%" stop-color="#1b2c41" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)" />
+  <path d="M10 32L32 16l22 16" stroke="#f4e9da" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <path d="M18 32v16h28V32" stroke="#f4e9da" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <text x="32" y="42" text-anchor="middle" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#f4e9da">RM</text>
+</svg>

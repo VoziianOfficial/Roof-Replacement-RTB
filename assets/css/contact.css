@@ -1,0 +1,58 @@
+.contact-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+}
+
+.contact-hero .hero-copy {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.contact-hero .hero-visual {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.contact-hero .visual-tags span {
+  border: 1px solid rgba(24, 32, 42, 0.08);
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.contact-section .grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.hours-section .content-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.form-card {
+  margin-top: var(--space-lg);
+}
+
+.form-card .button {
+  width: fit-content;
+}
+
+.map-section .image-placeholder {
+  min-height: 300px;
+}
+
+@media (max-width: 960px) {
+  .contact-hero,
+  .hours-section .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .map-section .image-placeholder {
+    min-height: 220px;
+  }
+}

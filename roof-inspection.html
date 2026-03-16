@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roof Inspection | RoofMatch Advisory</title>
+    <meta
+      name="description"
+      content="Roof inspection request page scaffold for homeowners using a premium referral platform."
+    />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/roof-inspection.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css" />
+    <script defer src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script defer src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script defer src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <script defer src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="page-roof-inspection site-shell" data-page="services">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+            <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="RoofMatch Advisory home">
+          <span class="brand-mark">RM</span>
+          <span class="brand-text">
+            <span class="brand-title">RoofMatch Advisory</span>
+            <span class="brand-subtitle">Independent Provider Network</span>
+          </span>
+        </a>
+        <div class="header-center">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-navigation"
+            aria-label="Open navigation"
+            data-nav-toggle
+          >
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+          </button>
+          <a
+            class="header-phone-mobile"
+            href="tel:1-800-555-0199"
+            aria-label="Call RoofMatch Advisory"
+          >
+            <span class="phone-icon" aria-hidden="true"><i data-lucide="phone-call"></i></span>
+          </a>
+          <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav>
+            <ul class="nav-list">
+              <li><a class="nav-link" href="index.html" data-page-link="home">Home</a></li>
+              <li><a class="nav-link" href="about.html" data-page-link="about">About</a></li>
+              <li><a class="nav-link" href="services.html" data-page-link="services">Services</a></li>
+              <li><a class="nav-link" href="contact.html" data-page-link="contact">Contact</a></li>
+            </ul>
+            <a class="header-cta" href="contact.html">Request Quotes</a>
+          </nav>
+        </div>
+        <a
+          class="header-phone-cta"
+          href="tel:1-800-555-0199"
+          aria-label="Call RoofMatch Advisory"
+        >
+          <span class="phone-icon" aria-hidden="true"><i data-lucide="phone-call"></i></span>
+          <span>Call 1-800-555-0199</span>
+        </a>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="page-hero">
+        <div class="container">
+          <div class="page-hero-inner service-hero">
+            <div class="hero-copy">
+              <p class="eyebrow">Roof Inspection</p>
+              <h1 class="page-title">Inspection matches for clarity and next steps.</h1>
+              <p class="page-summary">
+                RoofMatch Advisory introduces homeowners to independent local inspectors for roof
+                condition assessments. We keep the process clear; providers deliver reports and
+                recommendations.
+              </p>
+              <div class="page-actions">
+                <a class="button-link" href="tel:1-800-555-0199">Call for Inspection</a>
+                <a class="button-link is-secondary" href="contact.html">Request Quotes</a>
+              </div>
+              <div class="hero-meta">
+                <span>Objective reporting</span>
+                <span>Storm and maintenance</span>
+                <span>Certified inspectors</span>
+              </div>
+            </div>
+            <div class="hero-visual card">
+              <div class="image-placeholder">
+                <img src="assets/images/roof-inspection/inspection-hero.svg" alt="Roofing inspector on ladder" />
+              </div>
+              <div class="visual-tags">
+                <span>Condition scans</span>
+                <span>Detailed notes</span>
+                <span>Follow-up planning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-section">
+        <div class="container content-grid">
+          <article class="content-card">
+            <p class="eyebrow">Service explanation</p>
+            <h2>Inspection clarity.</h2>
+            <p>
+              Tell us the reason for your inspection: post-storm, maintenance, or pre-sale. We route
+              your request to local inspectors trained to document condition and next steps.
+            </p>
+          </article>
+          <aside class="content-panel">
+            <div class="image-placeholder">
+              <img src="assets/images/roof-inspection/inspection-documenting.svg" alt="Inspector documenting roof condition" />
+            </div>
+            <p class="panel-note">
+              Providers manage their own reporting, recommendations, and adjunct trades.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section signs-section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Signs homeowners may notice</p>
+            <h2 class="section-title">When to request an inspection.</h2>
+          </div>
+          <div class="grid-3 signs-grid">
+            <article class="card">
+              <h3>Storm events</h3>
+              <p>Hail, wind, or debris impact that warrants a documented review.</p>
+            </article>
+            <article class="card">
+              <h3>Age milestones</h3>
+              <p>Roofs reaching ±15–20 years benefit from professional evaluation.</p>
+            </article>
+            <article class="card">
+              <h3>Energy spikes</h3>
+              <p>Heating or cooling costs rise with suspected roof or insulation issues.</p>
+            </article>
+            <article class="card">
+              <h3>Visible wear</h3>
+              <p>Curling, granule loss, or cracked flashing seen from the ground.</p>
+            </article>
+            <article class="card">
+              <h3>Insurance or sale</h3>
+              <p>Requested documentation for underwriting or disclosure.</p>
+            </article>
+            <article class="card">
+              <h3>Maintenance strategy</h3>
+              <p>Routine inspection to align with planned repairs or upgrades.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section includes-section">
+        <div class="container content-grid">
+          <article class="content-card">
+            <p class="eyebrow">What inspection includes</p>
+            <h2>Detail-rich reports.</h2>
+            <ul class="detail-list">
+              <li>Exterior and interior condition review</li>
+              <li>Leak and moisture detection</li>
+              <li>Flashing, gutter, and penetration check</li>
+              <li>Roof deck and ventilation assessment</li>
+              <li>Report with findings, photos, and recommendations</li>
+            </ul>
+          </article>
+          <aside class="content-panel">
+            <div class="image-placeholder">
+              <img src="assets/images/roof-inspection/inspection-drone.svg" alt="Inspector reviewing drone imagery" />
+            </div>
+            <p class="panel-note">
+              Reporting cadence varies by provider.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section guidance-section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Homeowner guidance</p>
+            <h2 class="section-title">Prep for inspection day.</h2>
+          </div>
+          <div class="grid-3 guidance-grid">
+            <article class="card">
+              <h3>List concerns</h3>
+              <p>Note suspect areas, previous repairs, or insurance notes.</p>
+            </article>
+            <article class="card">
+              <h3>Clear access</h3>
+              <p>Ensure pathways, attics, and roofs are accessible.</p>
+            </article>
+            <article class="card">
+              <h3>Expect documentation</h3>
+              <p>Providers deliver photo-rich reports to inform next steps.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section image-section">
+        <div class="container gallery-grid">
+          <div class="gallery-tile"><img src="assets/images/roof-inspection/inspection-gallery-1.svg" alt="Inspector taking roof measurements" /></div>
+          <div class="gallery-tile"><img src="assets/images/roof-inspection/inspection-gallery-2.svg" alt="Inspection report sample" /></div>
+        </div>
+      </section>
+
+      <section class="section faq-section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">FAQ</p>
+            <h2 class="section-title">Inspection concerns.</h2>
+          </div>
+          <div class="faq-grid">
+            <details class="card faq-item">
+              <summary>Is inspection always needed before repair?</summary>
+              <p>Often. Providers want to diagnose the situation before proposing repairs.</p>
+            </details>
+            <details class="card faq-item">
+              <summary>Do you offer drone inspections?</summary>
+              <p>Some providers include aerial imaging; mention your preference in the request.</p>
+            </details>
+            <details class="card faq-item">
+              <summary>Is there a cost?</summary>
+              <p>Fees depend on provider and scope; clarify before scheduling.</p>
+            </details>
+            <details class="card faq-item">
+              <summary>Can inspections lead to insurance claims?</summary>
+              <p>Yes. Inspectors can document damage for claims when warranted.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section final-cta">
+        <div class="container">
+          <div class="cta-card cta-layout">
+            <div>
+              <p class="eyebrow">Inspection alignment</p>
+              <h2>Request an inspection match.</h2>
+              <p>Share your property needs and we will route your request to independent inspectors.</p>
+            </div>
+            <div class="cta-actions">
+              <a class="button-link" href="tel:1-800-555-0199">Call 1-800-555-0199</a>
+              <a class="button-link is-secondary" href="contact.html">Request Quotes</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h2 class="footer-title">RoofMatch Advisory</h2>
+            <p class="footer-note">
+              Inspection requests are routed to independent local roofing service providers.
+            </p>
+          </div>
+          <div>
+            <h2 class="footer-title">Explore</h2>
+            <div class="footer-links">
+              <a href="roof-repair.html">Roof Repair</a>
+              <a href="storm-damage-roofing.html">Storm Damage</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div>
+            <h2 class="footer-title">Policies</h2>
+            <div class="footer-links">
+              <a href="privacy-policy.html">Privacy Policy</a>
+              <a href="terms-of-service.html">Terms of Service</a>
+              <a href="cookie-policy.html">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p class="footer-meta">Inspection page scaffold only.</p>
+          <p class="footer-meta">2026 RoofMatch Advisory. All rights reserved.</p>
+        </div>
+        <p class="footer-disclaimer">Disclaimer: This site is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and this site does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on this site.</p>
+      </div>
+    </footer>
+  </body>
+</html>

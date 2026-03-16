@@ -1,0 +1,53 @@
+.page-about .content-card,
+.page-about .content-panel {
+  min-height: 220px;
+}
+.about-hero {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+}
+
+.about-hero .hero-visual {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.about-hero .visual-tags {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.about-hero .visual-tags span {
+  padding: 0.65rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(24, 32, 42, 0.08);
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.philosophy-section .trust-grid,
+.services-grid .grid-3 {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.process-section .content-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.final-cta .cta-layout {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: var(--space-lg);
+}
+
+@media (max-width: 960px) {
+  .about-hero,
+  .philosophy-section .trust-grid,
+  .process-section .content-grid,
+  .final-cta .cta-layout {
+    grid-template-columns: 1fr;
+  }
+}

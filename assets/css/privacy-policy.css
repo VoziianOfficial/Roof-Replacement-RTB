@@ -1,0 +1,75 @@
+.page-privacy-policy .content-card {
+  min-height: 320px;
+}
+
+.page-privacy-policy .legal-prose {
+  max-width: 78ch;
+  font-size: var(--text-md);
+  line-height: 1.75;
+}
+
+.page-privacy-policy .legal-prose h3 {
+  margin-top: 1.35rem;
+}
+
+.page-privacy-policy .legal-prose h3:first-child {
+  margin-top: 0;
+}
+
+.page-privacy-policy .legal-prose p + p {
+  margin-top: 0.9rem;
+}
+
+.page-privacy-policy .legal-prose ul,
+.page-privacy-policy .legal-prose ol {
+  margin-top: 0.85rem;
+  padding-left: 1.25rem;
+}
+
+.page-privacy-policy .legal-prose ul {
+  list-style: disc;
+}
+
+.page-privacy-policy .legal-prose ol {
+  list-style: decimal;
+}
+
+.page-privacy-policy .legal-prose li {
+  margin: 0.45rem 0;
+  color: var(--color-slate-700);
+}
+
+.page-privacy-policy .legal-prose a {
+  text-decoration: underline;
+  text-decoration-color: rgba(52, 89, 125, 0.32);
+  text-underline-offset: 3px;
+}
+
+.page-privacy-policy .legal-prose a:hover {
+  text-decoration-color: rgba(52, 89, 125, 0.6);
+}
+
+.policy-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+}
+
+.policy-hero .hero-copy,
+.policy-hero .hero-visual {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.policy-hero .visual-tags {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.policy-hero .visual-tags span {
+  padding: 0.65rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(24, 32, 42, 0.08);
+  background: rgba(255, 255, 255, 0.76);
+}
