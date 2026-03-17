@@ -27,40 +27,13 @@ function initHeaderScroll() {
     const header = document.querySelector(".site-header");
     if (!header) return;
 
-    const supportsSticky =
-        window.CSS &&
-        CSS.supports &&
-        (CSS.supports("position", "sticky") || CSS.supports("position", "-webkit-sticky"));
-
-    const applyStickyFallback = () => {
-        if (supportsSticky) {
-            header.style.position = "";
-            header.style.left = "";
-            header.style.right = "";
-            document.body.style.paddingTop = "";
-            return;
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 14) {
+            header.classList.add("is-scrolled");
+        } else {
+            header.classList.remove("is-scrolled");
         }
-
-        const height = header.offsetHeight;
-        header.style.position = "fixed";
-        header.style.left = "0";
-        header.style.right = "0";
-        header.style.top = "0";
-        document.body.style.paddingTop = `${height}px`;
-    };
-
-    const updateHeader = () => {
-        if (window.scrollY > 14) header.classList.add("is-scrolled");
-        else header.classList.remove("is-scrolled");
-    };
-
-    updateHeader();
-    applyStickyFallback();
-    window.addEventListener("scroll", updateHeader, { passive: true });
-    window.addEventListener("resize", () => {
-        updateHeader();
-        applyStickyFallback();
-    });
+    }, { passive: true });
 }
 
 function initScrollProgress() {

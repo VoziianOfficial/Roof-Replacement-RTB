@@ -9,18 +9,16 @@
 }
 
 .site-header {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
     z-index: 1400;
     width: 100%;
     backdrop-filter: blur(18px);
     background: rgba(255, 249, 242, 0.82);
     border-bottom: 1px solid rgba(95, 70, 56, 0.08);
-    transition: var(--transition);
+    transition: background 0.35s ease, box-shadow 0.35s ease;
 }
-
-
 
 .site-header.is-scrolled {
     background: rgba(255, 249, 242, 0.95);
@@ -185,16 +183,12 @@
 .mobile-menu {
     display: block;
     position: fixed;
-    top: 82px;
-    right: 14px;
-    left: 14px;
-    z-index: 1300;
-    padding: 18px;
-    border-radius: 28px;
-    background: rgba(255, 249, 242, 0.98);
-    box-shadow: var(--shadow-lg);
-    border: 1px solid rgba(95, 70, 56, 0.08);
-    transform: translateY(-18px) scale(0.96);
+    inset: 0;
+    z-index: 1350;
+    padding: 20px 18px 18px;
+    background: linear-gradient(180deg, rgba(255, 249, 242, 0.99), rgba(255, 250, 244, 0.98));
+    backdrop-filter: blur(8px);
+    overflow-y: auto;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -202,7 +196,6 @@
 }
 
 .mobile-menu.active {
-    transform: translateY(0) scale(1);
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -211,6 +204,7 @@
 .mobile-menu-inner {
     display: grid;
     gap: 12px;
+    max-width: 400px;
 }
 
 .mobile-menu-inner a {
@@ -576,8 +570,8 @@
 .floating-call-btn {
     position: fixed;
     left: 18px;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 100px;
+    top: auto;
     z-index: 1450;
     display: inline-flex;
     align-items: center;
@@ -591,7 +585,7 @@
 }
 
 .floating-call-btn:hover {
-    transform: translateY(-50%) translateX(4px);
+    transform: translateY(-2px);
     box-shadow: 0 22px 50px rgba(112, 77, 55, 0.18);
 }
 

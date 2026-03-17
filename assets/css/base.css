@@ -46,7 +46,6 @@
 
 html {
     scroll-behavior: smooth;
-    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -59,7 +58,6 @@ body {
         linear-gradient(180deg, #fffaf3 0%, #f7ecdf 100%);
     line-height: 1.6;
     overflow-x: hidden;
-    max-width: 100%;
 }
 
 img,
