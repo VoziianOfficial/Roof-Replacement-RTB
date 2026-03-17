@@ -8,6 +8,31 @@
     z-index: 9999;
 }
 
+.section-bg-image {
+    position: relative;
+    background-image: url("../images/global/section-fons.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.section-bg-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(62, 57, 57, 0.88),
+            rgba(68, 68, 68, 0.78));
+    backdrop-filter: blur(6px);
+    z-index: 1;
+}
+
+.section-bg-image>* {
+    position: relative;
+    z-index: 2;
+}
+
 .site-header {
     position: sticky;
     top: 0;
