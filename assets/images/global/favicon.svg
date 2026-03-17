@@ -9,8 +9,9 @@
 
   <rect x="6" y="6" width="52" height="52" rx="18" fill="url(#roofGradient)"/>
 
-  <path d="M18 33.5L32 20L46 33.5" stroke="white" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M23 31.5V42H41V31.5" stroke="white" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M29.5 42V34.5H34.5V42" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="47.5" cy="18.5" r="4" fill="#FFF7F0" fill-opacity="0.95"/>
+  <circle cx="32" cy="32" r="16" stroke="white" stroke-width="3.2" opacity="0.95"/>
+  <path d="M32 23L38 38L32 35L26 38L32 23Z" fill="#FFF7F0" fill-opacity="0.95"/>
+
+  <path d="M20 35L32 24L44 35" stroke="white" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24.5 33V42H39.5V33" stroke="white" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

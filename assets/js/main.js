@@ -27,13 +27,40 @@ function initHeaderScroll() {
     const header = document.querySelector(".site-header");
     if (!header) return;
 
+    const supportsSticky =
+        window.CSS &&
+        CSS.supports &&
+        (CSS.supports("position", "sticky") || CSS.supports("position", "-webkit-sticky"));
+
+    const applyStickyFallback = () => {
+        if (supportsSticky) {
+            header.style.position = "";
+            header.style.left = "";
+            header.style.right = "";
+            document.body.style.paddingTop = "";
+            return;
+        }
+
+        const height = header.offsetHeight;
+        header.style.position = "fixed";
+        header.style.left = "0";
+        header.style.right = "0";
+        header.style.top = "0";
+        document.body.style.paddingTop = `${height}px`;
+    };
+
     const updateHeader = () => {
         if (window.scrollY > 14) header.classList.add("is-scrolled");
         else header.classList.remove("is-scrolled");
     };
 
     updateHeader();
+    applyStickyFallback();
     window.addEventListener("scroll", updateHeader, { passive: true });
+    window.addEventListener("resize", () => {
+        updateHeader();
+        applyStickyFallback();
+    });
 }
 
 function initScrollProgress() {
@@ -88,6 +115,12 @@ function initMobileMenu() {
     window.addEventListener("resize", () => {
         if (window.innerWidth > 991) closeMenu();
     });
+
+    document.addEventListener("click", (event) => {
+        if (!mobileMenu.classList.contains("active")) return;
+        if (mobileMenu.contains(event.target) || toggleBtn.contains(event.target)) return;
+        closeMenu();
+    });
 }
 
 function initSearchPanel() {
@@ -104,8 +137,8 @@ function initSearchPanel() {
     const pages = [
         { title: "Home", url: "index.html", desc: "RTB homepage with request paths, platform notes and planning guidance.", keywords: ["home", "rtb", "roof atlas", "request", "planning"] },
         { title: "About", url: "about.html", desc: "Learn what RTB is and how the platform works.", keywords: ["about", "platform", "rtb", "how it works"] },
-        { title: "Services", url: "services.html", desc: "Explore roofing-related request categories and guidance.", keywords: ["services", "categories", "roofing requests"] },
-        { title: "Contact", url: "contact.html", desc: "Submit a request and share property details.", keywords: ["contact", "request", "form", "map"] },
+        { title: "All Categories", url: "services.html", desc: "Browse all request categories and planning routes.", keywords: ["categories", "all categories", "services", "roofing requests"] },
+        { title: "Request", url: "contact.html", desc: "Submit a request and share property details.", keywords: ["request", "contact", "form", "map"] },
         { title: "Roof Replacement", url: "roof-replacement.html", desc: "Explore the roof replacement request category.", keywords: ["replacement", "roof replacement"] },
         { title: "Roof Repair", url: "roof-repair.html", desc: "Explore the roof repair request category.", keywords: ["repair", "roof repair", "leak"] },
         { title: "Roof Installation", url: "roof-installation.html", desc: "Explore the roof installation request category.", keywords: ["installation", "roof installation"] },
@@ -164,6 +197,13 @@ function initSearchPanel() {
         panel.classList.remove("active");
         document.body.classList.remove("search-open");
     };
+
+    input.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            renderResults(input.value);
+        }
+    });
 
     openBtn.addEventListener("click", openPanel);
     closeBtn.addEventListener("click", closePanel);
