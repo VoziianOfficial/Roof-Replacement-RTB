@@ -100,8 +100,9 @@ textarea {
 }
 
 textarea {
-    resize: vertical;
+    resize: none;
     min-height: 150px;
+    font-size: 1rem;
 }
 
 iframe {
