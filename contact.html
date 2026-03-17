@@ -4,19 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Contact Us | Roof Replacement RTB</title>
+    <title>Submit A Request | RTB Roof Atlas</title>
     <meta name="description"
-        content="Contact Roof Replacement RTB for premium roof replacement, repair, inspections, installation, and storm damage roofing services." />
+        content="Submit a roofing-related request through RTB Roof Atlas by sharing contact information, property details, and project context." />
 
     <link rel="icon" type="image/svg+xml" href="assets/images/global/favicon.svg" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap"
         rel="stylesheet" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
@@ -28,26 +25,25 @@
 <body>
     <div class="site-progress"></div>
 
-    <header class="site-header" id="siteHeader">
+    <header class="site-header">
         <div class="container header-inner">
             <a href="index.html" class="logo">
-                <span class="logo-mark"><i class="fa-solid fa-house-chimney"></i></span>
+                <span class="logo-mark"><i class="fa-solid fa-compass"></i></span>
                 <span class="logo-text">
-                    <strong>Roof Replacement</strong>
-                    <span>RTB Premium Roofing</span>
+                    <strong>RTB Roof Atlas</strong>
+                    <span>Roof request & planning platform</span>
                 </span>
             </a>
 
             <nav class="desktop-nav">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
-
                 <div class="nav-dropdown">
                     <button class="nav-link nav-dropdown-toggle" type="button">
-                        Services <i class="fa-solid fa-chevron-down"></i>
+                        Categories <i class="fa-solid fa-chevron-down"></i>
                     </button>
                     <div class="nav-dropdown-menu">
-                        <a href="services.html">All Services</a>
+                        <a href="services.html">All Categories</a>
                         <a href="roof-replacement.html">Roof Replacement</a>
                         <a href="roof-repair.html">Roof Repair</a>
                         <a href="roof-installation.html">Roof Installation</a>
@@ -55,18 +51,15 @@
                         <a href="storm-damage-roofing.html">Storm Damage Roofing</a>
                     </div>
                 </div>
-
-                <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="contact.html" class="nav-link active">Request</a>
             </nav>
 
             <div class="header-actions">
-                <button class="search-toggle" type="button" aria-label="Open search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <a href="contact.html" class="btn btn-primary header-btn">Get Free Estimate</a>
-                <button class="mobile-toggle" type="button" aria-label="Open menu">
-                    <span></span><span></span><span></span>
-                </button>
+                <button class="search-toggle" type="button" aria-label="Open search"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+                <a href="contact.html" class="btn btn-primary header-btn magnetic-btn">Start A Request</a>
+                <button class="mobile-toggle" type="button"
+                    aria-label="Open menu"><span></span><span></span><span></span></button>
             </div>
         </div>
 
@@ -74,180 +67,103 @@
             <div class="container mobile-menu-inner">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="services.html">Services</a>
+                <a href="services.html">All Categories</a>
                 <a href="roof-replacement.html">Roof Replacement</a>
                 <a href="roof-repair.html">Roof Repair</a>
                 <a href="roof-installation.html">Roof Installation</a>
                 <a href="roof-inspection.html">Roof Inspection</a>
                 <a href="storm-damage-roofing.html">Storm Damage Roofing</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html">Request</a>
             </div>
         </div>
     </header>
 
-    <div class="search-panel">
-        <div class="search-panel__overlay"></div>
-        <div class="search-panel__inner">
-            <button class="search-close" type="button" aria-label="Close search">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-            <h3>Search The Site</h3>
-            <p>Find roofing services, pages, and legal information.</p>
-
-            <div class="site-search">
-                <input type="text" id="siteSearchInput" placeholder="Search pages or services..." />
-                <button type="button" id="siteSearchButton">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
-
-            <div class="site-search__quick-links">
-                <a href="roof-replacement.html">Roof Replacement</a>
-                <a href="roof-repair.html">Roof Repair</a>
-                <a href="roof-installation.html">Roof Installation</a>
-                <a href="roof-inspection.html">Roof Inspection</a>
-                <a href="storm-damage-roofing.html">Storm Damage Roofing</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
-            </div>
-
-            <div id="siteSearchResults" class="site-search-results"></div>
-        </div>
-    </div>
-
     <main>
-        <section class="page-hero contact-hero section-padding">
-            <div class="container page-hero__grid">
-                <div class="page-hero__content" data-aos="fade-up">
-                    <span class="eyebrow">Contact Roof Replacement RTB</span>
-                    <h1>Let’s talk about your roof, your timeline, and the right next step.</h1>
+        <section class="page-hero section-padding">
+            <div class="container section-grid">
+                <div class="section-copy" data-aos="fade-right">
+                    <span class="eyebrow">Submit A Request</span>
+                    <h1>Share your roofing situation and property details through RTB.</h1>
                     <p>
-                        Reach out for a premium roofing consultation, inspection request,
-                        replacement estimate, repair support, or storm damage review.
+                        This form is intended to help route your request based on the category, timing,
+                        and information provided.
                     </p>
+                    <div class="site-disclaimer">
+                        <p>
+                            RTB does not directly perform roofing work. Final response, provider availability,
+                            project scope, and timing depend on the category selected and the provider reviewing the
+                            request.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="page-hero__visual" data-aos="fade-left">
-                    <img src="assets/images/contact/contact-hero.jpg" alt="Roof consultation and contact support" />
+                    <img src="assets/images/contact/contact-hero.jpg" alt="Warm editorial request form visual" />
                 </div>
             </div>
         </section>
 
-        <section class="contact-main section-padding">
-            <div class="container contact-main__grid">
-                <div class="contact-main__form" data-aos="fade-right">
-                    <span class="eyebrow">Request A Consultation</span>
-                    <h2>Tell us what you need.</h2>
-
+        <section class="section-padding section-soft-bg">
+            <div class="container section-grid">
+                <div class="contact-form-box" data-aos="fade-right">
                     <form class="contact-form">
-                        <div class="form-grid">
+                        <div class="cards-2">
                             <input type="text" placeholder="Full Name" />
                             <input type="email" placeholder="Email Address" />
                             <input type="tel" placeholder="Phone Number" />
                             <input type="text" placeholder="Property Address" />
-                            <input type="text" placeholder="Preferred Service" />
-                            <input type="text" placeholder="Preferred Timeline" />
+                            <input type="text" placeholder="Preferred Category" />
+                            <input type="text" placeholder="Time Sensitivity" />
                         </div>
-                        <textarea placeholder="Tell us about your roofing needs"></textarea>
-                        <button type="submit" class="btn btn-primary">Send Request</button>
+                        <textarea placeholder="Describe the roof condition, recent issues, or planning goal"></textarea>
+                        <button type="submit" class="btn btn-primary magnetic-btn">Submit Request</button>
                     </form>
                 </div>
 
-                <div class="contact-main__info" data-aos="fade-left">
-                    <div class="info-card">
-                        <h3>Contact Details</h3>
-                        <ul>
-                            <li><i class="fa-solid fa-phone"></i> (713) 555-0148</li>
-                            <li><i class="fa-solid fa-envelope"></i> hello@roofreplacementrtb.com</li>
-                            <li><i class="fa-solid fa-location-dot"></i> 1450 W Gray St, Houston, TX 77019</li>
-                        </ul>
-                    </div>
-
-                    <div class="info-card">
-                        <h3>Business Hours</h3>
-                        <ul>
-                            <li>Monday — Friday: 8:00 AM — 6:00 PM</li>
-                            <li>Saturday: 9:00 AM — 2:00 PM</li>
-                            <li>Sunday: By Appointment</li>
-                            <li>Storm Emergency Support: 24/7</li>
-                        </ul>
-                    </div>
-
-                    <div class="info-card info-card--accent">
-                        <h3>What We Help With</h3>
-                        <p>
-                            Roof replacement, roof repair, roof installation, roof inspection,
-                            storm damage roofing, and residential maintenance planning.
+                <div class="contact-info" data-aos="fade-left">
+                    <article class="note-card">
+                        <i class="fa-solid fa-list"></i>
+                        <h3>Useful request details</h3>
+                        <p>Property address, visible damage, approximate roof age, and urgency level are all helpful.
                         </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    </article>
 
-        <section class="map-section section-padding section-soft-bg">
-            <div class="container">
-                <div class="section-head" data-aos="fade-up">
-                    <span class="eyebrow">Our Service Location</span>
-                    <h2>Conveniently positioned to support homeowners across the area.</h2>
-                </div>
+                    <article class="note-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h3>Routing depends on region</h3>
+                        <p>Response pathways may vary depending on service area and provider availability.</p>
+                    </article>
 
-                <div class="map-layout" data-aos="fade-up">
-                    <div class="map-layout__card">
-                        <h3>Office Address</h3>
-                        <p>1450 W Gray St, Houston, TX 77019, United States</p>
-                        <p>
-                            Schedule a consultation, ask about service availability,
-                            or request an on-site roof assessment.
+                    <article class="note-card">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        <h3>Request does not equal final scope</h3>
+                        <p>Final work recommendations and pricing are determined only after provider-side evaluation.
                         </p>
-                    </div>
-
-                    <div class="map-layout__frame">
-                        <iframe
-                            src="https://www.google.com/maps?q=1450%20W%20Gray%20St,%20Houston,%20TX%2077019,%20United%20States&output=embed"
-                            loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                    </article>
                 </div>
-            </div>
-        </section>
-
-        <section class="contact-cta section-padding">
-            <div class="container contact-cta__inner" data-aos="fade-up">
-                <div>
-                    <span class="eyebrow">Ready To Begin?</span>
-                    <h2>Start with a clear conversation and a roof plan that makes sense.</h2>
-                </div>
-                <a href="services.html" class="btn btn-secondary">View Services</a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-grid">
-            <div>
-                <a href="index.html" class="logo footer-logo">
-                    <span class="logo-mark"><i class="fa-solid fa-house-chimney"></i></span>
-                    <span class="logo-text">
-                        <strong>Roof Replacement</strong>
-                        <span>RTB Premium Roofing</span>
-                    </span>
-                </a>
-                <p class="footer-copy">
-                    Premium roofing services with a modern, trusted, and design-forward approach.
+            <div><a href="index.html" class="logo footer-logo"><span class="logo-mark"><i
+                            class="fa-solid fa-compass"></i></span><span class="logo-text"><strong>RTB Roof
+                            Atlas</strong><span>Roof request & planning platform</span></span></a>
+                <p class="footer-copy">RTB Roof Atlas helps homeowners submit more informed roofing-related requests.
                 </p>
             </div>
-
             <div>
-                <h4>Navigation</h4>
+                <h4>Pages</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="services.html">All Categories</a></li>
+                    <li><a href="contact.html">Request</a></li>
                 </ul>
             </div>
-
             <div>
-                <h4>Services</h4>
+                <h4>Categories</h4>
                 <ul>
                     <li><a href="roof-replacement.html">Roof Replacement</a></li>
                     <li><a href="roof-repair.html">Roof Repair</a></li>
@@ -256,7 +172,6 @@
                     <li><a href="storm-damage-roofing.html">Storm Damage Roofing</a></li>
                 </ul>
             </div>
-
             <div>
                 <h4>Legal</h4>
                 <ul>
@@ -266,9 +181,8 @@
                 </ul>
             </div>
         </div>
-
         <div class="container footer-bottom">
-            <p>© 2026 Roof Replacement RTB. All rights reserved.</p>
+            <p>© 2026 RTB Roof Atlas. All rights reserved.</p>
         </div>
     </footer>
 
@@ -276,16 +190,13 @@
         <div class="cookie-banner__inner">
             <div class="cookie-banner__text">
                 <h4>Privacy & Site Policy Notice</h4>
-                <p>
-                    Please review our site policies. This notice remains visible until you choose Accept or Decline.
-                </p>
+                <p>Please review our site policies. This notice remains visible until you choose Accept or Decline.</p>
                 <div class="cookie-links">
                     <a href="privacy-policy.html">Privacy Policy</a>
                     <a href="cookie-policy.html">Cookie Policy</a>
                     <a href="terms-of-service.html">Terms Of Service</a>
                 </div>
             </div>
-
             <div class="cookie-banner__actions">
                 <button class="btn btn-secondary" id="declineCookies" type="button">Decline</button>
                 <button class="btn btn-primary" id="acceptCookies" type="button">Accept</button>

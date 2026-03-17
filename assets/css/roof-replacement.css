@@ -1,10 +1,47 @@
-.page-hero,
 .service-hero {
+    position: relative;
+    overflow: hidden;
     padding-top: 110px;
-    padding-bottom: 80px;
+    padding-bottom: 72px;
+}
+
+.service-hero::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: -40px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(207, 118, 71, 0.12), transparent 70%);
+    filter: blur(10px);
+}
+
+.service-hero::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: 20px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 1px dashed rgba(207, 118, 71, 0.22);
+    animation: rotateDetail 16s linear infinite;
+}
+
+@keyframes rotateDetail {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .service-hero__grid {
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: 1.02fr 0.98fr;
     gap: 34px;
@@ -14,6 +51,23 @@
 .service-hero__content h1 {
     font-size: clamp(2.5rem, 5vw, 4.6rem);
     margin-bottom: 18px;
+    letter-spacing: -0.03em;
+}
+
+.service-hero__visual {
+    position: relative;
+}
+
+.service-hero__visual::after {
+    content: "";
+    position: absolute;
+    right: -16px;
+    bottom: -16px;
+    width: 110px;
+    height: 110px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, rgba(207, 118, 71, 0.14), rgba(232, 187, 145, 0.18));
+    z-index: -1;
 }
 
 .service-hero__visual img {
@@ -26,96 +80,156 @@
     display: flex;
     gap: 14px;
     margin-top: 28px;
+    margin-bottom: 20px;
 }
 
-.stats-grid,
-.cards-3,
-.cards-4 {
+.switcher-grid {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
 }
 
-.stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.cards-3 {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.cards-4 {
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.stat-card,
-.info-card,
-.step-card,
-.service-highlight-card,
-.cta-box {
-    background: rgba(255, 255, 255, 0.84);
-    box-shadow: var(--shadow-sm);
-}
-
-.stat-card {
-    padding: 28px 20px;
+.switcher-card {
+    position: relative;
+    padding: 26px;
     border-radius: 28px;
-    text-align: center;
+    background: rgba(255, 250, 244, 0.94);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    overflow: hidden;
 }
 
-.stat-card strong {
-    display: block;
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--color-title);
-    font-family: var(--font-title);
+.switcher-card::before {
+    content: "";
+    position: absolute;
+    inset: auto -30px -30px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(207, 118, 71, 0.10), transparent 70%);
 }
 
-.service-highlight-card,
-.info-card,
-.step-card {
+.switcher-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.switcher-card i {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(207, 118, 71, 0.10);
+    color: var(--color-primary-2);
+    margin-bottom: 18px;
+    font-size: 1.2rem;
+}
+
+.switcher-card h3 {
+    margin-bottom: 10px;
+}
+
+.checklist-box {
+    max-width: 860px;
+    margin: 0 auto;
     padding: 28px;
-    border-radius: 28px;
+    border-radius: 30px;
+    background: rgba(255, 250, 244, 0.9);
+    box-shadow: var(--shadow-md);
 }
 
-.service-highlight-card h3,
-.info-card h3,
-.step-card h3 {
-    margin-bottom: 12px;
-}
-
-.service-highlight-card ul {
-    display: grid;
-    gap: 12px;
-}
-
-.service-highlight-card li i {
-    color: var(--color-primary-2);
-    margin-right: 10px;
-}
-
-.info-card i {
-    width: 58px;
-    height: 58px;
-    border-radius: 18px;
-    display: inline-flex;
+.checklist-item {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    background: rgba(78, 166, 255, 0.08);
-    color: var(--color-primary-2);
-    margin-bottom: 18px;
-    font-size: 1.25rem;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(95, 70, 56, 0.08);
 }
 
-.step-card span {
-    display: inline-flex;
-    width: 58px;
-    height: 58px;
-    border-radius: 18px;
-    align-items: center;
-    justify-content: center;
+.checklist-item:last-child {
+    border-bottom: none;
+}
+
+.checklist-item span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
     background: var(--gradient-main);
-    color: #fff;
-    font-weight: 800;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.checklist-item span::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    width: 6px;
+    height: 10px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.scenario-gallery {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr 0.9fr;
+    gap: 18px;
+}
+
+.scenario-card {
+    position: relative;
+    min-height: 230px;
+    padding: 28px;
+    border-radius: 30px;
+    overflow: hidden;
+    background: rgba(255, 250, 244, 0.92);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.scenario-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.scenario-card--large {
+    grid-row: span 2;
+    min-height: 100%;
+}
+
+.scenario-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(61, 42, 34, 0.02), rgba(61, 42, 34, 0.08)),
+        radial-gradient(circle at top right, rgba(207, 118, 71, 0.10), transparent 36%);
+    pointer-events: none;
+}
+
+.scenario-card>* {
+    position: relative;
+    z-index: 2;
+}
+
+.scenario-card i {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(207, 118, 71, 0.10);
+    color: var(--color-primary-2);
     margin-bottom: 18px;
+    font-size: 1.2rem;
+}
+
+.scenario-card h3 {
+    margin-bottom: 10px;
 }
 
 .faq-grid {
@@ -128,10 +242,16 @@
 }
 
 .faq-item {
+    border-radius: 26px;
+    background: rgba(255, 250, 244, 0.94);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
     padding: 18px 20px;
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.82);
-    box-shadow: var(--shadow-sm);
+}
+
+.faq-item.active {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
 }
 
 .faq-question {
@@ -142,6 +262,14 @@
     text-align: left;
     font-weight: 800;
     color: var(--color-title);
+}
+
+.faq-question i {
+    transition: transform 0.35s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(45deg);
 }
 
 .faq-answer {
@@ -156,29 +284,49 @@
 }
 
 .cta-box {
+    position: relative;
+    overflow: hidden;
     padding: 34px;
     border-radius: 34px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    background: rgba(255, 250, 244, 0.92);
+    box-shadow: var(--shadow-md);
+}
+
+.cta-box::before {
+    content: "";
+    position: absolute;
+    right: -50px;
+    top: -40px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(207, 118, 71, 0.12), transparent 70%);
 }
 
 .cta-box h2 {
     font-size: clamp(1.8rem, 4vw, 3rem);
+    max-width: 740px;
 }
 
 @media (max-width: 991px) {
 
     .service-hero__grid,
-    .stats-grid,
-    .cards-3,
-    .cards-4 {
+    .cards-4,
+    .switcher-grid,
+    .scenario-gallery {
         grid-template-columns: 1fr 1fr;
     }
 
     .service-hero__visual img {
         height: 460px;
+    }
+
+    .scenario-card--large {
+        grid-row: auto;
     }
 
     .cta-box {
@@ -194,9 +342,9 @@
     }
 
     .service-hero__grid,
-    .stats-grid,
-    .cards-3,
-    .cards-4 {
+    .cards-4,
+    .switcher-grid,
+    .scenario-gallery {
         grid-template-columns: 1fr;
     }
 
@@ -208,7 +356,13 @@
         flex-direction: column;
     }
 
+    .checklist-box,
     .cta-box {
-        padding: 24px 18px;
+        padding: 20px 16px;
+    }
+
+    .scenario-card {
+        min-height: 200px;
+        padding: 22px 18px;
     }
 }

@@ -4,24 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Roof Replacement RTB | Premium Roofing Solutions</title>
+  <title>RTB Roof Atlas | Roof Request & Planning Platform</title>
   <meta name="description"
-    content="Premium roof replacement, repair, inspection, installation, and storm damage roofing services with a modern and trusted approach." />
+    content="RTB Roof Atlas is a roof request and planning platform designed to help homeowners explore replacement, repair, inspection, installation, and storm-related request categories." />
 
   <link rel="icon" type="image/svg+xml" href="assets/images/global/favicon.svg" />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap"
     rel="stylesheet" />
-
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
-  <!-- AOS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
   <link rel="stylesheet" href="assets/css/base.css" />
@@ -32,13 +25,13 @@
 <body>
   <div class="site-progress"></div>
 
-  <header class="site-header" id="siteHeader">
+  <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        <span class="logo-mark"><i class="fa-solid fa-house-chimney"></i></span>
+        <span class="logo-mark"><i class="fa-solid fa-compass"></i></span>
         <span class="logo-text">
-          <strong>Roof Replacement</strong>
-          <span>RTB Premium Roofing</span>
+          <strong>RTB Roof Atlas</strong>
+          <span>Roof request & planning platform</span>
         </span>
       </a>
 
@@ -48,10 +41,10 @@
 
         <div class="nav-dropdown">
           <button class="nav-link nav-dropdown-toggle" type="button">
-            Services <i class="fa-solid fa-chevron-down"></i>
+            Categories <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="nav-dropdown-menu">
-            <a href="services.html">All Services</a>
+            <a href="services.html">All Categories</a>
             <a href="roof-replacement.html">Roof Replacement</a>
             <a href="roof-repair.html">Roof Repair</a>
             <a href="roof-installation.html">Roof Installation</a>
@@ -60,14 +53,14 @@
           </div>
         </div>
 
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="nav-link">Request</a>
       </nav>
 
       <div class="header-actions">
         <button class="search-toggle" type="button" aria-label="Open search">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
-        <a href="contact.html" class="btn btn-primary header-btn">Get Free Estimate</a>
+        <a href="contact.html" class="btn btn-primary header-btn magnetic-btn">Start A Request</a>
         <button class="mobile-toggle" type="button" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
@@ -78,13 +71,13 @@
       <div class="container mobile-menu-inner">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+        <a href="services.html">All Categories</a>
         <a href="roof-replacement.html">Roof Replacement</a>
         <a href="roof-repair.html">Roof Repair</a>
         <a href="roof-installation.html">Roof Installation</a>
         <a href="roof-inspection.html">Roof Inspection</a>
         <a href="storm-damage-roofing.html">Storm Damage Roofing</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Request</a>
       </div>
     </div>
   </header>
@@ -96,23 +89,22 @@
         <i class="fa-solid fa-xmark"></i>
       </button>
 
-      <h3>Search The Site</h3>
-      <p>Find roofing services, service pages, contact details, or legal pages instantly.</p>
+      <h3>Search RTB Roof Atlas</h3>
+      <p>Explore categories, planning pages, request steps, and legal information.</p>
 
       <div class="site-search">
-        <input type="text" id="siteSearchInput" placeholder="Search pages or services..." />
+        <input type="text" id="siteSearchInput" placeholder="Search pages or categories..." />
         <button type="button" id="siteSearchButton">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
 
       <div class="site-search__quick-links">
-        <a href="roof-replacement.html">Roof Replacement</a>
-        <a href="roof-repair.html">Roof Repair</a>
-        <a href="roof-installation.html">Roof Installation</a>
-        <a href="roof-inspection.html">Roof Inspection</a>
-        <a href="storm-damage-roofing.html">Storm Damage Roofing</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="services.html">All Categories</a>
+        <a href="roof-replacement.html">Replacement</a>
+        <a href="roof-repair.html">Repair</a>
+        <a href="roof-inspection.html">Inspection</a>
+        <a href="contact.html">Request</a>
       </div>
 
       <div id="siteSearchResults" class="site-search-results"></div>
@@ -120,325 +112,326 @@
   </div>
 
   <main>
-    <section class="hero section-padding">
-      <div class="hero-bg-shape hero-bg-shape--one"></div>
-      <div class="hero-bg-shape hero-bg-shape--two"></div>
+    <section class="hero section-padding parallax-section">
+      <div class="hero-bg-orb hero-bg-orb--one"></div>
+      <div class="hero-bg-orb hero-bg-orb--two"></div>
+      <div class="rotating-detail rotating-detail--one"></div>
+      <div class="rotating-detail rotating-detail--two"></div>
 
       <div class="container hero-grid">
         <div class="hero-content" data-aos="fade-up">
-          <span class="eyebrow">Premium Residential Roofing</span>
+          <span class="eyebrow">Roof Request Platform</span>
           <h1>
-            Roof replacement that feels
-            <span>modern, confident, and built to last.</span>
+            Roof decisions feel messy.<br />
+            This platform makes the next step feel obvious.
           </h1>
           <p class="hero-text">
-            We create elevated roofing experiences with premium materials,
-            precise craftsmanship, elegant communication, and reliable project execution.
+            RTB Roof Atlas turns scattered roofing concerns into clearer request paths —
+            from leak signals and storm impact to inspection-first decisions and broader roof planning.
           </p>
+
+          <div class="hero-mini-points">
+            <span><i class="fa-solid fa-check"></i> Situation-based entry points</span>
+            <span><i class="fa-solid fa-check"></i> Cleaner request routing</span>
+            <span><i class="fa-solid fa-check"></i> Planning-first structure</span>
+          </div>
 
           <div class="hero-actions">
-            <a href="contact.html" class="btn btn-primary">Book Free Inspection</a>
-            <a href="services.html" class="btn btn-secondary">Explore Services</a>
-          </div>
-
-          <div class="hero-badges">
-            <div class="hero-badge">
-              <i class="fa-solid fa-shield-heart"></i>
-              <span>Warranty-backed work</span>
-            </div>
-            <div class="hero-badge">
-              <i class="fa-solid fa-star"></i>
-              <span>5-star client experience</span>
-            </div>
-            <div class="hero-badge">
-              <i class="fa-solid fa-bolt"></i>
-              <span>Fast scheduling</span>
-            </div>
+            <a href="contact.html" class="btn btn-primary magnetic-btn">Start A Request</a>
+            <a href="services.html" class="btn btn-secondary magnetic-btn">Browse Categories</a>
           </div>
         </div>
 
-        <div class="hero-visual" data-aos="fade-left">
-          <div class="hero-card hero-card-main">
-            <img src="assets/images/home/hero-main.jpg" alt="Premium roof replacement project" />
-            <div class="hero-card-overlay">
-              <span>Signature Roofing Systems</span>
-              <strong>Designed for curb appeal & protection</strong>
+        <div class="hero-visual layered-cards" data-aos="fade-left">
+          <div class="hero-main-card">
+            <img src="assets/images/home/hero-main.jpg" alt="Warm modern residential roof exterior" />
+          </div>
+
+          <div class="floating-card floating-card--top">
+            <i class="fa-solid fa-house-crack"></i>
+            <div>
+              <strong>Aging roof?</strong>
+              <span>Explore replacement pathways</span>
             </div>
           </div>
 
-          <div class="hero-float hero-float-top">
-            <span>Trusted by homeowners across the U.S.</span>
+          <div class="floating-card floating-card--middle">
+            <i class="fa-solid fa-droplet"></i>
+            <div>
+              <strong>Leak concern?</strong>
+              <span>Review repair categories</span>
+            </div>
           </div>
 
-          <div class="hero-float hero-float-bottom">
-            <strong>+1,280</strong>
-            <span>Completed roofing projects</span>
+          <div class="floating-card floating-card--bottom">
+            <i class="fa-solid fa-cloud-bolt"></i>
+            <div>
+              <strong>Storm impact?</strong>
+              <span>Compare urgent request options</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="ticker-bar">
-      <div class="ticker-track">
-        <span>Roof Replacement</span>
-        <span>Roof Repair</span>
-        <span>Roof Installation</span>
-        <span>Roof Inspection</span>
-        <span>Storm Damage Roofing</span>
-        <span>Fast Estimates</span>
-        <span>Premium Materials</span>
-        <span>Roof Replacement</span>
-        <span>Roof Repair</span>
-        <span>Roof Installation</span>
-        <span>Roof Inspection</span>
-        <span>Storm Damage Roofing</span>
-      </div>
-    </section>
-
-    <section class="stats section-padding">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-card" data-aos="fade-up">
-            <strong class="counter" data-target="1280">0</strong>
-            <span>Projects Completed</span>
-          </div>
-          <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-            <strong class="counter" data-target="98">0</strong>
-            <span>Client Satisfaction Rate</span>
-          </div>
-          <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-            <strong class="counter" data-target="14">0</strong>
-            <span>Years Of Field Experience</span>
-          </div>
-          <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-            <strong class="counter" data-target="24">0</strong>
-            <span>Emergency Response Availability</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-preview section-padding section-soft-bg">
-      <div class="container section-grid">
-        <div class="section-copy" data-aos="fade-right">
-          <span class="eyebrow">About Our Company</span>
-          <h2>We bring clarity, style, and structure to every roofing project.</h2>
-          <p>
-            Roof Replacement RTB was built around one idea: homeowners deserve
-            roofing services that feel polished, transparent, and deeply professional.
-            From initial inspection to final cleanup, every detail is handled with care.
-          </p>
-          <p>
-            Our team focuses on premium service delivery, durable materials, modern communication,
-            and roofing systems that protect your home while elevating its appearance.
-          </p>
-          <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
-        </div>
-
-        <div class="section-visual image-stack" data-aos="fade-left">
-          <img src="assets/images/about/about-preview-1.jpg" alt="Roofing specialists reviewing project" />
-          <img src="assets/images/about/about-preview-2.jpg" alt="Modern residential roof detail" />
-        </div>
-      </div>
-    </section>
-
-    <section class="services-preview section-padding">
+    <section class="situations section-padding">
       <div class="container">
         <div class="section-head" data-aos="fade-up">
-          <span class="eyebrow">Core Services</span>
-          <h2>Six focused roofing services for modern homes.</h2>
-          <p>
-            Clean process, premium appearance, durable results.
-          </p>
+          <span class="eyebrow">Situation Selector</span>
+          <h2>Choose the path that feels closest to your current roof situation.</h2>
         </div>
 
-        <div class="service-cards">
-          <a href="roof-replacement.html" class="service-card" data-aos="zoom-in">
-            <img src="assets/images/roof-replacement/service-thumb.jpg" alt="Roof replacement service" />
-            <div class="service-card__overlay">
-              <h3>Roof Replacement</h3>
-              <p>Complete system renewal with premium installation standards.</p>
-            </div>
+        <div class="cards-3">
+          <a href="roof-replacement.html" class="situation-card" data-aos="fade-up">
+            <i class="fa-solid fa-house-crack"></i>
+            <h3>Aging Roof</h3>
+            <p>Useful when the roof looks older, broadly worn, or near end-of-life.</p>
           </a>
 
-          <a href="roof-repair.html" class="service-card" data-aos="zoom-in" data-aos-delay="80">
-            <img src="assets/images/roof-repair/service-thumb.jpg" alt="Roof repair service" />
-            <div class="service-card__overlay">
-              <h3>Roof Repair</h3>
-              <p>Targeted repairs for leaks, damage, and structural wear.</p>
-            </div>
+          <a href="roof-repair.html" class="situation-card" data-aos="fade-up" data-aos-delay="80">
+            <i class="fa-solid fa-droplet"></i>
+            <h3>Leak Concern</h3>
+            <p>Useful for visible water entry, isolated damage, or smaller issue zones.</p>
           </a>
 
-          <a href="roof-installation.html" class="service-card" data-aos="zoom-in" data-aos-delay="160">
-            <img src="assets/images/roof-installation/service-thumb.jpg" alt="Roof installation service" />
-            <div class="service-card__overlay">
-              <h3>Roof Installation</h3>
-              <p>New roof systems designed for beauty, efficiency, and longevity.</p>
-            </div>
+          <a href="storm-damage-roofing.html" class="situation-card" data-aos="fade-up" data-aos-delay="160">
+            <i class="fa-solid fa-cloud-bolt"></i>
+            <h3>Storm Impact</h3>
+            <p>Useful after hail, wind, or debris exposure following severe weather.</p>
           </a>
 
-          <a href="roof-inspection.html" class="service-card" data-aos="zoom-in">
-            <img src="assets/images/roof-inspection/service-thumb.jpg" alt="Roof inspection service" />
-            <div class="service-card__overlay">
-              <h3>Roof Inspection</h3>
-              <p>Professional evaluation before buying, selling, or restoring.</p>
-            </div>
+          <a href="roof-inspection.html" class="situation-card" data-aos="fade-up">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            <h3>Need Inspection</h3>
+            <p>Useful when the first step is understanding the roof condition.</p>
           </a>
 
-          <a href="storm-damage-roofing.html" class="service-card" data-aos="zoom-in" data-aos-delay="80">
-            <img src="assets/images/storm-damage-roofing/service-thumb.jpg" alt="Storm damage roofing service" />
-            <div class="service-card__overlay">
-              <h3>Storm Damage Roofing</h3>
-              <p>Fast response for wind, hail, and severe weather recovery.</p>
-            </div>
-          </a>
-
-          <a href="services.html" class="service-card service-card--accent" data-aos="zoom-in" data-aos-delay="160">
-            <div class="service-card__overlay service-card__overlay--solid">
-              <h3>All Services</h3>
-              <p>Browse the full service lineup and compare solutions.</p>
-              <span>View More <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="why-us section-padding section-gradient-bg">
-      <div class="container">
-        <div class="section-head" data-aos="fade-up">
-          <span class="eyebrow">Why Homeowners Choose Us</span>
-          <h2>Premium service without confusion or pressure.</h2>
-        </div>
-
-        <div class="benefits-grid">
-          <article class="benefit-card" data-aos="fade-up">
+          <a href="roof-installation.html" class="situation-card" data-aos="fade-up" data-aos-delay="80">
             <i class="fa-solid fa-layer-group"></i>
-            <h3>Structured Process</h3>
-            <p>Every project follows a clear timeline, scope, and communication plan.</p>
-          </article>
+            <h3>Planning A New Roof</h3>
+            <p>Useful for scheduled roof system planning or installation-based projects.</p>
+          </a>
 
-          <article class="benefit-card" data-aos="fade-up" data-aos-delay="100">
-            <i class="fa-solid fa-gem"></i>
-            <h3>Premium Materials</h3>
-            <p>We prioritize proven roofing products that balance style and performance.</p>
-          </article>
-
-          <article class="benefit-card" data-aos="fade-up" data-aos-delay="200">
-            <i class="fa-solid fa-comments"></i>
-            <h3>Transparent Guidance</h3>
-            <p>No vague estimates, no guesswork, no unnecessary upsells.</p>
-          </article>
-
-          <article class="benefit-card" data-aos="fade-up" data-aos-delay="300">
-            <i class="fa-solid fa-house-circle-check"></i>
-            <h3>Property Respect</h3>
-            <p>We protect your landscape, exterior finishes, and daily routine.</p>
-          </article>
+          <a href="services.html" class="situation-card" data-aos="fade-up" data-aos-delay="160">
+            <i class="fa-solid fa-compass-drafting"></i>
+            <h3>Compare Categories</h3>
+            <p>Useful when you want to browse all request categories first.</p>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="reviews section-padding">
+    <section class="how-it-works section-padding section-bg-image parallax-section">
       <div class="container">
         <div class="section-head" data-aos="fade-up">
-          <span class="eyebrow">Client Reviews</span>
-          <h2>What homeowners say about working with us.</h2>
+          <span class="eyebrow">How RTB Works Timeline</span>
+          <h2>A simpler path from roofing concern to next-step request.</h2>
         </div>
 
-        <div class="reviews-grid">
-          <article class="review-card" data-aos="fade-up">
-            <div class="stars">★★★★★</div>
-            <p>
-              “The experience felt organized from day one. Beautiful result,
-              clear communication, and the crew treated our home with respect.”
-            </p>
-            <strong>— Melissa R.</strong>
+        <div class="cards-4">
+          <article class="step-card" data-aos="zoom-in">
+            <span>01</span>
+            <h3>Identify</h3>
+            <p>Start with the issue, goal, or roof condition that best matches your situation.</p>
           </article>
 
-          <article class="review-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="stars">★★★★★</div>
-            <p>
-              “We needed a full roof replacement after storm damage. The team was fast,
-              professional, and made the process much easier than expected.”
-            </p>
-            <strong>— Daniel T.</strong>
+          <article class="step-card" data-aos="zoom-in" data-aos-delay="80">
+            <span>02</span>
+            <h3>Review</h3>
+            <p>Explore planning notes, request categories, and common use cases.</p>
           </article>
 
-          <article class="review-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="stars">★★★★★</div>
-            <p>
-              “Very premium feel, great materials, and zero chaos. Highly recommend
-              for homeowners who want quality and professionalism.”
-            </p>
-            <strong>— Andrea P.</strong>
+          <article class="step-card" data-aos="zoom-in" data-aos-delay="160">
+            <span>03</span>
+            <h3>Submit</h3>
+            <p>Share contact details, address, category, and project context through the request form.</p>
+          </article>
+
+          <article class="step-card" data-aos="zoom-in" data-aos-delay="240">
+            <span>04</span>
+            <h3>Continue</h3>
+            <p>Next steps depend on the category selected and independent provider availability.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="faq section-padding section-soft-bg">
+    <section class="insight-showcase section-padding section-bg-image parallax-section">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Planning Notes Mosaic</span>
+          <h2>Better requests usually start with sharper observation.</h2>
+          <p>
+            Instead of generic notes, RTB helps users frame the roof situation through
+            visible clues, urgency, age context, and planning intent.
+          </p>
+        </div>
+
+        <div class="insight-showcase__grid">
+          <article class="insight-panel insight-panel--large" data-aos="fade-up">
+            <div class="insight-panel__icon">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <h3>What you can actually see matters first</h3>
+            <p>
+              Stains, lifted shingles, sagging lines, storm marks, and leak timing often
+              say more than generic category guesses.
+            </p>
+            <div class="insight-tags">
+              <span>Visible wear</span>
+              <span>Leak timing</span>
+              <span>Storm clues</span>
+            </div>
+          </article>
+
+          <article class="insight-panel" data-aos="fade-up" data-aos-delay="80">
+            <div class="insight-panel__icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <h3>Urgency changes the request path</h3>
+            <p>A planning request and an active leak request should not feel the same in the form flow.</p>
+          </article>
+
+          <article class="insight-panel" data-aos="fade-up" data-aos-delay="140">
+            <div class="insight-panel__icon">
+              <i class="fa-solid fa-house-circle-check"></i>
+            </div>
+            <h3>Roof age still matters</h3>
+            <p>Even an approximate age helps place the request closer to inspection, repair, or replacement logic.</p>
+          </article>
+
+          <article class="insight-panel insight-panel--wide" data-aos="fade-up" data-aos-delay="200">
+            <div class="insight-panel__icon">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <h3>Planning intent is a real signal</h3>
+            <p>
+              Some users are reacting to damage. Others are planning exterior upgrades, comparing options,
+              or preparing for the next decision step. RTB should reflect that difference clearly.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="category-rail section-padding section-bg-image parallax-section">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Scrolling Category Rail</span>
+          <h2>Browse RTB categories in a more visual way.</h2>
+        </div>
+
+        <div class="category-rail__track">
+          <a href="roof-replacement.html" class="rail-card">
+            <img src="assets/images/roof-replacement/service-main.jpg" alt="Roof Replacement" />
+            <div class="rail-card__overlay">
+              <h3>Roof Replacement</h3>
+            </div>
+          </a>
+          <a href="roof-repair.html" class="rail-card">
+            <img src="assets/images/roof-repair/service-main.jpg" alt="Roof Repair" />
+            <div class="rail-card__overlay">
+              <h3>Roof Repair</h3>
+            </div>
+          </a>
+          <a href="roof-installation.html" class="rail-card">
+            <img src="assets/images/roof-installation/service-main.jpg" alt="Roof Installation" />
+            <div class="rail-card__overlay">
+              <h3>Roof Installation</h3>
+            </div>
+          </a>
+          <a href="roof-inspection.html" class="rail-card">
+            <img src="assets/images/roof-inspection/service-main.jpg" alt="Roof Inspection" />
+            <div class="rail-card__overlay">
+              <h3>Roof Inspection</h3>
+            </div>
+          </a>
+          <a href="storm-damage-roofing.html" class="rail-card">
+            <img src="assets/images/storm-damage-roofing/service-main.jpg" alt="Storm Damage Roofing" />
+            <div class="rail-card__overlay">
+              <h3>Storm Damage</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Layered Disclaimer Section</span>
+          <h2>Important notes about what RTB Roof Atlas is and what it is not.</h2>
+        </div>
+
+        <div class="disclaimer-grid">
+          <article class="disclaimer-card" data-aos="fade-up">
+            <i class="fa-solid fa-circle-info"></i>
+            <h3>Informational platform</h3>
+            <p>RTB is designed for request guidance, category clarity, and planning support.</p>
+          </article>
+          <article class="disclaimer-card" data-aos="fade-up" data-aos-delay="80">
+            <i class="fa-solid fa-ban"></i>
+            <h3>Not a direct contractor</h3>
+            <p>RTB does not directly perform roofing construction, repair, or installation work.</p>
+          </article>
+          <article class="disclaimer-card" data-aos="fade-up" data-aos-delay="160">
+            <i class="fa-solid fa-route"></i>
+            <h3>Routing depends on context</h3>
+            <p>Next steps, scope, timing, and provider response depend on request details and availability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section-padding section-bg-image">
       <div class="container section-grid faq-grid">
         <div class="section-copy" data-aos="fade-right">
-          <span class="eyebrow">FAQ</span>
-          <h2>Answers to common roofing questions.</h2>
-          <p>
-            Quick guidance for homeowners exploring replacement, repair, inspection,
-            and premium roofing upgrades.
-          </p>
+          <span class="eyebrow">Premium FAQ</span>
+          <h2>Answers to common questions about using RTB Roof Atlas.</h2>
         </div>
 
         <div class="faq-list" data-aos="fade-left">
           <div class="faq-item active">
             <button class="faq-question" type="button">
-              How do I know if I need full roof replacement?
+              Does RTB directly perform roofing work?
               <i class="fa-solid fa-plus"></i>
             </button>
             <div class="faq-answer">
-              <p>
-                If your roof has widespread aging, repeated leaks, storm damage,
-                or visible structural wear, a full replacement may be the more
-                reliable long-term option.
+              <p>No. RTB Roof Atlas is an informational and request-routing platform, not a direct roofing contractor.
               </p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              Do you offer inspections before estimates?
+              Can I use RTB if I am not sure what I need?
               <i class="fa-solid fa-plus"></i>
             </button>
             <div class="faq-answer">
-              <p>
-                Yes. We recommend an inspection first so we can understand your roof’s
-                actual condition and offer the right scope of work.
-              </p>
+              <p>Yes. The category and planning pages are designed to help users compare common roofing situations
+                before submitting a request.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              Can you help after storm damage?
+              Are pricing and timelines listed on the site final?
               <i class="fa-solid fa-plus"></i>
             </button>
             <div class="faq-answer">
-              <p>
-                Absolutely. We handle storm-related roofing assessments, urgent repairs,
-                and restoration recommendations.
-              </p>
+              <p>No. Final pricing, scheduling, and project scope depend on the independent provider reviewing the
+                request.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              How long does a roof project usually take?
+              Is the request form a guarantee of service?
               <i class="fa-solid fa-plus"></i>
             </button>
             <div class="faq-answer">
-              <p>
-                Timelines depend on roof size, weather, and project complexity,
-                but many residential projects are completed efficiently within a few days.
-              </p>
+              <p>No. A submitted request helps with routing and review, but does not guarantee provider acceptance,
+                final scope, or scheduling.</p>
             </div>
           </div>
         </div>
@@ -446,35 +439,27 @@
     </section>
 
     <section class="contact-preview section-padding">
-      <div class="container section-grid contact-preview-grid">
-        <div class="contact-box" data-aos="fade-right">
-          <span class="eyebrow">Get In Touch</span>
-          <h2>Book your free consultation today.</h2>
+      <div class="container section-grid">
+        <div class="section-copy" data-aos="fade-right">
+          <span class="eyebrow">Request Form</span>
+          <h2>Share your property details and roofing situation.</h2>
           <p>
-            Tell us about your roof, your goals, and your timeline.
-            We’ll help you choose the right next step.
+            Use the request form to provide contact information, property address,
+            category preference, and any visible roof concerns.
           </p>
+        </div>
 
+        <div class="contact-box" data-aos="fade-left">
           <form class="contact-form">
-            <div class="form-grid">
+            <div class="cards-2">
               <input type="text" placeholder="Full Name" />
               <input type="email" placeholder="Email Address" />
               <input type="tel" placeholder="Phone Number" />
               <input type="text" placeholder="Property Address" />
             </div>
-            <textarea placeholder="Tell us about your roofing needs"></textarea>
-            <button type="submit" class="btn btn-primary">Request Estimate</button>
+            <textarea placeholder="Describe your roofing situation"></textarea>
+            <button type="submit" class="btn btn-primary magnetic-btn">Submit Request</button>
           </form>
-        </div>
-
-        <div class="map-box" data-aos="fade-left">
-          <div class="map-box__content">
-            <h3>Visit Our Service Office</h3>
-            <p>1450 W Gray St, Houston, TX 77019, United States</p>
-          </div>
-          <iframe
-            src="https://www.google.com/maps?q=1450%20W%20Gray%20St,%20Houston,%20TX%2077019,%20United%20States&output=embed"
-            loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
@@ -484,29 +469,43 @@
     <div class="container footer-grid">
       <div>
         <a href="index.html" class="logo footer-logo">
-          <span class="logo-mark"><i class="fa-solid fa-house-chimney"></i></span>
+          <span class="logo-mark"><i class="fa-solid fa-compass"></i></span>
           <span class="logo-text">
-            <strong>Roof Replacement</strong>
-            <span>RTB Premium Roofing</span>
+            <strong>RTB Roof Atlas</strong>
+            <span>Roof request & planning platform</span>
           </span>
         </a>
+
         <p class="footer-copy">
-          Premium roofing services with a modern, trusted, and design-forward approach.
+          RTB Roof Atlas helps homeowners explore roofing request categories,
+          planning notes, and next-step inquiry options.
         </p>
+
+        <div class="footer-collage">
+          <div class="footer-collage__item footer-collage__item--one">
+            <img src="assets/images/home/hero-main.jpg" alt="Roof visual 1" />
+          </div>
+          <div class="footer-collage__item footer-collage__item--two">
+            <img src="assets/images/roof-repair/service-main.jpg" alt="Roof visual 2" />
+          </div>
+          <div class="footer-collage__item footer-collage__item--three">
+            <img src="assets/images/roof-inspection/service-main.jpg" alt="Roof visual 3" />
+          </div>
+        </div>
       </div>
 
       <div>
-        <h4>Navigation</h4>
+        <h4>Pages</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services.html">All Categories</a></li>
+          <li><a href="contact.html">Request</a></li>
         </ul>
       </div>
 
       <div>
-        <h4>Services</h4>
+        <h4>Categories</h4>
         <ul>
           <li><a href="roof-replacement.html">Roof Replacement</a></li>
           <li><a href="roof-repair.html">Roof Repair</a></li>
@@ -515,6 +514,7 @@
           <li><a href="storm-damage-roofing.html">Storm Damage Roofing</a></li>
         </ul>
       </div>
+
       <div>
         <h4>Legal</h4>
         <ul>
@@ -526,7 +526,7 @@
     </div>
 
     <div class="container footer-bottom">
-      <p>© 2026 Roof Replacement RTB. All rights reserved.</p>
+      <p>© 2026 RTB Roof Atlas. All rights reserved.</p>
     </div>
   </footer>
 
@@ -535,9 +535,7 @@
       <div class="cookie-banner__text">
         <h4>Privacy & Site Policy Notice</h4>
         <p>
-          Before continuing, please review our site policies.
-          You can continue browsing the site while this notice remains visible,
-          but it will stay on screen until you choose Accept or Decline.
+          Please review our site policies. This notice remains visible until you choose Accept or Decline.
         </p>
         <div class="cookie-links">
           <a href="privacy-policy.html">Privacy Policy</a>
@@ -545,7 +543,6 @@
           <a href="terms-of-service.html">Terms Of Service</a>
         </div>
       </div>
-
       <div class="cookie-banner__actions">
         <button class="btn btn-secondary" id="declineCookies" type="button">Decline</button>
         <button class="btn btn-primary" id="acceptCookies" type="button">Accept</button>
