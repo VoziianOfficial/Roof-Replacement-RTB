@@ -1,298 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Storm Damage Roofing | RoofMatch Advisory</title>
-    <meta
-      name="description"
-      content="Storm damage roofing request page scaffold for homeowners seeking local provider connections."
-    />
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <title>Storm Damage Roofing | Roof Replacement RTB</title>
+    <meta name="description"
+        content="Storm damage roofing services for hail, wind, impact damage, urgent inspections, repairs, and full recovery planning." />
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/global/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/storm-damage-roofing.css" />
-        <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css" />
-    <script defer src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-    <script defer src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script defer src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
-    <script defer src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
-    <script src="assets/js/main.js" defer></script>
-  </head>
-  <body class="page-storm-damage-roofing site-shell" data-page="services">
-    <a class="skip-link" href="#main-content">Skip to content</a>
-            <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="RoofMatch Advisory home">
-          <span class="brand-mark">RM</span>
-          <span class="brand-text">
-            <span class="brand-title">RoofMatch Advisory</span>
-            <span class="brand-subtitle">Independent Provider Network</span>
-          </span>
-        </a>
-        <div class="header-center">
-          <button
-            class="nav-toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="site-navigation"
-            aria-label="Open navigation"
-            data-nav-toggle
-          >
-            <span class="nav-toggle-line"></span>
-            <span class="nav-toggle-line"></span>
-            <span class="nav-toggle-line"></span>
-          </button>
-          <a
-            class="header-phone-mobile"
-            href="tel:1-800-555-0199"
-            aria-label="Call RoofMatch Advisory"
-          >
-            <span class="phone-icon" aria-hidden="true"><i data-lucide="phone-call"></i></span>
-          </a>
-          <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav>
-            <ul class="nav-list">
-              <li><a class="nav-link" href="index.html" data-page-link="home">Home</a></li>
-              <li><a class="nav-link" href="about.html" data-page-link="about">About</a></li>
-              <li><a class="nav-link" href="services.html" data-page-link="services">Services</a></li>
-              <li><a class="nav-link" href="contact.html" data-page-link="contact">Contact</a></li>
-            </ul>
-            <a class="header-cta" href="contact.html">Request Quotes</a>
-          </nav>
+</head>
+
+<body>
+    <div class="site-progress"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark"><i class="fa-solid fa-house-chimney"></i></span>
+                <span class="logo-text"><strong>Roof Replacement</strong><span>RTB Premium Roofing</span></span>
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle active" type="button">
+                        Services <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="services.html">All Services</a>
+                        <a href="roof-replacement.html">Roof Replacement</a>
+                        <a href="roof-repair.html">Roof Repair</a>
+                        <a href="roof-installation.html">Roof Installation</a>
+                        <a href="roof-inspection.html">Roof Inspection</a>
+                        <a href="storm-damage-roofing.html">Storm Damage Roofing</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="search-toggle" type="button" aria-label="Open search"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+                <a href="contact.html" class="btn btn-primary header-btn">Get Free Estimate</a>
+                <button class="mobile-toggle" type="button"
+                    aria-label="Open menu"><span></span><span></span><span></span></button>
+            </div>
         </div>
-        <a
-          class="header-phone-cta"
-          href="tel:1-800-555-0199"
-          aria-label="Call RoofMatch Advisory"
-        >
-          <span class="phone-icon" aria-hidden="true"><i data-lucide="phone-call"></i></span>
-          <span>Call 1-800-555-0199</span>
-        </a>
-      </div>
+        <div class="mobile-menu">
+            <div class="container mobile-menu-inner">
+                <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+                <a href="roof-replacement.html">Roof Replacement</a><a href="roof-repair.html">Roof Repair</a>
+                <a href="roof-installation.html">Roof Installation</a><a href="roof-inspection.html">Roof Inspection</a>
+                <a href="storm-damage-roofing.html">Storm Damage Roofing</a><a href="contact.html">Contact</a>
+            </div>
+        </div>
     </header>
-    <main id="main-content">
-      <section class="page-hero">
-        <div class="container">
-          <div class="page-hero-inner service-hero">
-            <div class="hero-copy">
-              <p class="eyebrow">Storm Damage Roofing</p>
-              <h1 class="page-title">Rapid connections to storm recovery specialists.</h1>
-              <p class="page-summary">
-                RoofMatch Advisory connects homeowners to independent local providers experienced in
-                storm damage. We focus on lead generation; providers assess and repair.
-              </p>
-              <div class="page-actions">
-                <a class="button-link" href="tel:1-800-555-0199">Call for Storm Support</a>
-                <a class="button-link is-secondary" href="contact.html">Request Quotes</a>
-              </div>
-              <div class="hero-meta">
-                <span>Weather-sensitive routing</span>
-                <span>Insurance-friendly responses</span>
-                <span>Independent specialists</span>
-              </div>
+
+    <div class="search-panel">
+        <div class="search-panel__overlay"></div>
+        <div class="search-panel__inner">
+            <button class="search-close" type="button" aria-label="Close search"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <h3>Search The Site</h3>
+            <p>Find roofing services, pages, and legal information.</p>
+            <div class="site-search">
+                <input type="text" id="siteSearchInput" placeholder="Search pages or services..." />
+                <button type="button" id="siteSearchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <div class="hero-visual card">
-              <div class="image-placeholder">
-                <img src="assets/images/storm-damage-roofing/storm-hero.svg" alt="Storm-damaged roof with assessment underway" />
-              </div>
-              <div class="visual-tags">
-                <span>Emergency triage</span>
-                <span>Wind and hail coverage</span>
-                <span>Claim documentation</span>
-              </div>
+            <div class="site-search__quick-links">
+                <a href="roof-replacement.html">Roof Replacement</a>
+                <a href="roof-repair.html">Roof Repair</a>
+                <a href="roof-installation.html">Roof Installation</a>
+                <a href="roof-inspection.html">Roof Inspection</a>
+                <a href="storm-damage-roofing.html">Storm Damage Roofing</a>
             </div>
-          </div>
+            <div id="siteSearchResults" class="site-search-results"></div>
         </div>
-      </section>
+    </div>
 
-      <section class="section intro-section">
-        <div class="container content-grid">
-          <article class="content-card">
-            <p class="eyebrow">Service explanation</p>
-            <h2>Storm damage triage made clear.</h2>
-            <p>
-              We gather your event details and prioritize your request with independent providers who
-              respond to storm-damaged roofs and insurance needs.
-            </p>
-          </article>
-          <aside class="content-panel">
-            <div class="image-placeholder">
-              <img src="assets/images/storm-damage-roofing/storm-inspection.svg" alt="Storm damage inspection photos" />
+    <main>
+        <section class="service-hero section-padding">
+            <div class="container service-hero__grid">
+                <div class="service-hero__content" data-aos="fade-up">
+                    <span class="eyebrow">Storm Damage Roofing</span>
+                    <h1>Fast storm damage response for roofs affected by wind, hail, and impact.</h1>
+                    <p>
+                        Severe weather can weaken a roof quickly. We provide urgent inspections,
+                        damage assessment, repair strategy, and replacement planning where needed.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-primary">Request Storm Inspection</a>
+                        <a href="services.html" class="btn btn-secondary">All Services</a>
+                    </div>
+                </div>
+                <div class="service-hero__visual" data-aos="fade-left">
+                    <img src="assets/images/storm-damage-roofing/hero.jpg"
+                        alt="Storm damaged residential roof after severe weather" />
+                </div>
             </div>
-            <p class="panel-note">
-              Providers document damage, share reports, and coordinate with you for next steps.
-            </p>
-          </aside>
-        </div>
-      </section>
+        </section>
 
-      <section class="section signs-section">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Signs homeowners may notice</p>
-            <h2 class="section-title">Storm damage indicators.</h2>
-          </div>
-          <div class="grid-3 signs-grid">
-            <article class="card">
-              <h3>Missing shingles</h3>
-              <p>Visible roof area where shingles were blown off.</p>
-            </article>
-            <article class="card">
-              <h3>Granule loss</h3>
-              <p>Clogged gutters and downspouts after hail.</p>
-            </article>
-            <article class="card">
-              <h3>Structural dents</h3>
-              <p>Dents or bruising on metal flashing or vents.</p>
-            </article>
-            <article class="card">
-              <h3>Interior leaks</h3>
-              <p>Water intrusion after storm events.</p>
-            </article>
-            <article class="card">
-              <h3>Insurance requests</h3>
-              <p>Insurer requests inspection documentation.</p>
-            </article>
-            <article class="card">
-              <h3>Debris impact</h3>
-              <p>Branches or hail causing obvious roof damage.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section includes-section">
-        <div class="container content-grid">
-          <article class="content-card">
-            <p class="eyebrow">What storm damage service includes</p>
-            <h2>Assessment through restoration.</h2>
-            <ul class="detail-list">
-              <li>Immediate damage documentation</li>
-              <li>Insurance claim coordination</li>
-              <li>Temporary tarps or protectors</li>
-              <li>Repair or replacement proposals</li>
-              <li>Follow-up checks after repairs</li>
-            </ul>
-          </article>
-          <aside class="content-panel">
-            <div class="image-placeholder">
-              <img src="assets/images/storm-damage-roofing/storm-tarp.svg" alt="Tarp deployment after storm" />
+        <section class="service-stats section-padding">
+            <div class="container stats-grid">
+                <div class="stat-card"><strong class="counter" data-target="310">0</strong><span>Storm Recovery
+                        Jobs</span></div>
+                <div class="stat-card"><strong class="counter" data-target="24">0</strong><span>Emergency
+                        Availability</span></div>
+                <div class="stat-card"><strong class="counter" data-target="130">0</strong><span>Hail Damage
+                        Cases</span></div>
+                <div class="stat-card"><strong class="counter" data-target="14">0</strong><span>Years Experience</span>
+                </div>
             </div>
-            <p class="panel-note">
-              Exact services depend on provider capacity and severity.
-            </p>
-          </aside>
-        </div>
-      </section>
+        </section>
 
-      <section class="section guidance-section">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Homeowner guidance</p>
-            <h2 class="section-title">Immediate next steps.</h2>
-          </div>
-          <div class="grid-3 guidance-grid">
-            <article class="card">
-              <h3>Capture evidence</h3>
-              <p>Photograph damaged areas right after the storm.</p>
-            </article>
-            <article class="card">
-              <h3>Protect your home</h3>
-              <p>Secure temporary coverings if necessary.</p>
-            </article>
-            <article class="card">
-              <h3>Notify insurance</h3>
-              <p>Inform your carrier and share provider reports.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section image-section">
-        <div class="container gallery-grid">
-          <div class="gallery-tile"><img src="assets/images/storm-damage-roofing/storm-gallery-1.svg" alt="Storm damage close-up" /></div>
-          <div class="gallery-tile"><img src="assets/images/storm-damage-roofing/storm-gallery-2.svg" alt="Provider on ladder assessing damage" /></div>
-        </div>
-      </section>
-
-      <section class="section faq-section">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">FAQ</p>
-            <h2 class="section-title">Storm damage concerns.</h2>
-          </div>
-          <div class="faq-grid">
-            <details class="card faq-item">
-              <summary>Do providers work with insurance adjusters?</summary>
-              <p>Yes, many coordinate reviews and provide documentation.</p>
-            </details>
-            <details class="card faq-item">
-              <summary>How soon can they respond?</summary>
-              <p>Response time depends on storm severity; urgent cases are prioritized.</p>
-            </details>
-            <details class="card faq-item">
-              <summary>Is it safe to wait?</summary>
-              <p>Delays can worsen damage. Requesting a match quickly is advised.</p>
-            </details>
-            <details class="card faq-item">
-              <summary>Are temporary repairs included?</summary>
-              <p>Providers may offer tarps or boarding until final repairs are scheduled.</p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section class="section final-cta">
-        <div class="container">
-          <div class="cta-card cta-layout">
-            <div>
-              <p class="eyebrow">Storm response</p>
-              <h2>Get an urgent storm damage match.</h2>
-              <p>
-                Share the damage details and we will route your request to independent storm
-                specialists.
-              </p>
+        <section class="service-overview section-padding section-soft-bg">
+            <div class="container section-grid">
+                <div class="section-copy" data-aos="fade-right">
+                    <span class="eyebrow">After The Storm</span>
+                    <h2>Quick action helps reduce deeper damage and restore safety faster.</h2>
+                    <p>
+                        Wind uplift, hail strikes, broken shingles, exposed edges, and hidden leak
+                        points often appear after storms. Delays can allow water intrusion and larger loss.
+                    </p>
+                    <p>
+                        Our process focuses on fast evaluation, immediate priorities, and a clear recovery path.
+                    </p>
+                </div>
+                <div class="service-highlight-card" data-aos="fade-left">
+                    <h3>Storm Damage Response</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Wind and hail roof inspection</li>
+                        <li><i class="fa-solid fa-check"></i> Visible and hidden damage review</li>
+                        <li><i class="fa-solid fa-check"></i> Leak and weak point identification</li>
+                        <li><i class="fa-solid fa-check"></i> Repair or replacement guidance</li>
+                        <li><i class="fa-solid fa-check"></i> Priority-based recovery planning</li>
+                    </ul>
+                </div>
             </div>
-            <div class="cta-actions">
-              <a class="button-link" href="tel:1-800-555-0199">Call 1-800-555-0199</a>
-              <a class="button-link is-secondary" href="contact.html">Request Quotes</a>
+        </section>
+
+        <section class="benefits section-padding">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <span class="eyebrow">Storm Service Benefits</span>
+                    <h2>Why fast storm damage action matters for the whole property.</h2>
+                </div>
+                <div class="cards-3">
+                    <article class="info-card" data-aos="fade-up">
+                        <i class="fa-solid fa-cloud-bolt"></i>
+                        <h3>Rapid Response</h3>
+                        <p>Urgent assessment helps reduce the chance of ongoing weather exposure.</p>
+                    </article>
+                    <article class="info-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-house-crack"></i>
+                        <h3>Damage Control</h3>
+                        <p>Early intervention can prevent larger structural and interior consequences.</p>
+                    </article>
+                    <article class="info-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-list-check"></i>
+                        <h3>Clear Next Steps</h3>
+                        <p>We help homeowners understand whether repair or full replacement makes sense.</p>
+                    </article>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+        <section class="process section-padding section-gradient-bg">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <span class="eyebrow">Storm Recovery Process</span>
+                    <h2>Clear action from inspection to repair plan.</h2>
+                </div>
+                <div class="cards-4">
+                    <article class="step-card" data-aos="zoom-in"><span>01</span>
+                        <h3>Urgent Review</h3>
+                        <p>We inspect visible storm impact and immediate risk areas.</p>
+                    </article>
+                    <article class="step-card" data-aos="zoom-in" data-aos-delay="100"><span>02</span>
+                        <h3>Damage Mapping</h3>
+                        <p>We identify affected zones and hidden performance concerns.</p>
+                    </article>
+                    <article class="step-card" data-aos="zoom-in" data-aos-delay="200"><span>03</span>
+                        <h3>Repair Strategy</h3>
+                        <p>We define repair priorities or recommend replacement if needed.</p>
+                    </article>
+                    <article class="step-card" data-aos="zoom-in" data-aos-delay="300"><span>04</span>
+                        <h3>Recovery Execution</h3>
+                        <p>We move into repair or replacement with a structured plan.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section-padding">
+            <div class="container section-grid faq-grid">
+                <div class="section-copy" data-aos="fade-right">
+                    <span class="eyebrow">Storm Damage FAQ</span>
+                    <h2>What homeowners often ask after severe weather hits.</h2>
+                </div>
+                <div class="faq-list" data-aos="fade-left">
+                    <div class="faq-item active">
+                        <button class="faq-question" type="button">Should I inspect my roof after hail or wind?<i
+                                class="fa-solid fa-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Yes. Even when damage seems minor, storms can create hidden weak points and future leak
+                                risks.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Can storm damage require full replacement?<i
+                                class="fa-solid fa-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Yes. If damage is widespread or structural integrity is affected, replacement may be the
+                                better solution.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">How soon should I act after a storm?<i
+                                class="fa-solid fa-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>As soon as possible. Early inspection helps prevent moisture spread and larger repair
+                                costs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-cta section-padding">
+            <div class="container cta-box" data-aos="fade-up">
+                <div>
+                    <span class="eyebrow">Storm Hit Your Roof?</span>
+                    <h2>Let’s inspect the damage quickly and create the right recovery plan.</h2>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Book Storm Review</a>
+            </div>
+        </section>
     </main>
+
     <footer class="site-footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <h2 class="footer-title">RoofMatch Advisory</h2>
-            <p class="footer-note">
-              Storm-related inquiries are matched with independent local roofing service providers.
-            </p>
-          </div>
-          <div>
-            <h2 class="footer-title">Explore</h2>
-            <div class="footer-links">
-              <a href="roof-replacement.html">Roof Replacement</a>
-              <a href="roof-repair.html">Roof Repair</a>
-              <a href="contact.html">Contact</a>
+        <div class="container footer-grid">
+            <div><a href="index.html" class="logo footer-logo"><span class="logo-mark"><i
+                            class="fa-solid fa-house-chimney"></i></span><span class="logo-text"><strong>Roof
+                            Replacement</strong><span>RTB Premium Roofing</span></span></a>
+                <p class="footer-copy">Premium roofing services with a modern, trusted, and design-forward approach.</p>
             </div>
-          </div>
-          <div>
-            <h2 class="footer-title">Policies</h2>
-            <div class="footer-links">
-              <a href="privacy-policy.html">Privacy Policy</a>
-              <a href="terms-of-service.html">Terms of Service</a>
-              <a href="cookie-policy.html">Cookie Policy</a>
+            <div>
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-          </div>
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="roof-replacement.html">Roof Replacement</a></li>
+                    <li><a href="roof-repair.html">Roof Repair</a></li>
+                    <li><a href="roof-installation.html">Roof Installation</a></li>
+                    <li><a href="roof-inspection.html">Roof Inspection</a></li>
+                    <li><a href="storm-damage-roofing.html">Storm Damage Roofing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms Of Service</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-legal">
-          <p class="footer-meta">Storm damage page scaffold only.</p>
-          <p class="footer-meta">2026 RoofMatch Advisory. All rights reserved.</p>
+        <div class="container footer-bottom">
+            <p>© 2026 Roof Replacement RTB. All rights reserved.</p>
         </div>
-        <p class="footer-disclaimer">Disclaimer: This site is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and this site does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on this site.</p>
-      </div>
     </footer>
-  </body>
+
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-banner__inner">
+            <div class="cookie-banner__text">
+                <h4>Privacy & Site Policy Notice</h4>
+                <p>Please review our site policies. This notice remains visible until you choose Accept or Decline.</p>
+                <div class="cookie-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                    <a href="terms-of-service.html">Terms Of Service</a>
+                </div>
+            </div>
+            <div class="cookie-banner__actions">
+                <button class="btn btn-secondary" id="declineCookies" type="button">Decline</button>
+                <button class="btn btn-primary" id="acceptCookies" type="button">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>

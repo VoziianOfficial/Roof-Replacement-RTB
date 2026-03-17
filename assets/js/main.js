@@ -1,143 +1,215 @@
-const menuToggle = document.querySelector("[data-nav-toggle]");
-const siteNav = document.querySelector("[data-site-nav]");
-const pageKey = document.body.dataset.page;
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-if (menuToggle && siteNav) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = document.body.classList.toggle("is-menu-open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  siteNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      document.body.classList.remove("is-menu-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-}
-
-if (pageKey) {
-  document.querySelectorAll("[data-page-link]").forEach((link) => {
-    if (link.dataset.pageLink === pageKey) {
-      link.classList.add("is-active");
-      link.setAttribute("aria-current", "page");
-    }
-  });
-}
-const floatingCta = document.createElement("a");
-floatingCta.className = "floating-cta";
-floatingCta.href = "contact.html#lead-form";
-floatingCta.setAttribute("aria-label", "Request quotes from RoofMatch Advisory");
-
-floatingCta.innerHTML = `
-<span class="floating-cta-icon" aria-hidden="true">
-<i data-lucide="mail"></i>
-</span>
-<span>Request Quotes</span>
-`;
-
-document.body.appendChild(floatingCta);
-
-const toggleFloatingCta = () => {
-  const shouldShow = window.scrollY > 200;
-  floatingCta.classList.toggle("is-visible", shouldShow);
-};
-
-window.addEventListener("scroll", toggleFloatingCta);
-toggleFloatingCta();
-
-floatingCta.addEventListener("click", (event) => {
-  const form = document.getElementById("lead-form");
-
-  if (form && document.body.classList.contains("page-contact")) {
-    event.preventDefault();
-
-    form.scrollIntoView({
-      behavior: "smooth",
-      block: "center"
+document.addEventListener("DOMContentLoaded", () => {
+    AOS.init({
+        duration: 900,
+        once: true,
+        offset: 80
     });
 
-    const focusable = form.querySelector("input, textarea, select, button");
-
-    if (focusable) {
-      focusable.focus();
-    }
-  }
+    initMobileMenu();
+    initSearchPanel();
+    initFaq();
+    initCounters();
+    initCookieBanner();
+    initScrollProgress();
+    initForms();
 });
 
-const applyAosAttributes = () => {
-  const elements = document.querySelectorAll(
-    ".section, .page-hero-inner, .card, .header-cta, .button-link, .form-card"
-  );
+function initMobileMenu() {
+    const toggle = document.querySelector(".mobile-toggle");
+    const menu = document.querySelector(".mobile-menu");
 
-  elements.forEach((el, index) => {
-    if (!el.dataset.aos) {
-      el.dataset.aos = "fade-up";
-      el.dataset.aosDelay = String((index % 4) * 70);
-    }
-  });
-};
+    if (!toggle || !menu) return;
 
-const initGsapAnimations = () => {
-  if (prefersReducedMotion) return;
-  if (!window.gsap || !window.ScrollTrigger) return;
-
-  const { gsap, ScrollTrigger } = window;
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.from(".page-hero-inner", {
-    opacity: 0,
-    y: 16,
-    duration: 1,
-    ease: "power3.out"
-  });
-
-  gsap.utils.toArray(".card, .content-card, .content-panel").forEach((card) => {
-    gsap.from(card, {
-      opacity: 0,
-      y: 18,
-      duration: 0.85,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: card,
-        start: "top 90%"
-      }
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
     });
-  });
+}
 
-  gsap.from(".hero-meta span", {
-    opacity: 0,
-    y: 8,
-    stagger: 0.16,
-    duration: 0.8,
-    ease: "power3.out"
-  });
-};
+function initSearchPanel() {
+    const panel = document.querySelector(".search-panel");
+    const openBtn = document.querySelector(".search-toggle");
+    const closeBtn = document.querySelector(".search-close");
+    const overlay = document.querySelector(".search-panel__overlay");
+    const input = document.getElementById("siteSearchInput");
+    const button = document.getElementById("siteSearchButton");
+    const results = document.getElementById("siteSearchResults");
 
-const initAos = () => {
-  if (!window.AOS) return;
+    if (!panel || !openBtn || !closeBtn || !overlay || !input || !button || !results) return;
 
-  applyAosAttributes();
+    const pages = [
+        { title: "Home", url: "index.html", keywords: ["home", "main", "roof", "hero"] },
+        { title: "About", url: "about.html", keywords: ["about", "company", "team"] },
+        { title: "Services", url: "services.html", keywords: ["services", "all services", "roofing solutions"] },
+        { title: "Roof Replacement", url: "roof-replacement.html", keywords: ["replacement", "roof replacement", "new roof"] },
+        { title: "Roof Repair", url: "roof-repair.html", keywords: ["repair", "roof repair", "leak"] },
+        { title: "Roof Installation", url: "roof-installation.html", keywords: ["installation", "roof installation"] },
+        { title: "Roof Inspection", url: "roof-inspection.html", keywords: ["inspection", "roof inspection"] },
+        { title: "Storm Damage Roofing", url: "storm-damage-roofing.html", keywords: ["storm", "damage", "hail", "wind"] },
+        { title: "Contact", url: "contact.html", keywords: ["contact", "estimate", "phone", "email"] },
+        { title: "Privacy Policy", url: "privacy-policy.html", keywords: ["privacy", "policy"] },
+        { title: "Cookie Policy", url: "cookie-policy.html", keywords: ["cookie", "cookies"] },
+        { title: "Terms Of Service", url: "terms-of-service.html", keywords: ["terms", "service", "legal"] }
+    ];
 
-  window.AOS.init({
-    duration: 820,
-    easing: "power3.out",
-    once: true,
-    disableMutationObserver: true,
-    disable: prefersReducedMotion
-  });
-};
+    const openPanel = () => {
+        panel.classList.add("active");
+        document.body.style.overflow = "hidden";
+        setTimeout(() => input.focus(), 100);
+    };
 
-const initLucideIcons = () => {
-  if (window.lucide && typeof window.lucide.createIcons === "function") {
-    window.lucide.createIcons();
-  }
-};
+    const closePanel = () => {
+        panel.classList.remove("active");
+        document.body.style.overflow = "";
+    };
 
-window.addEventListener("load", () => {
-  initLucideIcons();
-  initAos();
-  initGsapAnimations();
-});
+    const renderResults = (query) => {
+        const q = query.trim().toLowerCase();
+
+        if (!q) {
+            results.innerHTML = "";
+            return;
+        }
+
+        const found = pages.filter((page) =>
+            page.title.toLowerCase().includes(q) ||
+            page.keywords.some((keyword) => keyword.includes(q))
+        );
+
+        if (!found.length) {
+            results.innerHTML = `<div class="search-result-item">No results found for "<strong>${query}</strong>".</div>`;
+            return;
+        }
+
+        results.innerHTML = found
+            .map(
+                (page) => `
+          <a class="search-result-item" href="${page.url}">
+            <strong>${page.title}</strong><br>
+            <span>Open page</span>
+          </a>
+        `
+            )
+            .join("");
+    };
+
+    openBtn.addEventListener("click", openPanel);
+    closeBtn.addEventListener("click", closePanel);
+    overlay.addEventListener("click", closePanel);
+
+    button.addEventListener("click", () => renderResults(input.value));
+    input.addEventListener("input", () => renderResults(input.value));
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closePanel();
+    });
+}
+
+function initFaq() {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    if (!faqItems.length) return;
+
+    faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+
+        question.addEventListener("click", () => {
+            if (item.classList.contains("active")) {
+                item.classList.remove("active");
+                return;
+            }
+
+            faqItems.forEach((faq) => faq.classList.remove("active"));
+            item.classList.add("active");
+        });
+    });
+}
+
+function initCounters() {
+    const counters = document.querySelectorAll(".counter");
+
+    if (!counters.length) return;
+
+    const animateCounter = (counter) => {
+        const target = +counter.dataset.target;
+        const increment = Math.max(1, Math.ceil(target / 100));
+        let current = 0;
+
+        const update = () => {
+            current += increment;
+
+            if (current >= target) {
+                counter.textContent = target + (target === 98 ? "%" : target === 24 ? "/7" : "+");
+                return;
+            }
+
+            counter.textContent = current;
+            requestAnimationFrame(update);
+        };
+
+        update();
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach((counter) => observer.observe(counter));
+}
+
+function initCookieBanner() {
+    const banner = document.getElementById("cookieBanner");
+    const acceptBtn = document.getElementById("acceptCookies");
+    const declineBtn = document.getElementById("declineCookies");
+
+    if (!banner || !acceptBtn || !declineBtn) return;
+
+    const consent = localStorage.getItem("rtb_cookie_choice");
+
+    if (!consent) {
+        setTimeout(() => {
+            banner.classList.add("show");
+        }, 500);
+    }
+
+    acceptBtn.addEventListener("click", () => {
+        localStorage.setItem("rtb_cookie_choice", "accepted");
+        banner.classList.remove("show");
+    });
+
+    declineBtn.addEventListener("click", () => {
+        localStorage.setItem("rtb_cookie_choice", "declined");
+        banner.classList.remove("show");
+    });
+}
+
+function initScrollProgress() {
+    const progress = document.querySelector(".site-progress");
+    if (!progress) return;
+
+    const updateProgress = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const value = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progress.style.width = `${value}%`;
+    };
+
+    updateProgress();
+    window.addEventListener("scroll", updateProgress);
+}
+
+function initForms() {
+    const forms = document.querySelectorAll(".contact-form");
+
+    forms.forEach((form) => {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Thank you! Your request has been received.");
+            form.reset();
+        });
+    });
+}

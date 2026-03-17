@@ -1,372 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roof Replacement | RoofMatch Advisory</title>
-    <meta
-      name="description"
-      content="Request a roof replacement match with vetted independent local roofing providers."
-    />
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <title>Roof Replacement | Roof Replacement RTB</title>
+    <meta name="description"
+        content="Premium roof replacement services with modern materials, clear project planning, and long-term residential protection." />
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/global/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/roof-replacement.css" />
-        <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css" />
-    <script defer src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-    <script defer src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script defer src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
-    <script defer src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
-    <script src="assets/js/main.js" defer></script>
-  </head>
-  <body class="page-roof-replacement site-shell" data-page="services">
-    <a class="skip-link" href="#main-content">Skip to content</a>
-            <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="RoofMatch Advisory home">
-          <span class="brand-mark">RM</span>
-          <span class="brand-text">
-            <span class="brand-title">RoofMatch Advisory</span>
-            <span class="brand-subtitle">Independent Provider Network</span>
-          </span>
-        </a>
-        <div class="header-center">
-          <button
-            class="nav-toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="site-navigation"
-            aria-label="Open navigation"
-            data-nav-toggle
-          >
-            <span class="nav-toggle-line"></span>
-            <span class="nav-toggle-line"></span>
-            <span class="nav-toggle-line"></span>
-          </button>
-          <a
-            class="header-phone-mobile"
-            href="tel:1-800-555-0199"
-            aria-label="Call RoofMatch Advisory"
-          >
-            <span class="phone-icon" aria-hidden="true"><i data-lucide="phone-call"></i></span>
-          </a>
-          <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav>
-            <ul class="nav-list">
-              <li><a class="nav-link" href="index.html" data-page-link="home">Home</a></li>
-              <li><a class="nav-link" href="about.html" data-page-link="about">About</a></li>
-              <li><a class="nav-link" href="services.html" data-page-link="services">Services</a></li>
-              <li><a class="nav-link" href="contact.html" data-page-link="contact">Contact</a></li>
-            </ul>
-            <a class="header-cta" href="contact.html">Request Quotes</a>
-          </nav>
+</head>
+
+<body>
+    <div class="site-progress"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark"><i class="fa-solid fa-house-chimney"></i></span>
+                <span class="logo-text">
+                    <strong>Roof Replacement</strong>
+                    <span>RTB Premium Roofing</span>
+                </span>
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle active" type="button">
+                        Services <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="services.html">All Services</a>
+                        <a href="roof-replacement.html">Roof Replacement</a>
+                        <a href="roof-repair.html">Roof Repair</a>
+                        <a href="roof-installation.html">Roof Installation</a>
+                        <a href="roof-inspection.html">Roof Inspection</a>
+                        <a href="storm-damage-roofing.html">Storm Damage Roofing</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="search-toggle" type="button" aria-label="Open search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <a href="contact.html" class="btn btn-primary header-btn">Get Free Estimate</a>
+                <button class="mobile-toggle" type="button" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
-        <a
-          class="header-phone-cta"
-          href="tel:1-800-555-0199"
-          aria-label="Call RoofMatch Advisory"
-        >
-          <span class="phone-icon" aria-hidden="true"><i data-lucide="phone-call"></i></span>
-          <span>Call 1-800-555-0199</span>
-        </a>
-      </div>
+
+        <div class="mobile-menu">
+            <div class="container mobile-menu-inner">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="roof-replacement.html">Roof Replacement</a>
+                <a href="roof-repair.html">Roof Repair</a>
+                <a href="roof-installation.html">Roof Installation</a>
+                <a href="roof-inspection.html">Roof Inspection</a>
+                <a href="storm-damage-roofing.html">Storm Damage Roofing</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
     </header>
-    <main id="main-content">
-      <section class="page-hero">
-        <div class="container">
-          <div class="page-hero-inner replacement-hero">
-            <div class="hero-copy">
-              <p class="eyebrow">Roof Replacement</p>
-              <h1 class="page-title">Premier roof replacement matches, curated for homeowners.</h1>
-              <p class="page-summary">
-                RoofMatch Advisory connects homeowners with vetted independent local replacement
-                specialists. We are not a contractor. We gather your project details and introduce
-                providers who can deliver full-system proposals you can compare.
-              </p>
-              <div class="page-actions">
-                <a class="button-link" href="tel:1-800-555-0199">
-                  <span class="button-icon" aria-hidden="true"><i data-lucide="phone-call"></i></span>
-                  Call for a Replacement Match
-                </a>
-                <a class="button-link is-secondary" href="contact.html">
-                  <span class="button-icon" aria-hidden="true"><i data-lucide="mail"></i></span>
-                  Request Quotes
-                </a>
-              </div>
-              <div class="hero-meta" aria-label="Replacement highlights">
-                <span><i data-lucide="clipboard-check" aria-hidden="true"></i>Replacement-focused intake</span>
-                <span><i data-lucide="map-pin" aria-hidden="true"></i>Local provider matching</span>
-                <span><i data-lucide="scale" aria-hidden="true"></i>Clear comparison path</span>
-              </div>
-            </div>
-            <div class="hero-visual card">
-              <div class="image-placeholder">
-                <img src="assets/images/roof-replacement/replacement-hero.svg" alt="Premium suburban home with new roof" />
-              </div>
-              <div class="visual-tags">
-                <span>Architectural shingles</span>
-                <span>Multi-point inspection</span>
-                <span>Quality-driven proposals</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section intro-section">
-        <div class="container content-grid">
-          <article class="content-card">
-            <p class="eyebrow">Introduction</p>
-            <h2>Replacement clarity for homeowners.</h2>
-            <p>
-              A full roof replacement is a major investment. Our role is to connect you with
-              independent local providers who can evaluate your roof, explain options, and deliver
-              proposals you can compare side by side.
-            </p>
-            <p>
-              We gather your project details, confirm location coverage, and route your request to
-              specialists who focus on replacement work in your area.
-            </p>
-          </article>
-          <aside class="content-panel">
-            <div class="image-placeholder">
-              <img src="assets/images/roof-replacement/replacement-plan.svg" alt="Homeowner and roofing specialist reviewing roof plans" />
-            </div>
-            <p class="panel-note">
-              Independent providers handle inspections, proposals, and project execution.
-            </p>
-          </aside>
-        </div>
-      </section>
 
-      <section class="section signs-section">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Warning Signs</p>
-            <h2 class="section-title">Signs a roof may need replacement.</h2>
-            <p class="section-copy">
-              A local provider can confirm the condition, but these indicators often signal that a
-              full replacement is the best next step.
-            </p>
-          </div>
-          <div class="grid-3 signs-grid">
-            <article class="card">
-              <h3>Widespread shingle damage</h3>
-              <p>Large sections with curling, cracking, or significant granule loss.</p>
-            </article>
-            <article class="card">
-              <h3>Recurring leaks</h3>
-              <p>Multiple leak points even after prior repairs.</p>
-            </article>
-            <article class="card">
-              <h3>Roof age and material limits</h3>
-              <p>Roofs near or beyond expected service lifespan.</p>
-            </article>
-            <article class="card">
-              <h3>Structural sagging</h3>
-              <p>Visible dips or soft spots that may indicate deck issues.</p>
-            </article>
-            <article class="card">
-              <h3>Storm impact</h3>
-              <p>Hail or wind damage affecting large roof areas.</p>
-            </article>
-            <article class="card">
-              <h3>Energy inefficiency</h3>
-              <p>Rising energy bills tied to poor roof insulation or ventilation.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section includes-section">
-        <div class="container content-grid">
-          <article class="content-card">
-            <p class="eyebrow">What Replacement Includes</p>
-            <h2>Full-system scope, not just shingles.</h2>
-            <ul class="detail-list">
-              <li>Removal and disposal of existing roofing materials</li>
-              <li>Inspection of decking and structural integrity</li>
-              <li>Underlayment, flashing, and ventilation upgrades</li>
-              <li>Installation of a new roofing system and accessories</li>
-              <li>Final walkthrough and site cleanup</li>
-            </ul>
-          </article>
-          <aside class="content-panel">
-            <div class="image-placeholder">
-              <img src="assets/images/roof-replacement/replacement-install.svg" alt="Roofing crew installing underlayment layers" />
+    <div class="search-panel">
+        <div class="search-panel__overlay"></div>
+        <div class="search-panel__inner">
+            <button class="search-close" type="button" aria-label="Close search">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3>Search The Site</h3>
+            <p>Find roofing services, pages, and legal information.</p>
+            <div class="site-search">
+                <input type="text" id="siteSearchInput" placeholder="Search pages or services..." />
+                <button type="button" id="siteSearchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <p class="panel-note">
-              Scope details vary by provider and property requirements.
-            </p>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section timing-section">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Why Timing Matters</p>
-            <h2 class="section-title">Delays can increase risk and cost.</h2>
-            <p class="section-copy">
-              Roof degradation accelerates quickly. Local providers can prioritize urgent projects
-              and help plan around seasonal scheduling.
-            </p>
-          </div>
-          <div class="timing-grid">
-            <article class="card">
-              <h3>Prevent interior damage</h3>
-              <p>Small leaks can lead to insulation, drywall, and mold issues.</p>
-            </article>
-            <article class="card">
-              <h3>Secure scheduling windows</h3>
-              <p>Peak seasons book quickly. Early requests keep options open.</p>
-            </article>
-            <article class="card">
-              <h3>Protect long-term value</h3>
-              <p>Timely replacement preserves curb appeal and resale position.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section considerations-section">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Homeowner Considerations</p>
-            <h2 class="section-title">Key decisions to plan for.</h2>
-            <p class="section-copy">
-              Independent providers will guide you through materials, warranties, and financing.
-            </p>
-          </div>
-          <div class="grid-2 considerations-grid">
-            <article class="card">
-              <h3>Material selection</h3>
-              <p>Architectural shingles, metal systems, and premium options vary by climate.</p>
-            </article>
-            <article class="card">
-              <h3>Project timeline</h3>
-              <p>Weather windows, permitting, and crew availability affect scheduling.</p>
-            </article>
-            <article class="card">
-              <h3>Warranty coverage</h3>
-              <p>Ask about manufacturer warranties and workmanship coverage.</p>
-            </article>
-            <article class="card">
-              <h3>Budget alignment</h3>
-              <p>Compare proposals for scope, materials, and long-term value.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section faq-section">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">FAQ</p>
-            <h2 class="section-title">Roof replacement questions.</h2>
-          </div>
-          <div class="faq-grid">
-            <details class="card faq-item">
-              <summary>
-                <span class="faq-title">
-                  <span class="card-icon" aria-hidden="true"><i data-lucide="help-circle"></i></span>
-                  Do you provide the replacement service?
-                </span>
-              </summary>
-              <p>
-                No. We connect homeowners with independent local roofing providers who perform the
-                work.
-              </p>
-            </details>
-            <details class="card faq-item">
-              <summary>
-                <span class="faq-title">
-                  <span class="card-icon" aria-hidden="true"><i data-lucide="list-checks"></i></span>
-                  How many providers will I hear from?
-                </span>
-              </summary>
-              <p>We aim to introduce multiple qualified providers when available in your area.</p>
-            </details>
-            <details class="card faq-item">
-              <summary>
-                <span class="faq-title">
-                  <span class="card-icon" aria-hidden="true"><i data-lucide="badge-dollar-sign"></i></span>
-                  Is my request free?
-                </span>
-              </summary>
-              <p>Yes. Submitting a request through RoofMatch Advisory is free for homeowners.</p>
-            </details>
-            <details class="card faq-item">
-              <summary>
-                <span class="faq-title">
-                  <span class="card-icon" aria-hidden="true"><i data-lucide="layers"></i></span>
-                  Can I request a specific material?
-                </span>
-              </summary>
-              <p>
-                Yes. Include material preferences in your request and providers can advise on fit
-                and availability.
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section class="section final-cta">
-        <div class="container">
-          <div class="cta-card cta-layout">
-            <div>
-              <p class="eyebrow">Replacement Match</p>
-              <h2>Get matched with a local replacement specialist.</h2>
-              <p>
-                Share your project details today. We will route your request to independent
-                providers who can assess and quote your replacement.
-              </p>
+            <div class="site-search__quick-links">
+                <a href="roof-replacement.html">Roof Replacement</a>
+                <a href="roof-repair.html">Roof Repair</a>
+                <a href="roof-installation.html">Roof Installation</a>
+                <a href="roof-inspection.html">Roof Inspection</a>
+                <a href="storm-damage-roofing.html">Storm Damage Roofing</a>
             </div>
-            <div class="cta-actions">
-              <a class="button-link" href="tel:1-800-555-0199">
-                <span class="button-icon" aria-hidden="true"><i data-lucide="phone-call"></i></span>
-                Call 1-800-555-0199
-              </a>
-              <a class="button-link is-secondary" href="contact.html">
-                <span class="button-icon" aria-hidden="true"><i data-lucide="mail"></i></span>
-                Request Quotes
-              </a>
-            </div>
-          </div>
+            <div id="siteSearchResults" class="site-search-results"></div>
         </div>
-      </section>
+    </div>
+
+    <main>
+        <section class="service-hero section-padding">
+            <div class="container service-hero__grid">
+                <div class="service-hero__content" data-aos="fade-up">
+                    <span class="eyebrow">Roof Replacement Service</span>
+                    <h1>Complete roof replacement with premium detail and long-term confidence.</h1>
+                    <p>
+                        When repairs are no longer enough, we provide full roofing replacement
+                        with careful planning, refined material choices, and clean project delivery.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-primary">Book Free Estimate</a>
+                        <a href="services.html" class="btn btn-secondary">All Services</a>
+                    </div>
+                </div>
+                <div class="service-hero__visual" data-aos="fade-left">
+                    <img src="assets/images/roof-replacement/hero.jpg"
+                        alt="Roof replacement project on a premium residential home" />
+                </div>
+            </div>
+        </section>
+
+        <section class="service-stats section-padding">
+            <div class="container stats-grid">
+                <div class="stat-card"><strong class="counter" data-target="420">0</strong><span>Replacement
+                        Projects</span></div>
+                <div class="stat-card"><strong class="counter" data-target="98">0</strong><span>Client Satisfaction
+                        Rate</span></div>
+                <div class="stat-card"><strong class="counter" data-target="16">0</strong><span>Average Crew
+                        Specialists</span></div>
+                <div class="stat-card"><strong class="counter" data-target="14">0</strong><span>Years Experience</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-overview section-padding section-soft-bg">
+            <div class="container section-grid">
+                <div class="section-copy" data-aos="fade-right">
+                    <span class="eyebrow">When Replacement Makes Sense</span>
+                    <h2>A smarter option for roofs with age, repeated failure, or widespread damage.</h2>
+                    <p>
+                        Full replacement is often the best long-term choice when a roof has reached
+                        the end of its lifespan, suffered storm impact, or developed repeated leak issues.
+                    </p>
+                    <p>
+                        We guide homeowners through material selection, visual direction, timeline planning,
+                        and complete system renewal without unnecessary pressure.
+                    </p>
+                </div>
+                <div class="service-highlight-card" data-aos="fade-left">
+                    <h3>Included In Most Projects</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Tear-off and removal of old materials</li>
+                        <li><i class="fa-solid fa-check"></i> Deck inspection and preparation</li>
+                        <li><i class="fa-solid fa-check"></i> Underlayment and ventilation review</li>
+                        <li><i class="fa-solid fa-check"></i> New roofing material installation</li>
+                        <li><i class="fa-solid fa-check"></i> Cleanup and final walkthrough</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits section-padding">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <span class="eyebrow">Why Choose Replacement</span>
+                    <h2>Better protection, stronger appearance, and fewer future surprises.</h2>
+                </div>
+
+                <div class="cards-3">
+                    <article class="info-card" data-aos="fade-up">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Reliable Protection</h3>
+                        <p>A full new system reduces risk from aging materials and hidden weak points.</p>
+                    </article>
+                    <article class="info-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-house"></i>
+                        <h3>Stronger Curb Appeal</h3>
+                        <p>A new roof can dramatically improve the overall look and value of the property.</p>
+                    </article>
+                    <article class="info-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h3>Lower Repair Cycle</h3>
+                        <p>Replacement often reduces recurring service calls and long-term maintenance stress.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="process section-padding section-gradient-bg">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <span class="eyebrow">Our Process</span>
+                    <h2>A clear replacement process from inspection to final review.</h2>
+                </div>
+                <div class="cards-4">
+                    <article class="step-card" data-aos="zoom-in"><span>01</span>
+                        <h3>Assessment</h3>
+                        <p>We inspect condition, damage, age, and structural priorities.</p>
+                    </article>
+                    <article class="step-card" data-aos="zoom-in" data-aos-delay="100"><span>02</span>
+                        <h3>Scope & Materials</h3>
+                        <p>We define the system, timeline, and design direction.</p>
+                    </article>
+                    <article class="step-card" data-aos="zoom-in" data-aos-delay="200"><span>03</span>
+                        <h3>Installation</h3>
+                        <p>Our team performs the replacement with care and structure.</p>
+                    </article>
+                    <article class="step-card" data-aos="zoom-in" data-aos-delay="300"><span>04</span>
+                        <h3>Final Walkthrough</h3>
+                        <p>We review details, cleanup, and answer your final questions.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section-padding">
+            <div class="container section-grid faq-grid">
+                <div class="section-copy" data-aos="fade-right">
+                    <span class="eyebrow">Roof Replacement FAQ</span>
+                    <h2>Answers before you commit to a full roofing upgrade.</h2>
+                </div>
+                <div class="faq-list" data-aos="fade-left">
+                    <div class="faq-item active">
+                        <button class="faq-question" type="button">How long does roof replacement take?<i
+                                class="fa-solid fa-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Most residential replacements are completed in a few days depending on size, weather, and
+                                complexity.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Can replacement improve home value?<i
+                                class="fa-solid fa-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Yes. A new roof can improve appearance, buyer confidence, and overall property value
+                                perception.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Do I always need full replacement after leaks?<i
+                                class="fa-solid fa-plus"></i></button>
+                        <div class="faq-answer">
+                            <p>Not always. If damage is limited, repair may be enough. We inspect first before
+                                recommending replacement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-cta section-padding">
+            <div class="container cta-box" data-aos="fade-up">
+                <div>
+                    <span class="eyebrow">Ready To Replace Your Roof?</span>
+                    <h2>Let’s plan a roofing system that protects the home and elevates the exterior.</h2>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Request Estimate</a>
+            </div>
+        </section>
     </main>
+
     <footer class="site-footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <h2 class="footer-title">RoofMatch Advisory</h2>
-            <p class="footer-note">
-              Roof replacement inquiries are matched with independent local roofing providers.
-            </p>
-          </div>
-          <div>
-            <h2 class="footer-title">Explore</h2>
-            <div class="footer-links">
-              <a href="roof-repair.html">Roof Repair</a>
-              <a href="roof-installation.html">Roof Installation</a>
-              <a href="roof-inspection.html">Roof Inspection</a>
+        <div class="container footer-grid">
+            <div>
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-mark"><i class="fa-solid fa-house-chimney"></i></span>
+                    <span class="logo-text"><strong>Roof Replacement</strong><span>RTB Premium Roofing</span></span>
+                </a>
+                <p class="footer-copy">Premium roofing services with a modern, trusted, and design-forward approach.</p>
             </div>
-          </div>
-          <div>
-            <h2 class="footer-title">Policies</h2>
-            <div class="footer-links">
-              <a href="privacy-policy.html">Privacy Policy</a>
-              <a href="terms-of-service.html">Terms of Service</a>
-              <a href="cookie-policy.html">Cookie Policy</a>
+            <div>
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-          </div>
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="roof-replacement.html">Roof Replacement</a></li>
+                    <li><a href="roof-repair.html">Roof Repair</a></li>
+                    <li><a href="roof-installation.html">Roof Installation</a></li>
+                    <li><a href="roof-inspection.html">Roof Inspection</a></li>
+                    <li><a href="storm-damage-roofing.html">Storm Damage Roofing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms Of Service</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-legal">
-          <p class="footer-meta">Replacement page scaffold only.</p>
-          <p class="footer-meta">2026 RoofMatch Advisory. All rights reserved.</p>
+        <div class="container footer-bottom">
+            <p>© 2026 Roof Replacement RTB. All rights reserved.</p>
         </div>
-        <p class="footer-disclaimer">Disclaimer: This site is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and this site does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on this site.</p>
-      </div>
     </footer>
-  </body>
+
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-banner__inner">
+            <div class="cookie-banner__text">
+                <h4>Privacy & Site Policy Notice</h4>
+                <p>Please review our site policies. This notice remains visible until you choose Accept or Decline.</p>
+                <div class="cookie-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                    <a href="terms-of-service.html">Terms Of Service</a>
+                </div>
+            </div>
+            <div class="cookie-banner__actions">
+                <button class="btn btn-secondary" id="declineCookies" type="button">Decline</button>
+                <button class="btn btn-primary" id="acceptCookies" type="button">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>
