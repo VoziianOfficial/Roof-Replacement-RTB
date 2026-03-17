@@ -16,6 +16,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/global.css" />
@@ -315,43 +316,79 @@
     </section>
 
     <section class="category-rail section-padding section-bg-image parallax-section">
+      <div class="glow-orb glow-orb--warm float-soft" style="width:220px;height:220px;left:-50px;top:20px;"></div>
+    
       <div class="container">
         <div class="section-head" data-aos="fade-up">
           <span class="eyebrow">Scrolling Category Rail</span>
-          <h2>Browse RTB categories in a more visual way.</h2>
+          <h2>Browse RTB categories in a smoother, swipeable loop.</h2>
+          <p>
+            Move through the main roofing request paths with a continuous carousel
+            that works on desktop and mobile.
+          </p>
         </div>
-
-        <div class="category-rail__track">
-          <a href="roof-replacement.html" class="rail-card">
-            <img src="assets/images/roof-replacement/service-main.jpg" alt="Roof Replacement" />
-            <div class="rail-card__overlay">
-              <h3>Roof Replacement</h3>
+    
+        <div class="swiper js-loop-swiper category-swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="roof-replacement.html" class="rail-card">
+                <img src="assets/images/roof-replacement/service-main.jpg" alt="Roof Replacement" />
+                <div class="rail-card__overlay">
+                  <span class="rail-card__eyebrow">Category</span>
+                  <h3>Roof Replacement</h3>
+                  <p>For broader aging, repeated concerns, or whole-roof planning.</p>
+                </div>
+              </a>
             </div>
-          </a>
-          <a href="roof-repair.html" class="rail-card">
-            <img src="assets/images/roof-repair/service-main.jpg" alt="Roof Repair" />
-            <div class="rail-card__overlay">
-              <h3>Roof Repair</h3>
+    
+            <div class="swiper-slide">
+              <a href="roof-repair.html" class="rail-card">
+                <img src="assets/images/roof-repair/service-main.jpg" alt="Roof Repair" />
+                <div class="rail-card__overlay">
+                  <span class="rail-card__eyebrow">Category</span>
+                  <h3>Roof Repair</h3>
+                  <p>For more localized issues, leak points, and smaller damage zones.</p>
+                </div>
+              </a>
             </div>
-          </a>
-          <a href="roof-installation.html" class="rail-card">
-            <img src="assets/images/roof-installation/service-main.jpg" alt="Roof Installation" />
-            <div class="rail-card__overlay">
-              <h3>Roof Installation</h3>
+    
+            <div class="swiper-slide">
+              <a href="roof-installation.html" class="rail-card">
+                <img src="assets/images/roof-installation/service-main.jpg" alt="Roof Installation" />
+                <div class="rail-card__overlay">
+                  <span class="rail-card__eyebrow">Category</span>
+                  <h3>Roof Installation</h3>
+                  <p>For planned roof systems, new builds, or installation-led projects.</p>
+                </div>
+              </a>
             </div>
-          </a>
-          <a href="roof-inspection.html" class="rail-card">
-            <img src="assets/images/roof-inspection/service-main.jpg" alt="Roof Inspection" />
-            <div class="rail-card__overlay">
-              <h3>Roof Inspection</h3>
+    
+            <div class="swiper-slide">
+              <a href="roof-inspection.html" class="rail-card">
+                <img src="assets/images/roof-inspection/service-main.jpg" alt="Roof Inspection" />
+                <div class="rail-card__overlay">
+                  <span class="rail-card__eyebrow">Category</span>
+                  <h3>Roof Inspection</h3>
+                  <p>For condition clarity before choosing a more final request path.</p>
+                </div>
+              </a>
             </div>
-          </a>
-          <a href="storm-damage-roofing.html" class="rail-card">
-            <img src="assets/images/storm-damage-roofing/service-main.jpg" alt="Storm Damage Roofing" />
-            <div class="rail-card__overlay">
-              <h3>Storm Damage</h3>
+    
+            <div class="swiper-slide">
+              <a href="storm-damage-roofing.html" class="rail-card">
+                <img src="assets/images/storm-damage-roofing/service-main.jpg" alt="Storm Damage Roofing" />
+                <div class="rail-card__overlay">
+                  <span class="rail-card__eyebrow">Category</span>
+                  <h3>Storm Damage</h3>
+                  <p>For hail, wind, debris impact, and post-weather roofing concerns.</p>
+                </div>
+              </a>
             </div>
-          </a>
+          </div>
+    
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </section>
@@ -480,18 +517,6 @@
           RTB Roof Atlas helps homeowners explore roofing request categories,
           planning notes, and next-step inquiry options.
         </p>
-
-        <div class="footer-collage">
-          <div class="footer-collage__item footer-collage__item--one">
-            <img src="assets/images/home/hero-main.jpg" alt="Roof visual 1" />
-          </div>
-          <div class="footer-collage__item footer-collage__item--two">
-            <img src="assets/images/roof-repair/service-main.jpg" alt="Roof visual 2" />
-          </div>
-          <div class="footer-collage__item footer-collage__item--three">
-            <img src="assets/images/roof-inspection/service-main.jpg" alt="Roof visual 3" />
-          </div>
-        </div>
       </div>
 
       <div>
@@ -528,6 +553,21 @@
     <div class="container footer-bottom">
       <p>© 2026 RTB Roof Atlas. All rights reserved.</p>
     </div>
+    <div class="footer-floating-bg">
+      <div class="footer-floating-bg__img footer-floating-bg__img--one">
+        <img src="assets/images/home/hero-main.jpg" alt="Roof background visual" />
+      </div>
+      <div class="footer-floating-bg__img footer-floating-bg__img--two">
+        <img src="assets/images/roof-repair/service-main.jpg" alt="Roof background visual" />
+      </div>
+      <div class="footer-floating-bg__img footer-floating-bg__img--three">
+        <img src="assets/images/roof-inspection/service-main.jpg" alt="Roof background visual" />
+      </div>
+      <div class="footer-floating-bg__img footer-floating-bg__img--four">
+        <img src="assets/images/storm-damage-roofing/service-main.jpg" alt="Roof background visual" />
+      </div>
+      
+    </div>
   </footer>
 
   <div class="cookie-banner" id="cookieBanner">
@@ -549,9 +589,17 @@
       </div>
     </div>
   </div>
+  <a href="tel:+12135551234" class="floating-call-btn magnetic-btn" aria-label="Call now">
+    <span class="floating-call-btn__icon">
+      <i class="fa-solid fa-phone"></i>
+    </span>
+    <span class="floating-call-btn__text">Call Now</span>
+  </a>
+  
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>

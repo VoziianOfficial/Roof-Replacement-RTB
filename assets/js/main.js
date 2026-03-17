@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initForms();
     initParallaxSections();
     initMagneticButtons();
+    initLoopingSwipers();
 });
 
 function initAOS() {
@@ -228,11 +229,19 @@ function initForms() {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            const fields = form.querySelectorAll("input, textarea");
+            const fields = form.querySelectorAll("input, textarea, select");
             let isValid = true;
 
             fields.forEach((field) => {
                 field.classList.remove("is-error");
+
+                if (field.tagName === "SELECT") {
+                    if (!field.value || field.selectedIndex === 0) {
+                        field.classList.add("is-error");
+                        isValid = false;
+                    }
+                    return;
+                }
 
                 if (field.type === "email") {
                     const value = field.value.trim();
@@ -288,11 +297,55 @@ function initMagneticButtons() {
             const rect = button.getBoundingClientRect();
             const x = e.clientX - rect.left - rect.width / 2;
             const y = e.clientY - rect.top - rect.height / 2;
-            button.style.transform = `translate(${x * 0.12}px, ${y * 0.12}px)`;
+            const isCallButton = button.classList.contains("floating-call-btn");
+
+            if (isCallButton) {
+                button.style.transform = `translateY(-50%) translate(${x * 0.08}px, ${y * 0.08}px)`;
+            } else {
+                button.style.transform = `translate(${x * 0.12}px, ${y * 0.12}px)`;
+            }
         });
 
         button.addEventListener("mouseleave", () => {
             button.style.transform = "";
+        });
+    });
+}
+
+function initLoopingSwipers() {
+    if (typeof Swiper === "undefined") return;
+
+    const sliders = document.querySelectorAll(".js-loop-swiper");
+    if (!sliders.length) return;
+
+    sliders.forEach((slider) => {
+        const pagination = slider.querySelector(".swiper-pagination");
+        const nextBtn = slider.querySelector(".swiper-button-next");
+        const prevBtn = slider.querySelector(".swiper-button-prev");
+
+        new Swiper(slider, {
+            loop: true,
+            speed: 700,
+            grabCursor: true,
+            spaceBetween: 18,
+            slidesPerView: 1.15,
+            centeredSlides: false,
+            pagination: pagination ? {
+                el: pagination,
+                clickable: true
+            } : undefined,
+            navigation: nextBtn && prevBtn ? {
+                nextEl: nextBtn,
+                prevEl: prevBtn
+            } : undefined,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2.1
+                },
+                1100: {
+                    slidesPerView: 3.1
+                }
+            }
         });
     });
 }

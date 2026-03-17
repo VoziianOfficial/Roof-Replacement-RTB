@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Submit A Request | RTB Roof Atlas</title>
+    <title>Request | RTB Roof Atlas</title>
     <meta name="description"
-        content="Submit a roofing-related request through RTB Roof Atlas by sharing contact information, property details, and project context." />
+        content="Submit a roofing-related request through RTB Roof Atlas. Share your contact details, property location, category preference, and request context." />
 
     <link rel="icon" type="image/svg+xml" href="assets/images/global/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,6 +38,7 @@
             <nav class="desktop-nav">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
+
                 <div class="nav-dropdown">
                     <button class="nav-link nav-dropdown-toggle" type="button">
                         Categories <i class="fa-solid fa-chevron-down"></i>
@@ -51,15 +52,18 @@
                         <a href="storm-damage-roofing.html">Storm Damage Roofing</a>
                     </div>
                 </div>
+
                 <a href="contact.html" class="nav-link active">Request</a>
             </nav>
 
             <div class="header-actions">
-                <button class="search-toggle" type="button" aria-label="Open search"><i
-                        class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="search-toggle" type="button" aria-label="Open search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
                 <a href="contact.html" class="btn btn-primary header-btn magnetic-btn">Start A Request</a>
-                <button class="mobile-toggle" type="button"
-                    aria-label="Open menu"><span></span><span></span><span></span></button>
+                <button class="mobile-toggle" type="button" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
 
@@ -78,81 +82,264 @@
         </div>
     </header>
 
+    <div class="search-panel">
+        <div class="search-panel__overlay"></div>
+        <div class="search-panel__inner">
+            <button class="search-close" type="button" aria-label="Close search">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3>Search RTB Roof Atlas</h3>
+            <p>Explore categories, planning pages, request steps, and legal information.</p>
+
+            <div class="site-search">
+                <input type="text" id="siteSearchInput" placeholder="Search pages or categories..." />
+                <button type="button" id="siteSearchButton">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="site-search__quick-links">
+                <a href="services.html">All Categories</a>
+                <a href="roof-replacement.html">Replacement</a>
+                <a href="roof-repair.html">Repair</a>
+                <a href="roof-inspection.html">Inspection</a>
+                <a href="contact.html">Request</a>
+            </div>
+
+            <div id="siteSearchResults" class="site-search-results"></div>
+        </div>
+    </div>
+
     <main>
-        <section class="page-hero section-padding">
-            <div class="container section-grid">
-                <div class="section-copy" data-aos="fade-right">
-                    <span class="eyebrow">Submit A Request</span>
-                    <h1>Share your roofing situation and property details through RTB.</h1>
+        <section class="contact-hero section-padding parallax-section">
+            <div class="glow-orb glow-orb--warm float-soft" style="width:220px;height:220px;left:-40px;top:70px;"></div>
+            <div class="glow-orb glow-orb--soft float-soft-delay"
+                style="width:180px;height:180px;right:-20px;bottom:40px;"></div>
+
+            <div class="container contact-hero__grid">
+                <div class="contact-hero__content" data-aos="fade-up">
+                    <span class="eyebrow">Request Form</span>
+                    <h1>Describe the roof situation, choose a likely category, and move toward the next step with more
+                        structure.</h1>
                     <p>
-                        This form is intended to help route your request based on the category, timing,
-                        and information provided.
+                        Use the request form to share your property details, contact information,
+                        category preference, and the roofing context you want reviewed.
                     </p>
+
+                    <div class="contact-points">
+                        <span><i class="fa-solid fa-check"></i> Clear category selection</span>
+                        <span><i class="fa-solid fa-check"></i> Stronger request context</span>
+                        <span><i class="fa-solid fa-check"></i> Cleaner next-step routing</span>
+                    </div>
+
                     <div class="site-disclaimer">
                         <p>
-                            RTB does not directly perform roofing work. Final response, provider availability,
-                            project scope, and timing depend on the category selected and the provider reviewing the
-                            request.
+                            RTB Roof Atlas is an informational and request-routing platform.
+                            Request submission does not guarantee provider acceptance, final scope, or scheduling.
                         </p>
                     </div>
                 </div>
 
-                <div class="page-hero__visual" data-aos="fade-left">
-                    <img src="assets/images/contact/contact-hero.jpg" alt="Warm editorial request form visual" />
+                <div class="contact-hero__visual" data-aos="fade-left">
+                    <img src="assets/images/contact/contact-hero.jpg"
+                        alt="Warm editorial request and planning visual" />
                 </div>
             </div>
         </section>
 
         <section class="section-padding section-soft-bg">
-            <div class="container section-grid">
-                <div class="contact-form-box" data-aos="fade-right">
-                    <form class="contact-form">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <span class="eyebrow">Before You Submit</span>
+                    <h2>Useful details that make the request stronger from the start.</h2>
+                </div>
+
+                <div class="contact-prep-grid">
+                    <article class="prep-card blur-card gradient-overlay-card float-soft" data-aos="fade-up">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h3>Property address</h3>
+                        <p>Location helps support routing and request context.</p>
+                    </article>
+
+                    <article class="prep-card blur-card gradient-overlay-card float-soft-delay" data-aos="fade-up"
+                        data-aos-delay="70">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <h3>Visible concerns</h3>
+                        <p>Leaks, storm impact, wear, stains, or damage notes are useful.</p>
+                    </article>
+
+                    <article class="prep-card blur-card gradient-overlay-card float-soft" data-aos="fade-up"
+                        data-aos-delay="140">
+                        <i class="fa-solid fa-clock"></i>
+                        <h3>Urgency level</h3>
+                        <p>Active leaks or recent weather impact should be described clearly.</p>
+                    </article>
+
+                    <article class="prep-card blur-card gradient-overlay-card float-soft-delay" data-aos="fade-up"
+                        data-aos-delay="210">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <h3>Likely category</h3>
+                        <p>Choose replacement, repair, inspection, installation, or storm-related review.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="request-layout section-padding">
+            <div class="container request-layout__grid">
+                <div class="request-form-wrap blur-card gradient-overlay-card" data-aos="fade-right">
+                    <div class="request-form-head">
+                        <span class="eyebrow">Submit A Request</span>
+                        <h2>Tell RTB what’s happening with the roof.</h2>
+                    </div>
+
+                    <form class="contact-form request-form">
                         <div class="cards-2">
                             <input type="text" placeholder="Full Name" />
                             <input type="email" placeholder="Email Address" />
                             <input type="tel" placeholder="Phone Number" />
                             <input type="text" placeholder="Property Address" />
-                            <input type="text" placeholder="Preferred Category" />
-                            <input type="text" placeholder="Time Sensitivity" />
                         </div>
-                        <textarea placeholder="Describe the roof condition, recent issues, or planning goal"></textarea>
+
+                        <div class="cards-2 select-row">
+                            <select>
+                                <option selected disabled>Select Category</option>
+                                <option>Roof Replacement</option>
+                                <option>Roof Repair</option>
+                                <option>Roof Installation</option>
+                                <option>Roof Inspection</option>
+                                <option>Storm Damage Roofing</option>
+                                <option>Not Sure Yet</option>
+                            </select>
+
+                            <select>
+                                <option selected disabled>Urgency Level</option>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                                <option>Urgent</option>
+                            </select>
+                        </div>
+
+                        <textarea
+                            placeholder="Describe the roofing situation, visible concerns, timing, and any planning context."></textarea>
+
                         <button type="submit" class="btn btn-primary magnetic-btn">Submit Request</button>
                     </form>
                 </div>
 
-                <div class="contact-info" data-aos="fade-left">
-                    <article class="note-card">
-                        <i class="fa-solid fa-list"></i>
-                        <h3>Useful request details</h3>
-                        <p>Property address, visible damage, approximate roof age, and urgency level are all helpful.
+                <div class="request-side" data-aos="fade-left">
+                    <div class="request-note blur-card gradient-overlay-card float-soft">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <h3>How requests are used</h3>
+                        <p>
+                            Submitted information helps organize request context, route the inquiry,
+                            and support the next step based on the category selected.
                         </p>
-                    </article>
+                    </div>
 
-                    <article class="note-card">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <h3>Routing depends on region</h3>
-                        <p>Response pathways may vary depending on service area and provider availability.</p>
-                    </article>
-
-                    <article class="note-card">
-                        <i class="fa-solid fa-scale-balanced"></i>
-                        <h3>Request does not equal final scope</h3>
-                        <p>Final work recommendations and pricing are determined only after provider-side evaluation.
+                    <div class="request-note blur-card gradient-overlay-card float-soft-delay">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Why good detail matters</h3>
+                        <p>
+                            Better request detail makes it easier to understand urgency,
+                            visible signs, and category fit from the start.
                         </p>
-                    </article>
+                    </div>
+
+                    <div class="map-card blur-card gradient-overlay-card" data-aos="zoom-in">
+                        <div class="map-card__head">
+                            <span class="eyebrow">Map Reference</span>
+                            <h3>Example U.S. location</h3>
+                        </div>
+                        <div class="map-frame">
+                            <iframe
+                                src="https://www.google.com/maps?q=1600%20Pennsylvania%20Avenue%20NW,%20Washington,%20DC&output=embed"
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                title="Map location"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section-padding section-bg-image parallax-section">
+            <div class="container section-grid faq-grid">
+                <div class="section-copy" data-aos="fade-right">
+                    <span class="eyebrow">Request FAQ</span>
+                    <h2>Answers to common questions before submitting.</h2>
+                </div>
+
+                <div class="faq-list" data-aos="fade-left">
+                    <div class="faq-item active">
+                        <button class="faq-question" type="button">
+                            Do I need to know the exact category first?
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No. You can choose the closest category or use a more general route if the situation is
+                                still unclear.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            Is the request form a service guarantee?
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No. Submission supports routing and review, but does not guarantee provider acceptance,
+                                final scope, or timing.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            Should I mention storm timing or leaks?
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Weather timing, leak activity, and urgency level are some of the most useful details
+                                you can include.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
+        <div class="footer-floating-bg">
+            <div class="footer-floating-bg__img footer-floating-bg__img--one">
+                <img src="assets/images/home/hero-main.jpg" alt="Roof background visual" />
+            </div>
+            <div class="footer-floating-bg__img footer-floating-bg__img--two">
+                <img src="assets/images/roof-repair/service-main.jpg" alt="Roof background visual" />
+            </div>
+            <div class="footer-floating-bg__img footer-floating-bg__img--three">
+                <img src="assets/images/roof-inspection/service-main.jpg" alt="Roof background visual" />
+            </div>
+            <div class="footer-floating-bg__img footer-floating-bg__img--four">
+                <img src="assets/images/storm-damage-roofing/service-main.jpg" alt="Roof background visual" />
+            </div>
+        </div>
+
         <div class="container footer-grid">
-            <div><a href="index.html" class="logo footer-logo"><span class="logo-mark"><i
-                            class="fa-solid fa-compass"></i></span><span class="logo-text"><strong>RTB Roof
-                            Atlas</strong><span>Roof request & planning platform</span></span></a>
-                <p class="footer-copy">RTB Roof Atlas helps homeowners submit more informed roofing-related requests.
+            <div>
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-mark"><i class="fa-solid fa-compass"></i></span>
+                    <span class="logo-text">
+                        <strong>RTB Roof Atlas</strong>
+                        <span>Roof request & planning platform</span>
+                    </span>
+                </a>
+                <p class="footer-copy">
+                    RTB Roof Atlas helps homeowners structure roofing-related requests
+                    with more clarity and stronger context.
                 </p>
             </div>
+
             <div>
                 <h4>Pages</h4>
                 <ul>
@@ -162,6 +349,7 @@
                     <li><a href="contact.html">Request</a></li>
                 </ul>
             </div>
+
             <div>
                 <h4>Categories</h4>
                 <ul>
@@ -172,6 +360,7 @@
                     <li><a href="storm-damage-roofing.html">Storm Damage Roofing</a></li>
                 </ul>
             </div>
+
             <div>
                 <h4>Legal</h4>
                 <ul>
@@ -181,6 +370,7 @@
                 </ul>
             </div>
         </div>
+
         <div class="container footer-bottom">
             <p>© 2026 RTB Roof Atlas. All rights reserved.</p>
         </div>
@@ -203,6 +393,12 @@
             </div>
         </div>
     </div>
+    <a href="tel:+12135551234" class="floating-call-btn magnetic-btn" aria-label="Call now">
+        <span class="floating-call-btn__icon">
+            <i class="fa-solid fa-phone"></i>
+        </span>
+        <span class="floating-call-btn__text">Call Now</span>
+    </a>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>

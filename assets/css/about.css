@@ -1,6 +1,26 @@
 .page-hero {
+    position: relative;
+    overflow: hidden;
     padding-top: 110px;
     padding-bottom: 70px;
+}
+
+.page-hero__visual {
+    position: relative;
+}
+
+.page-hero__visual::after {
+    content: "";
+    position: absolute;
+    left: -18px;
+    bottom: -18px;
+    width: 120px;
+    height: 120px;
+    border-radius: 26px;
+    background: linear-gradient(135deg,
+            rgba(207, 118, 71, 0.14),
+            rgba(232, 187, 145, 0.18));
+    z-index: -1;
 }
 
 .page-hero__visual img {
@@ -9,26 +29,35 @@
     box-shadow: var(--shadow-lg);
 }
 
+.page-hero .section-copy h1 {
+    font-size: clamp(2.4rem, 5vw, 4.7rem);
+    margin-bottom: 18px;
+    letter-spacing: -0.03em;
+}
+
 .storyline {
     position: relative;
-    max-width: 900px;
+    max-width: 920px;
     margin: 0 auto;
-    padding-left: 30px;
+    padding-left: 34px;
 }
 
 .storyline::before {
     content: "";
     position: absolute;
-    left: 10px;
+    left: 12px;
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, rgba(207, 118, 71, 0.2), rgba(207, 118, 71, 0.9), rgba(207, 118, 71, 0.2));
+    background: linear-gradient(to bottom,
+            rgba(207, 118, 71, 0.16),
+            rgba(207, 118, 71, 0.86),
+            rgba(207, 118, 71, 0.16));
 }
 
 .storyline-step {
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 }
 
 .storyline-step:last-child {
@@ -37,8 +66,8 @@
 
 .storyline-step__dot {
     position: absolute;
-    left: -30px;
-    top: 14px;
+    left: -34px;
+    top: 16px;
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -48,8 +77,6 @@
 
 .storyline-step__content {
     padding: 26px;
-    border-radius: 26px;
-    background: rgba(255, 250, 244, 0.92);
     box-shadow: var(--shadow-md);
 }
 
@@ -59,11 +86,50 @@
     color: var(--color-primary-2);
     font-weight: 800;
     letter-spacing: 0.08em;
+    font-size: 0.9rem;
+}
+
+.storyline-step__content h3 {
+    margin-bottom: 12px;
+    font-size: 1.45rem;
+}
+
+.note-card,
+.principle-card {
+    min-height: 250px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.note-card:hover,
+.principle-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.note-card h3,
+.principle-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.35rem;
+}
+
+.note-card p,
+.principle-card p {
+    max-width: 34ch;
 }
 
 @media (max-width: 991px) {
     .page-hero__visual img {
         height: 460px;
+    }
+
+    .storyline {
+        max-width: 100%;
+    }
+
+    .note-card,
+    .principle-card {
+        min-height: 220px;
     }
 }
 
@@ -78,14 +144,26 @@
     }
 
     .storyline {
-        padding-left: 22px;
+        padding-left: 24px;
+    }
+
+    .storyline::before {
+        left: 8px;
     }
 
     .storyline-step__dot {
-        left: -22px;
+        left: -24px;
+        width: 16px;
+        height: 16px;
     }
 
     .storyline-step__content {
         padding: 20px 16px;
+        border-radius: 22px;
+    }
+
+    .note-card,
+    .principle-card {
+        min-height: auto;
     }
 }

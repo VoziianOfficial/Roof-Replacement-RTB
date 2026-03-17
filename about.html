@@ -82,16 +82,56 @@
         </div>
     </header>
 
+    <div class="search-panel">
+        <div class="search-panel__overlay"></div>
+        <div class="search-panel__inner">
+            <button class="search-close" type="button" aria-label="Close search">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3>Search RTB Roof Atlas</h3>
+            <p>Explore categories, planning pages, request steps, and legal information.</p>
+
+            <div class="site-search">
+                <input type="text" id="siteSearchInput" placeholder="Search pages or categories..." />
+                <button type="button" id="siteSearchButton">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="site-search__quick-links">
+                <a href="services.html">All Categories</a>
+                <a href="roof-replacement.html">Replacement</a>
+                <a href="roof-repair.html">Repair</a>
+                <a href="roof-inspection.html">Inspection</a>
+                <a href="contact.html">Request</a>
+            </div>
+
+            <div id="siteSearchResults" class="site-search-results"></div>
+        </div>
+    </div>
+
     <main>
-        <section class="page-hero section-padding">
+        <section class="page-hero section-padding parallax-section">
+            <div class="glow-orb glow-orb--warm float-soft" style="width:220px;height:220px;left:-40px;top:60px;"></div>
+            <div class="glow-orb glow-orb--soft float-soft-delay"
+                style="width:170px;height:170px;right:-20px;bottom:60px;"></div>
+
             <div class="container section-grid">
                 <div class="section-copy" data-aos="fade-right">
                     <span class="eyebrow">About The Platform</span>
-                    <h1>RTB Roof Atlas is built to help homeowners make better roofing request decisions.</h1>
+                    <h1>RTB Roof Atlas is built to make roofing request decisions feel clearer, calmer, and more
+                        structured.</h1>
                     <p>
                         The platform is designed around category clarity, request preparation,
-                        and a calmer path through common roofing-related situations.
+                        and a more thoughtful path through common roofing-related situations.
                     </p>
+                    <div class="site-disclaimer">
+                        <p>
+                            RTB Roof Atlas is an informational and request-routing platform.
+                            It is not presented as a direct roofing contractor or final pricing engine.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="page-hero__visual" data-aos="fade-left">
@@ -108,40 +148,42 @@
                 </div>
 
                 <div class="storyline">
-                    <article class="storyline-step" data-aos="fade-right">
+                    <article class="storyline-step blur-card gradient-overlay-card float-soft" data-aos="fade-right">
                         <div class="storyline-step__dot"></div>
                         <div class="storyline-step__content">
                             <span>01</span>
-                            <h3>Roofing needs often start with uncertainty</h3>
-                            <p>Users frequently know there is a concern, but not which request category fits best.</p>
+                            <h3>Roofing needs often begin with uncertainty</h3>
+                            <p>Many users know something is wrong, but not which request path fits best.</p>
                         </div>
                     </article>
 
-                    <article class="storyline-step" data-aos="fade-left">
+                    <article class="storyline-step blur-card gradient-overlay-card float-soft-delay"
+                        data-aos="fade-left">
                         <div class="storyline-step__dot"></div>
                         <div class="storyline-step__content">
                             <span>02</span>
-                            <h3>RTB organizes that uncertainty into pathways</h3>
-                            <p>The platform groups common roof situations into clearer request directions.</p>
+                            <h3>RTB turns that uncertainty into clearer routes</h3>
+                            <p>The platform groups common roof situations into more understandable request directions.
+                            </p>
                         </div>
                     </article>
 
-                    <article class="storyline-step" data-aos="fade-right">
+                    <article class="storyline-step blur-card gradient-overlay-card float-soft" data-aos="fade-right">
                         <div class="storyline-step__dot"></div>
                         <div class="storyline-step__content">
                             <span>03</span>
                             <h3>Users review notes before submitting</h3>
-                            <p>Category pages and planning notes help make the request more informed.</p>
+                            <p>Category pages and planning notes help make requests stronger and more informed.</p>
                         </div>
                     </article>
 
-                    <article class="storyline-step" data-aos="fade-left">
+                    <article class="storyline-step blur-card gradient-overlay-card float-soft-delay"
+                        data-aos="fade-left">
                         <div class="storyline-step__dot"></div>
                         <div class="storyline-step__content">
                             <span>04</span>
                             <h3>Next steps depend on routing and provider review</h3>
-                            <p>Execution, timing, and final scope always depend on the provider connected to the
-                                request.</p>
+                            <p>Timing, scope, and final execution depend on the provider connected to the request.</p>
                         </div>
                     </article>
                 </div>
@@ -152,51 +194,60 @@
             <div class="container">
                 <div class="section-head" data-aos="fade-up">
                     <span class="eyebrow">What RTB Is / What RTB Is Not</span>
-                    <h2>Important role boundaries users should understand clearly.</h2>
+                    <h2>Clear role boundaries make the platform easier to trust and understand.</h2>
                 </div>
 
                 <div class="cards-2">
-                    <article class="note-card" data-aos="fade-up">
+                    <article class="note-card blur-card gradient-overlay-card float-soft" data-aos="fade-up">
                         <i class="fa-solid fa-circle-info"></i>
                         <h3>What RTB Is</h3>
-                        <p>RTB is an informational and request-routing platform built to help users compare
-                            roofing-related pathways and prepare stronger requests.</p>
+                        <p>
+                            RTB is an informational and request-routing platform that helps users compare
+                            roofing-related pathways and prepare stronger next-step requests.
+                        </p>
                     </article>
 
-                    <article class="note-card" data-aos="fade-up" data-aos-delay="80">
+                    <article class="note-card blur-card gradient-overlay-card float-soft-delay" data-aos="fade-up"
+                        data-aos-delay="90">
                         <i class="fa-solid fa-ban"></i>
                         <h3>What RTB Is Not</h3>
-                        <p>RTB is not presented as a direct roofing contractor, a final pricing engine, or a guaranteed
-                            provider-acceptance mechanism.</p>
+                        <p>
+                            RTB is not presented as a direct roofing contractor, a final diagnosis tool,
+                            or a guaranteed provider-acceptance mechanism.
+                        </p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="section-padding section-bg-image">
+        <section class="section-padding section-bg-image parallax-section">
+            <div class="glow-orb glow-orb--warm float-soft" style="width:210px;height:210px;right:4%;top:20px;"></div>
+
             <div class="container">
                 <div class="section-head" data-aos="fade-up">
                     <span class="eyebrow">Brand Principles Cards</span>
-                    <h2>The ideas shaping the platform experience.</h2>
+                    <h2>The ideas shaping the RTB experience.</h2>
                 </div>
 
                 <div class="cards-3">
-                    <article class="principle-card" data-aos="fade-up">
+                    <article class="principle-card blur-card gradient-overlay-card float-soft" data-aos="fade-up">
                         <i class="fa-solid fa-compass-drafting"></i>
                         <h3>Clarity</h3>
-                        <p>Reduce confusion around roofing-related request categories and user starting points.</p>
+                        <p>Reduce confusion around roofing-related request categories and user entry points.</p>
                     </article>
 
-                    <article class="principle-card" data-aos="fade-up" data-aos-delay="80">
+                    <article class="principle-card blur-card gradient-overlay-card float-soft-delay" data-aos="fade-up"
+                        data-aos-delay="80">
                         <i class="fa-solid fa-route"></i>
                         <h3>Routing</h3>
-                        <p>Help users move toward the next step with better structure and request context.</p>
+                        <p>Help users move toward the next step with cleaner structure and better request context.</p>
                     </article>
 
-                    <article class="principle-card" data-aos="fade-up" data-aos-delay="160">
+                    <article class="principle-card blur-card gradient-overlay-card float-soft" data-aos="fade-up"
+                        data-aos-delay="160">
                         <i class="fa-solid fa-list-check"></i>
                         <h3>Preparation</h3>
-                        <p>Support stronger requests through planning notes, useful details, and calmer decision flow.
+                        <p>Support stronger requests through planning notes, better details, and calmer decision flow.
                         </p>
                     </article>
                 </div>
@@ -205,6 +256,21 @@
     </main>
 
     <footer class="site-footer">
+        <div class="footer-floating-bg">
+            <div class="footer-floating-bg__img footer-floating-bg__img--one">
+                <img src="assets/images/home/hero-main.jpg" alt="Roof background visual" />
+            </div>
+            <div class="footer-floating-bg__img footer-floating-bg__img--two">
+                <img src="assets/images/roof-repair/service-main.jpg" alt="Roof background visual" />
+            </div>
+            <div class="footer-floating-bg__img footer-floating-bg__img--three">
+                <img src="assets/images/roof-inspection/service-main.jpg" alt="Roof background visual" />
+            </div>
+            <div class="footer-floating-bg__img footer-floating-bg__img--four">
+                <img src="assets/images/storm-damage-roofing/service-main.jpg" alt="Roof background visual" />
+            </div>
+        </div>
+
         <div class="container footer-grid">
             <div>
                 <a href="index.html" class="logo footer-logo">
@@ -214,8 +280,10 @@
                         <span>Roof request & planning platform</span>
                     </span>
                 </a>
-                <p class="footer-copy">RTB Roof Atlas helps homeowners explore roofing request categories and planning
-                    paths.</p>
+                <p class="footer-copy">
+                    RTB Roof Atlas helps homeowners explore roofing request categories,
+                    planning structure, and clearer next-step decisions.
+                </p>
             </div>
 
             <div>
@@ -271,6 +339,12 @@
             </div>
         </div>
     </div>
+    <a href="tel:+12135551234" class="floating-call-btn magnetic-btn" aria-label="Call now">
+        <span class="floating-call-btn__icon">
+            <i class="fa-solid fa-phone"></i>
+        </span>
+        <span class="floating-call-btn__text">Call Now</span>
+    </a>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>

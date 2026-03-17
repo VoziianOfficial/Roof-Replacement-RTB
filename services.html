@@ -16,6 +16,7 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/global.css" />
@@ -82,16 +83,55 @@
         </div>
     </header>
 
+    <div class="search-panel">
+        <div class="search-panel__overlay"></div>
+        <div class="search-panel__inner">
+            <button class="search-close" type="button" aria-label="Close search">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3>Search RTB Roof Atlas</h3>
+            <p>Explore categories, planning pages, request steps, and legal information.</p>
+
+            <div class="site-search">
+                <input type="text" id="siteSearchInput" placeholder="Search pages or categories..." />
+                <button type="button" id="siteSearchButton">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="site-search__quick-links">
+                <a href="services.html">All Categories</a>
+                <a href="roof-replacement.html">Replacement</a>
+                <a href="roof-repair.html">Repair</a>
+                <a href="roof-inspection.html">Inspection</a>
+                <a href="contact.html">Request</a>
+            </div>
+
+            <div id="siteSearchResults" class="site-search-results"></div>
+        </div>
+    </div>
+
     <main>
-        <section class="page-hero section-padding">
+        <section class="page-hero section-padding parallax-section">
+            <div class="glow-orb glow-orb--warm float-soft" style="width:220px;height:220px;left:-40px;top:80px;"></div>
+            <div class="glow-orb glow-orb--soft float-soft-delay"
+                style="width:180px;height:180px;right:-30px;bottom:40px;"></div>
+
             <div class="container section-grid">
                 <div class="section-copy" data-aos="fade-right">
                     <span class="eyebrow">All Categories</span>
-                    <h1>Review the main roofing-related request pathways available on RTB.</h1>
+                    <h1>Choose the request path that feels closest to the roof situation you’re dealing with.</h1>
                     <p>
-                        These category pages are designed to help users understand what kind of request
-                        may fit their current roofing situation.
+                        RTB Roof Atlas organizes roofing-related concerns into clearer category routes,
+                        so users can compare options before starting a request.
                     </p>
+                    <div class="site-disclaimer">
+                        <p>
+                            Category pages are informational and request-oriented. Final fit, scope,
+                            timing, and provider response depend on independent review.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="page-hero__visual" data-aos="fade-left">
@@ -109,110 +149,176 @@
                 </div>
 
                 <div class="spotlight">
-                    <div class="spotlight-main" data-aos="fade-right">
+                    <div class="spotlight-main blur-card gradient-overlay-card float-soft" data-aos="fade-right">
                         <span class="eyebrow">Spotlight</span>
                         <h3>Roof Inspection</h3>
                         <p>
-                            Inspection is often a useful first path when the roof condition is still unclear
-                            and a user wants more context before leaning toward repair or replacement.
+                            Inspection is often the strongest first route when the roof condition
+                            still feels unclear and the next step needs more structure before repair
+                            or replacement is considered.
                         </p>
                         <img src="assets/images/roof-inspection/service-main.jpg" alt="Roof Inspection spotlight" />
                     </div>
 
                     <div class="spotlight-nav" data-aos="fade-left">
-                        <a href="roof-replacement.html" class="spotlight-link">
+                        <a href="roof-replacement.html"
+                            class="spotlight-link blur-card gradient-overlay-card float-soft">
                             <strong>Roof Replacement</strong>
-                            <span>Useful for broader aging or full-system planning.</span>
+                            <span>Useful for broader aging, recurring issues, or whole-roof planning.</span>
                         </a>
-                        <a href="roof-repair.html" class="spotlight-link">
+
+                        <a href="roof-repair.html"
+                            class="spotlight-link blur-card gradient-overlay-card float-soft-delay">
                             <strong>Roof Repair</strong>
-                            <span>Useful for more localized concerns or leak-related issues.</span>
+                            <span>Useful for more localized concerns, leak signals, or focused damage areas.</span>
                         </a>
-                        <a href="storm-damage-roofing.html" class="spotlight-link">
+
+                        <a href="storm-damage-roofing.html"
+                            class="spotlight-link blur-card gradient-overlay-card float-soft">
                             <strong>Storm Damage</strong>
-                            <span>Useful after hail, wind, or debris-related weather events.</span>
+                            <span>Useful after hail, wind, debris impact, or weather-related urgency.</span>
                         </a>
-                        <a href="roof-installation.html" class="spotlight-link">
+
+                        <a href="roof-installation.html"
+                            class="spotlight-link blur-card gradient-overlay-card float-soft-delay">
                             <strong>Roof Installation</strong>
-                            <span>Useful for new systems and structured installation planning.</span>
+                            <span>Useful for planned systems, new builds, or installation-led project flow.</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-padding">
-            <div class="container">
-                <div class="section-head" data-aos="fade-up">
-                    <span class="eyebrow">Decision Helper</span>
-                    <h2>Simple guidance for choosing a stronger request path.</h2>
-                </div>
-
-                <div class="cards-3">
-                    <article class="helper-card" data-aos="fade-up">
-                        <i class="fa-solid fa-house-crack"></i>
-                        <h3>Broad wear</h3>
-                        <p>Often points users toward exploring replacement-related requests first.</p>
-                    </article>
-
-                    <article class="helper-card" data-aos="fade-up" data-aos-delay="80">
-                        <i class="fa-solid fa-droplet"></i>
-                        <h3>Isolated issue</h3>
-                        <p>Often points users toward a repair-related route or a more localized request.</p>
-                    </article>
-
-                    <article class="helper-card" data-aos="fade-up" data-aos-delay="160">
-                        <i class="fa-solid fa-search"></i>
-                        <h3>Unclear condition</h3>
-                        <p>Often points users toward inspection before choosing a more final category direction.</p>
-                    </article>
-                </div>
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-head" data-aos="fade-up">
+                <span class="eyebrow">Category Carousel</span>
+                <h2>Swipe across the full category range without breaking the flow.</h2>
             </div>
-        </section>
+    
+            <div class="swiper js-loop-swiper services-swiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="roof-replacement.html" class="service-slide-card blur-card gradient-overlay-card">
+                            <div class="service-slide-card__image">
+                                <img src="assets/images/roof-replacement/service-main.jpg" alt="Roof Replacement" />
+                            </div>
+                            <div class="service-slide-card__content">
+                                <span>Category</span>
+                                <h3>Roof Replacement</h3>
+                                <p>Best for broader aging, recurring concerns, or full-system planning.</p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <a href="roof-repair.html" class="service-slide-card blur-card gradient-overlay-card">
+                            <div class="service-slide-card__image">
+                                <img src="assets/images/roof-repair/service-main.jpg" alt="Roof Repair" />
+                            </div>
+                            <div class="service-slide-card__content">
+                                <span>Category</span>
+                                <h3>Roof Repair</h3>
+                                <p>Best for leak points, focused damage, and more localized issues.</p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <a href="roof-installation.html" class="service-slide-card blur-card gradient-overlay-card">
+                            <div class="service-slide-card__image">
+                                <img src="assets/images/roof-installation/service-main.jpg" alt="Roof Installation" />
+                            </div>
+                            <div class="service-slide-card__content">
+                                <span>Category</span>
+                                <h3>Roof Installation</h3>
+                                <p>Best for planned projects, new systems, or installation-led routes.</p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <a href="roof-inspection.html" class="service-slide-card blur-card gradient-overlay-card">
+                            <div class="service-slide-card__image">
+                                <img src="assets/images/roof-inspection/service-main.jpg" alt="Roof Inspection" />
+                            </div>
+                            <div class="service-slide-card__content">
+                                <span>Category</span>
+                                <h3>Roof Inspection</h3>
+                                <p>Best when the roof condition still needs clearer review first.</p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <a href="storm-damage-roofing.html" class="service-slide-card blur-card gradient-overlay-card">
+                            <div class="service-slide-card__image">
+                                <img src="assets/images/storm-damage-roofing/service-main.jpg" alt="Storm Damage Roofing" />
+                            </div>
+                            <div class="service-slide-card__content">
+                                <span>Category</span>
+                                <h3>Storm Damage</h3>
+                                <p>Best after hail, wind, debris exposure, or urgent weather context.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
 
         <section class="section-padding section-bg-image parallax-section">
+            <div class="glow-orb glow-orb--warm float-soft" style="width:200px;height:200px;right:5%;top:40px;"></div>
+
             <div class="container">
                 <div class="section-head" data-aos="fade-up">
                     <span class="eyebrow">Category Use Cases</span>
-                    <h2>Real-world situations often connected to these category paths.</h2>
+                    <h2>Real-world situations often connected to these request paths.</h2>
                 </div>
 
                 <div class="directory-grid">
-                    <article class="use-case-card" data-aos="fade-up">
-                        <i class="fa-solid fa-house"></i>
+                    <article class="use-case-card blur-card gradient-overlay-card float-soft" data-aos="fade-up">
+                        <i class="fa-solid fa-calendar-days"></i>
                         <h3>Roof older than expected</h3>
-                        <p>Often connected with comparison between inspection and replacement categories.</p>
+                        <p>Often connected with comparison between inspection and replacement paths.</p>
                     </article>
 
-                    <article class="use-case-card" data-aos="fade-up" data-aos-delay="80">
+                    <article class="use-case-card blur-card gradient-overlay-card float-soft-delay" data-aos="fade-up"
+                        data-aos-delay="70">
                         <i class="fa-solid fa-cloud-rain"></i>
                         <h3>Leak after rain</h3>
                         <p>Often connected with repair-oriented exploration or inspection-first review.</p>
                     </article>
 
-                    <article class="use-case-card" data-aos="fade-up" data-aos-delay="160">
+                    <article class="use-case-card blur-card gradient-overlay-card float-soft" data-aos="fade-up"
+                        data-aos-delay="140">
                         <i class="fa-solid fa-cloud-bolt"></i>
                         <h3>Recent storm activity</h3>
                         <p>Often connected with storm-related requests and urgency-driven context.</p>
                     </article>
 
-                    <article class="use-case-card" data-aos="fade-up">
+                    <article class="use-case-card blur-card gradient-overlay-card float-soft-delay" data-aos="fade-up">
                         <i class="fa-solid fa-building"></i>
                         <h3>Property planning decision</h3>
-                        <p>Often connected with inspection or installation-led planning pathways.</p>
+                        <p>Often connected with inspection or installation-led planning routes.</p>
                     </article>
 
-                    <article class="use-case-card" data-aos="fade-up" data-aos-delay="80">
+                    <article class="use-case-card blur-card gradient-overlay-card float-soft" data-aos="fade-up"
+                        data-aos-delay="70">
                         <i class="fa-solid fa-layer-group"></i>
-                        <h3>Planned exterior project</h3>
-                        <p>Often connected with installation or broader whole-roof planning considerations.</p>
+                        <h3>Planned exterior update</h3>
+                        <p>Often connected with installation or broader whole-roof planning.</p>
                     </article>
 
-                    <article class="use-case-card" data-aos="fade-up" data-aos-delay="160">
-                        <i class="fa-solid fa-list-check"></i>
+                    <article class="use-case-card blur-card gradient-overlay-card float-soft-delay" data-aos="fade-up"
+                        data-aos-delay="140">
+                        <i class="fa-solid fa-route"></i>
                         <h3>Not sure where to start</h3>
-                        <p>Often connected with using the category pages first, then submitting a more informed request.
-                        </p>
+                        <p>Often connected with using the category pages first, then submitting a clearer request.</p>
                     </article>
                 </div>
             </div>
@@ -220,6 +326,21 @@
     </main>
 
     <footer class="site-footer">
+        <div class="footer-floating-bg">
+            <div class="footer-floating-bg__img footer-floating-bg__img--one">
+                <img src="assets/images/home/hero-main.jpg" alt="Roof background visual" />
+            </div>
+            <div class="footer-floating-bg__img footer-floating-bg__img--two">
+                <img src="assets/images/roof-repair/service-main.jpg" alt="Roof background visual" />
+            </div>
+            <div class="footer-floating-bg__img footer-floating-bg__img--three">
+                <img src="assets/images/roof-inspection/service-main.jpg" alt="Roof background visual" />
+            </div>
+            <div class="footer-floating-bg__img footer-floating-bg__img--four">
+                <img src="assets/images/storm-damage-roofing/service-main.jpg" alt="Roof background visual" />
+            </div>
+        </div>
+
         <div class="container footer-grid">
             <div>
                 <a href="index.html" class="logo footer-logo">
@@ -229,7 +350,10 @@
                         <span>Roof request & planning platform</span>
                     </span>
                 </a>
-                <p class="footer-copy">RTB Roof Atlas helps homeowners review roofing-related request categories.</p>
+                <p class="footer-copy">
+                    RTB Roof Atlas helps homeowners review roofing-related request categories
+                    and move through the next step with more structure.
+                </p>
             </div>
 
             <div>
@@ -285,9 +409,15 @@
             </div>
         </div>
     </div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/main.js"></script>
+        <a href="tel:+12135551234" class="floating-call-btn magnetic-btn" aria-label="Call now">
+            <span class="floating-call-btn__icon">
+                <i class="fa-solid fa-phone"></i>
+            </span>
+            <span class="floating-call-btn__text">Call Now</span>
+        </a>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>
