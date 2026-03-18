@@ -122,6 +122,7 @@ iframe {
 .eyebrow {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     padding: 10px 16px;
     border-radius: var(--radius-pill);
@@ -133,6 +134,8 @@ iframe {
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    line-height: 1;
+    vertical-align: middle;
     margin-bottom: 18px;
 }
 
@@ -160,6 +163,8 @@ p {
     padding: 0 24px;
     border-radius: var(--radius-pill);
     font-weight: 700;
+    line-height: 1.2;
+    vertical-align: middle;
     transition:
         transform var(--transition),
         box-shadow var(--transition),
@@ -316,6 +321,8 @@ p {
     color: var(--color-primary-2);
     margin-bottom: 18px;
     font-size: 1.2rem;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 .step-card span {
@@ -329,6 +336,8 @@ p {
     color: #fff;
     font-weight: 800;
     margin-bottom: 18px;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 @media (max-width: 991px) {

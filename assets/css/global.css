@@ -36,7 +36,10 @@
 .logo {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 14px;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 .logo-mark {
@@ -93,7 +96,10 @@
 .nav-dropdown-toggle {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
+    line-height: 1.2;
+    vertical-align: middle;
 }
 
 .nav-dropdown-menu {
@@ -149,6 +155,8 @@
     align-items: center;
     justify-content: center;
     color: var(--color-title);
+    vertical-align: middle;
+    line-height: 1;
 }
 
 .mobile-toggle {
@@ -338,6 +346,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 .search-panel__inner h3 {
@@ -364,6 +374,11 @@
     border-radius: 18px;
     background: var(--gradient-main);
     color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    vertical-align: middle;
 }
 
 .site-search__quick-links {
@@ -684,6 +699,11 @@
     background: rgba(255, 250, 244, 0.92);
     box-shadow: var(--shadow-md);
     color: var(--color-title);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 .swiper-button-next::after,
