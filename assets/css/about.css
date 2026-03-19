@@ -118,6 +118,118 @@
     max-width: 34ch;
 }
 
+.company-momentum {
+    position: relative;
+    overflow: hidden;
+}
+
+.company-momentum::before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    right: -70px;
+    top: 18px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(100, 60, 40, 0.12), transparent 70%);
+    filter: blur(4px);
+}
+
+.company-momentum__layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 34px;
+    align-items: start;
+}
+
+.company-momentum__intro p {
+    max-width: 42ch;
+}
+
+.company-momentum__lane {
+    position: relative;
+    padding-left: 42px;
+    display: grid;
+    gap: 20px;
+}
+
+.company-momentum__lane::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(100, 60, 40, 0.18), rgba(100, 60, 40, 0.95), rgba(100, 60, 40, 0.18));
+    animation: lanePulse 5.4s ease-in-out infinite;
+}
+
+.momentum-item {
+    position: relative;
+    padding: 4px 0 18px;
+    border-bottom: 1px dashed rgba(95, 70, 56, 0.3);
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.momentum-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.momentum-item::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--gradient-main);
+    box-shadow: 0 0 0 8px rgba(100, 60, 40, 0.1);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.momentum-item__index {
+    display: inline-flex;
+    margin-bottom: 8px;
+    font-weight: 800;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    color: var(--color-primary-2);
+}
+
+.momentum-item h3 {
+    margin-bottom: 8px;
+    font-size: clamp(1.18rem, 2vw, 1.44rem);
+}
+
+.momentum-item p {
+    max-width: 42ch;
+    color: var(--color-text-soft);
+}
+
+.momentum-item:hover {
+    transform: translateX(8px);
+    border-color: rgba(95, 70, 56, 0.55);
+}
+
+.momentum-item:hover::before {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 11px rgba(100, 60, 40, 0.14);
+}
+
+@keyframes lanePulse {
+
+    0%,
+    100% {
+        opacity: 0.9;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
 @media (max-width: 991px) {
     .page-hero__visual img {
         height: 460px;
@@ -130,6 +242,16 @@
     .note-card,
     .principle-card {
         min-height: 220px;
+    }
+
+    .company-momentum__layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .company-momentum__intro p,
+    .momentum-item p {
+        max-width: 100%;
     }
 }
 
@@ -164,5 +286,24 @@
     .note-card,
     .principle-card {
         min-height: auto;
+    }
+
+    .company-momentum__lane {
+        padding-left: 30px;
+        gap: 16px;
+    }
+
+    .company-momentum__lane::before {
+        left: 9px;
+    }
+
+    .momentum-item::before {
+        left: -30px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .momentum-item:hover {
+        transform: translateX(4px);
     }
 }

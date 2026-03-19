@@ -213,6 +213,46 @@
             </div>
         </section>
 
+        <section class="company-momentum section-padding section-soft-bg">
+            <div class="container company-momentum__layout">
+                <div class="company-momentum__intro" data-aos="fade-right">
+                    <span class="eyebrow">Inside NobleRoof</span>
+                    <h2>How the company thinks, ships, and improves every month.</h2>
+                    <p>
+                        NobleRoof is built as a focused product team: we simplify roofing decisions into practical
+                        user flows, then keep refining every touchpoint based on real request behavior.
+                    </p>
+                    <p>
+                        Our benchmark is simple: less confusion at the start, stronger request detail in the middle,
+                        and clearer next-step outcomes at the end.
+                    </p>
+                </div>
+
+                <div class="company-momentum__lane" id="companyMomentumLane">
+                    <article class="momentum-item">
+                        <span class="momentum-item__index">01</span>
+                        <h3>We design for decision clarity first</h3>
+                        <p>Each page is structured to answer “what should I do next?” in under a minute.</p>
+                    </article>
+                    <article class="momentum-item">
+                        <span class="momentum-item__index">02</span>
+                        <h3>We reduce request friction continuously</h3>
+                        <p>Forms, category logic, and copy are tuned to help users submit better context faster.</p>
+                    </article>
+                    <article class="momentum-item">
+                        <span class="momentum-item__index">03</span>
+                        <h3>We treat trust as a product feature</h3>
+                        <p>Role boundaries, disclaimers, and expectations remain explicit across all customer paths.</p>
+                    </article>
+                    <article class="momentum-item">
+                        <span class="momentum-item__index">04</span>
+                        <h3>We iterate with measurable signals</h3>
+                        <p>Navigation, search, and section UX evolve through observed behavior, not assumptions.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section class="section-padding section-soft-bg">
             <div class="container">
                 <div class="section-head" data-aos="fade-up">
@@ -380,7 +420,28 @@
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        if (window.gsap && window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+            const lane = document.getElementById("companyMomentumLane");
+            if (lane) {
+                gsap.from(".momentum-item", {
+                    x: 36,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.14,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: lane,
+                        start: "top 78%"
+                    }
+                });
+            }
+        }
+    </script>
 </body>
 
 </html>
