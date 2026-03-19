@@ -219,29 +219,16 @@
                             <div class="form-field">
                                 <label class="sr-only" for="reqFullName">Full name</label>
                                 <input class="form-control" id="reqFullName" type="text" name="full_name"
-                                    autocomplete="name" placeholder="Full Name" />
-                            </div>
-                            <div class="form-field">
-                                <label class="sr-only" for="reqEmail">Email</label>
-                                <input class="form-control" id="reqEmail" type="email" name="email"
-                                    autocomplete="email" placeholder="Email Address" />
+                                    autocomplete="name" placeholder="Your Name" required />
                             </div>
                             <div class="form-field">
                                 <label class="sr-only" for="reqPhone">Phone</label>
                                 <input class="form-control" id="reqPhone" type="tel" name="phone" inputmode="tel"
-                                    autocomplete="tel" placeholder="Phone Number" />
+                                    autocomplete="tel" placeholder="Phone Number" required />
                             </div>
-                            <div class="form-field">
-                                <label class="sr-only" for="reqAddress">Property address</label>
-                                <input class="form-control" id="reqAddress" type="text" name="address"
-                                    autocomplete="street-address" placeholder="Property Address" />
-                            </div>
-                        </div>
-
-                        <div class="cards-2 form-grid select-row">
                             <div class="form-field">
                                 <label class="sr-only" for="reqCategory">Category</label>
-                                <select class="form-control" id="reqCategory" name="category">
+                                <select class="form-control" id="reqCategory" name="category" required>
                                     <option selected disabled value="">Select Category</option>
                                     <option>Roof Replacement</option>
                                     <option>Roof Repair</option>
@@ -251,10 +238,9 @@
                                     <option>Not Sure Yet</option>
                                 </select>
                             </div>
-
                             <div class="form-field">
                                 <label class="sr-only" for="reqUrgency">Urgency</label>
-                                <select class="form-control" id="reqUrgency" name="urgency">
+                                <select class="form-control" id="reqUrgency" name="urgency" required>
                                     <option selected disabled value="">Urgency Level</option>
                                     <option>Low</option>
                                     <option>Medium</option>
@@ -267,7 +253,7 @@
                         <div class="form-field">
                             <label class="sr-only" for="reqDetails">Details</label>
                             <textarea class="form-control" id="reqDetails" name="details"
-                                placeholder="What changed? Where is the issue? When does it show up?"></textarea>
+                                placeholder="What happened? Where is it? When did it start?" required></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary magnetic-btn">Submit Request</button>

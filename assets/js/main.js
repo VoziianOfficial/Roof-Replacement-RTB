@@ -251,7 +251,7 @@ function initForms() {
                 status.hidden = true;
             }
 
-            const fields = form.querySelectorAll("input, textarea, select");
+            const fields = form.querySelectorAll("input[required], textarea[required], select[required]");
             let isValid = true;
 
             fields.forEach((field) => {
@@ -259,16 +259,6 @@ function initForms() {
 
                 if (field.tagName === "SELECT") {
                     if (!field.value || field.selectedIndex === 0) {
-                        field.classList.add("is-error");
-                        isValid = false;
-                    }
-                    return;
-                }
-
-                if (field.type === "email") {
-                    const value = field.value.trim();
-                    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-                    if (!value || !valid) {
                         field.classList.add("is-error");
                         isValid = false;
                     }
@@ -285,7 +275,7 @@ function initForms() {
                 const firstInvalidField = form.querySelector(".is-error");
                 if (firstInvalidField) firstInvalidField.focus();
                 if (status) {
-                    status.textContent = "Please review the highlighted fields.";
+                    status.textContent = "Please fill the required fields.";
                     status.hidden = false;
                 }
                 return;

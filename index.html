@@ -591,28 +591,35 @@
               <div class="form-field">
                 <label class="sr-only" for="homeFullName">Full name</label>
                 <input class="form-control" id="homeFullName" name="full_name" type="text" autocomplete="name"
-                  placeholder="Full Name" />
-              </div>
-              <div class="form-field">
-                <label class="sr-only" for="homeEmail">Email</label>
-                <input class="form-control" id="homeEmail" name="email" type="email" autocomplete="email"
-                  placeholder="Email Address" />
+                  placeholder="Your Name" required />
               </div>
               <div class="form-field">
                 <label class="sr-only" for="homePhone">Phone</label>
-                <input class="form-control" id="homePhone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
-                  placeholder="Phone Number" />
+                <input class="form-control" id="homePhone" name="phone" type="tel" inputmode="tel"
+                  autocomplete="tel" placeholder="Phone Number" required />
               </div>
               <div class="form-field">
-                <label class="sr-only" for="homeAddress">Property address</label>
-                <input class="form-control" id="homeAddress" name="address" type="text" autocomplete="street-address"
-                  placeholder="Property Address" />
+                <label class="sr-only" for="homeCategory">Category</label>
+                <select class="form-control" id="homeCategory" name="category" required>
+                  <option value="" selected disabled>Select Category</option>
+                  <option>Roof Replacement</option>
+                  <option>Roof Repair</option>
+                  <option>Roof Installation</option>
+                  <option>Roof Inspection</option>
+                  <option>Storm Damage Roofing</option>
+                  <option>Not Sure Yet</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label class="sr-only" for="homeSummary">Short summary</label>
+                <input class="form-control" id="homeSummary" name="summary" type="text"
+                  placeholder="Short Summary of the Issue" required />
               </div>
             </div>
             <div class="form-field">
               <label class="sr-only" for="homeDetails">Details</label>
               <textarea class="form-control" id="homeDetails" name="details"
-                placeholder="What changed? Where is the issue? When does it show up?"></textarea>
+                placeholder="What happened? Where is it? When did it start?" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary magnetic-btn">Submit Request</button>
             <p class="inline-disclaimer">By submitting, you agree to be contacted about your request. Final scope and scheduling depend on provider review.</p>
