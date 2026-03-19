@@ -137,7 +137,7 @@
             <div class="container contact-hero__grid">
                 <div class="contact-hero__content" data-aos="fade-up">
                     <span class="eyebrow">Request Form</span>
-                    <h1>Share the roof issue clearly and we will help guide the next step.</h1>
+                    <h1>Share the roof issue clearly to support the next step.</h1>
                     <p>
                         Give us the essentials: property details, the likely category, urgency, and what changed. A
                         concise, specific request is the fastest way to start a productive conversation.
@@ -212,36 +212,63 @@
                         <h2>Tell NobleRoof what's happening with the roof.</h2>
                     </div>
 
-                    <form class="contact-form request-form">
-                        <div class="cards-2">
-                            <input type="text" name="full_name" autocomplete="name" placeholder="Full Name" />
-                            <input type="email" name="email" autocomplete="email" placeholder="Email Address" />
-                            <input type="tel" name="phone" autocomplete="tel" placeholder="Phone Number" />
-                            <input type="text" name="address" autocomplete="street-address" placeholder="Property Address" />
+                    <form class="contact-form request-form form-compact" novalidate>
+                        <div class="form-status" data-form-status hidden></div>
+
+                        <div class="cards-2 form-grid">
+                            <div class="form-field">
+                                <label class="sr-only" for="reqFullName">Full name</label>
+                                <input class="form-control" id="reqFullName" type="text" name="full_name"
+                                    autocomplete="name" placeholder="Full Name" />
+                            </div>
+                            <div class="form-field">
+                                <label class="sr-only" for="reqEmail">Email</label>
+                                <input class="form-control" id="reqEmail" type="email" name="email"
+                                    autocomplete="email" placeholder="Email Address" />
+                            </div>
+                            <div class="form-field">
+                                <label class="sr-only" for="reqPhone">Phone</label>
+                                <input class="form-control" id="reqPhone" type="tel" name="phone" inputmode="tel"
+                                    autocomplete="tel" placeholder="Phone Number" />
+                            </div>
+                            <div class="form-field">
+                                <label class="sr-only" for="reqAddress">Property address</label>
+                                <input class="form-control" id="reqAddress" type="text" name="address"
+                                    autocomplete="street-address" placeholder="Property Address" />
+                            </div>
                         </div>
 
-                        <div class="cards-2 select-row">
-                            <select name="category">
-                                <option selected disabled>Select Category</option>
-                                <option>Roof Replacement</option>
-                                <option>Roof Repair</option>
-                                <option>Roof Installation</option>
-                                <option>Roof Inspection</option>
-                                <option>Storm Damage Roofing</option>
-                                <option>Not Sure Yet</option>
-                            </select>
+                        <div class="cards-2 form-grid select-row">
+                            <div class="form-field">
+                                <label class="sr-only" for="reqCategory">Category</label>
+                                <select class="form-control" id="reqCategory" name="category">
+                                    <option selected disabled value="">Select Category</option>
+                                    <option>Roof Replacement</option>
+                                    <option>Roof Repair</option>
+                                    <option>Roof Installation</option>
+                                    <option>Roof Inspection</option>
+                                    <option>Storm Damage Roofing</option>
+                                    <option>Not Sure Yet</option>
+                                </select>
+                            </div>
 
-                            <select name="urgency">
-                                <option selected disabled>Urgency Level</option>
-                                <option>Low</option>
-                                <option>Medium</option>
-                                <option>High</option>
-                                <option>Urgent</option>
-                            </select>
+                            <div class="form-field">
+                                <label class="sr-only" for="reqUrgency">Urgency</label>
+                                <select class="form-control" id="reqUrgency" name="urgency">
+                                    <option selected disabled value="">Urgency Level</option>
+                                    <option>Low</option>
+                                    <option>Medium</option>
+                                    <option>High</option>
+                                    <option>Urgent</option>
+                                </select>
+                            </div>
                         </div>
 
-                        <textarea name="details"
-                            placeholder="Describe the roofing situation, visible concerns, timing, and any planning context."></textarea>
+                        <div class="form-field">
+                            <label class="sr-only" for="reqDetails">Details</label>
+                            <textarea class="form-control" id="reqDetails" name="details"
+                                placeholder="What changed? Where is the issue? When does it show up?"></textarea>
+                        </div>
 
                         <button type="submit" class="btn btn-primary magnetic-btn">Submit Request</button>
                         <p class="inline-disclaimer">By submitting this form, you agree to be contacted about your request. Provider acceptance and timing are not guaranteed.</p>

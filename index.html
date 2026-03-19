@@ -277,48 +277,84 @@
           </p>
         </div>
 
-        <div class="insight-showcase__grid">
-          <article class="insight-panel insight-panel--large" data-aos="fade-up">
-            <div class="insight-panel__icon">
-              <i class="fa-solid fa-eye"></i>
-            </div>
-            <h3>What you can actually see matters first</h3>
+        <div class="insight-showcase__grid insight-deck">
+          <article class="insight-card insight-card--hero blur-card gradient-overlay-card" data-aos="fade-up">
+            <header class="insight-card__head">
+              <div class="insight-icon insight-icon--hero" aria-hidden="true">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="insight-card__titles">
+                <span class="insight-kicker">Start With Signals</span>
+                <h3>Describe what changed, not what you guess.</h3>
+              </div>
+            </header>
             <p>
-              Stains, lifted shingles, sagging lines, storm marks, and leak timing often
-              say more than generic category guesses.
+              A premium request starts with observable detail: where the issue is, what you see, and when it shows up.
+              That clarity drives faster, more accurate next steps.
             </p>
-            <div class="insight-tags">
-              <span>Visible wear</span>
-              <span>Leak timing</span>
-              <span>Storm clues</span>
+            <div class="insight-mini">
+              <span><i class="fa-solid fa-droplet"></i> Leak timing</span>
+              <span><i class="fa-solid fa-wind"></i> Weather context</span>
+              <span><i class="fa-solid fa-camera"></i> Photos</span>
             </div>
           </article>
 
-          <article class="insight-panel" data-aos="fade-up" data-aos-delay="80">
-            <div class="insight-panel__icon">
-              <i class="fa-solid fa-clock"></i>
-            </div>
-            <h3>Urgency changes the request path</h3>
-            <p>A planning request and an active leak request should not feel the same in the form flow.</p>
+          <article class="insight-card blur-card gradient-overlay-card" data-aos="fade-up" data-aos-delay="70">
+            <header class="insight-card__head">
+              <div class="insight-icon" aria-hidden="true">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <div class="insight-card__titles">
+                <span class="insight-kicker">Urgency</span>
+                <h3>Sort risk in one sentence.</h3>
+              </div>
+            </header>
+            <p>Active leak, exposed decking, or sudden damage: call it out clearly so routing matches reality.</p>
           </article>
 
-          <article class="insight-panel" data-aos="fade-up" data-aos-delay="140">
-            <div class="insight-panel__icon">
-              <i class="fa-solid fa-house-circle-check"></i>
-            </div>
-            <h3>Roof age still matters</h3>
-            <p>Even an approximate age helps place the request closer to inspection, repair, or replacement logic.</p>
+          <article class="insight-card blur-card gradient-overlay-card" data-aos="fade-up" data-aos-delay="140">
+            <header class="insight-card__head">
+              <div class="insight-icon" aria-hidden="true">
+                <i class="fa-solid fa-calendar-check"></i>
+              </div>
+              <div class="insight-card__titles">
+                <span class="insight-kicker">Timeline</span>
+                <h3>When did it start?</h3>
+              </div>
+            </header>
+            <p>“After the storm” or “only during rain” is more useful than a long story. Keep it tight.</p>
           </article>
 
-          <article class="insight-panel insight-panel--wide" data-aos="fade-up" data-aos-delay="200">
-            <div class="insight-panel__icon">
-              <i class="fa-solid fa-compass-drafting"></i>
+          <article class="insight-card blur-card gradient-overlay-card" data-aos="fade-up" data-aos-delay="210">
+            <header class="insight-card__head">
+              <div class="insight-icon" aria-hidden="true">
+                <i class="fa-solid fa-clipboard-list"></i>
+              </div>
+              <div class="insight-card__titles">
+                <span class="insight-kicker">Scope</span>
+                <h3>One area or whole system?</h3>
+              </div>
+            </header>
+            <p>Localized issues usually map to repair. Broad wear or repeats often map to replacement planning.</p>
+          </article>
+
+          <article class="insight-card insight-card--wide blur-card gradient-overlay-card" data-aos="fade-up"
+            data-aos-delay="280">
+            <header class="insight-card__head">
+              <div class="insight-icon" aria-hidden="true">
+                <i class="fa-solid fa-route"></i>
+              </div>
+              <div class="insight-card__titles">
+                <span class="insight-kicker">Category Fit</span>
+                <h3>Pick the closest route. We refine from there.</h3>
+              </div>
+            </header>
+            <p>Not sure yet is fine. Choose the closest category, explain the signals, and let the review decide.</p>
+            <div class="insight-mini">
+              <span><i class="fa-solid fa-house-crack"></i> Replacement</span>
+              <span><i class="fa-solid fa-screwdriver-wrench"></i> Repair</span>
+              <span><i class="fa-solid fa-magnifying-glass-chart"></i> Inspection</span>
             </div>
-            <h3>Planning intent is a real signal</h3>
-            <p>
-              Some users are reacting to damage. Others are planning exterior upgrades, comparing options,
-              or preparing for the next decision step. NobleRoof should reflect that difference clearly.
-            </p>
           </article>
         </div>
       </div>
@@ -544,19 +580,40 @@
           <span class="eyebrow">Request Form</span>
           <h2>Share your property details and roofing situation.</h2>
           <p>
-            Share the essentials and we will route your request with more clarity from the start.
+            Share the essentials to support clearer request routing from the start.
           </p>
         </div>
 
         <div class="contact-box" data-aos="fade-left">
-          <form class="contact-form">
-            <div class="cards-2">
-              <input type="text" placeholder="Full Name" />
-              <input type="email" placeholder="Email Address" />
-              <input type="tel" placeholder="Phone Number" />
-              <input type="text" placeholder="Property Address" />
+          <form class="contact-form form-compact" novalidate>
+            <div class="form-status" data-form-status hidden></div>
+            <div class="cards-2 form-grid">
+              <div class="form-field">
+                <label class="sr-only" for="homeFullName">Full name</label>
+                <input class="form-control" id="homeFullName" name="full_name" type="text" autocomplete="name"
+                  placeholder="Full Name" />
+              </div>
+              <div class="form-field">
+                <label class="sr-only" for="homeEmail">Email</label>
+                <input class="form-control" id="homeEmail" name="email" type="email" autocomplete="email"
+                  placeholder="Email Address" />
+              </div>
+              <div class="form-field">
+                <label class="sr-only" for="homePhone">Phone</label>
+                <input class="form-control" id="homePhone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                  placeholder="Phone Number" />
+              </div>
+              <div class="form-field">
+                <label class="sr-only" for="homeAddress">Property address</label>
+                <input class="form-control" id="homeAddress" name="address" type="text" autocomplete="street-address"
+                  placeholder="Property Address" />
+              </div>
             </div>
-            <textarea placeholder="Describe your roofing situation"></textarea>
+            <div class="form-field">
+              <label class="sr-only" for="homeDetails">Details</label>
+              <textarea class="form-control" id="homeDetails" name="details"
+                placeholder="What changed? Where is the issue? When does it show up?"></textarea>
+            </div>
             <button type="submit" class="btn btn-primary magnetic-btn">Submit Request</button>
             <p class="inline-disclaimer">By submitting, you agree to be contacted about your request. Final scope and scheduling depend on provider review.</p>
           </form>

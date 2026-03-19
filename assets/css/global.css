@@ -921,6 +921,26 @@
     flex-shrink: 0;
 }
 
+.showcase-swiper__controls .swiper-button-prev,
+.showcase-swiper__controls .swiper-button-next {
+    position: relative;
+    inset: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 16px;
+    margin: 0;
+}
+
+.showcase-swiper__controls .swiper-button-prev::after,
+.showcase-swiper__controls .swiper-button-next::after {
+    font-size: 15px;
+}
+
 .showcase-swiper__progress {
     position: absolute;
     left: 0;
@@ -1195,6 +1215,26 @@ body.form-modal-open {
     box-shadow: 0 0 0 3px rgba(212, 131, 101, 0.12);
 }
 
+.form-status {
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: rgba(212, 131, 101, 0.12);
+    border: 1px solid rgba(212, 131, 101, 0.22);
+    color: rgba(36, 22, 15, 0.86);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.form-compact {
+    display: grid;
+    gap: 12px;
+}
+
+.form-grid {
+    gap: 12px;
+}
+
 html,
 body {
     overflow-x: hidden;
@@ -1235,6 +1275,12 @@ section,
     .showcase-swiper__topbar {
         align-items: flex-start;
         flex-direction: column;
+    }
+
+    .showcase-swiper__controls {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 6px;
     }
 
     .footer-brand {

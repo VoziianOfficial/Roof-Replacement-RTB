@@ -245,6 +245,12 @@ function initForms() {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
 
+            const status = form.querySelector("[data-form-status]");
+            if (status) {
+                status.textContent = "";
+                status.hidden = true;
+            }
+
             const fields = form.querySelectorAll("input, textarea, select");
             let isValid = true;
 
@@ -278,6 +284,10 @@ function initForms() {
             if (!isValid) {
                 const firstInvalidField = form.querySelector(".is-error");
                 if (firstInvalidField) firstInvalidField.focus();
+                if (status) {
+                    status.textContent = "Please review the highlighted fields.";
+                    status.hidden = false;
+                }
                 return;
             }
 
@@ -303,7 +313,7 @@ function initFormModal() {
                 <i class="fa-solid fa-check"></i>
             </div>
             <h3 id="formModalTitle">Спасибо, мы с вами свяжемся</h3>
-            <p>Your request has been received. We will review the details and get back to you shortly.</p>
+            <p>Your request was submitted. Response timing depends on provider availability and review.</p>
             <div class="form-modal__actions">
                 <button class="btn btn-primary" type="button" data-form-modal-close>Close</button>
             </div>
