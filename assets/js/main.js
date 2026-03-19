@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initAOS();
     initHeaderScroll();
     initScrollProgress();
+    initHeroStatsCounter();
     initMobileMenu();
     initSearchPanel();
     initFaq();
@@ -14,6 +15,71 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let formModalApi = null;
+
+function initHeroStatsCounter() {
+    const statNumbers = document.querySelectorAll(".hero-stats .stat-number");
+    if (!statNumbers.length) return;
+
+    const animateValue = (element) => {
+        const raw = element.textContent.trim();
+        if (!raw) return;
+
+        let target = 0;
+        let formatter = (value) => `${value}`;
+
+        const ratioMatch = raw.match(/^(\d+)\s*\/\s*(\d+)$/);
+        if (ratioMatch) {
+            target = Number(ratioMatch[1]);
+            const rightSide = ratioMatch[2];
+            formatter = (value) => `${value}/${rightSide}`;
+        } else {
+            const metricMatch = raw.match(/^(\d+)([%+]?)$/);
+            if (!metricMatch) return;
+            target = Number(metricMatch[1]);
+            const suffix = metricMatch[2] || "";
+            formatter = (value) => `${value}${suffix}`;
+        }
+
+        const duration = 1450;
+        const startTime = performance.now();
+
+        const tick = (now) => {
+            const progress = Math.min((now - startTime) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(target * eased);
+            element.textContent = formatter(current);
+            if (progress < 1) {
+                requestAnimationFrame(tick);
+            }
+        };
+
+        requestAnimationFrame(tick);
+    };
+
+    const startCounters = () => {
+        statNumbers.forEach((element) => {
+            if (element.dataset.counted === "true") return;
+            element.dataset.counted = "true";
+            animateValue(element);
+        });
+    };
+
+    const statsBlock = document.querySelector(".hero-stats");
+    if (!statsBlock) return;
+
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                startCounters();
+                observer.disconnect();
+            });
+        }, { threshold: 0.4 });
+        observer.observe(statsBlock);
+    } else {
+        startCounters();
+    }
+}
 
 function initAOS() {
     if (typeof AOS !== "undefined") {
