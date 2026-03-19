@@ -564,7 +564,7 @@
 .site-footer {
     position: relative;
     overflow: hidden;
-    padding: 92px 0 0;
+    padding: 40px 0 0;
     background: linear-gradient(180deg, rgba(241, 232, 221, 0.72), rgba(224, 204, 185, 0.84));
     border-top: 1px solid rgba(95, 70, 56, 0.08);
 }
@@ -691,7 +691,7 @@
 }
 
 .footer-logo {
-    margin-bottom: 18px;
+    margin-bottom: 0;
 }
 
 .footer-copy {
@@ -1296,10 +1296,28 @@ section,
 
     .footer-brand {
         grid-column: 1 / -1;
+        align-items: flex-start;
     }
 
     .footer-contact {
         grid-column: 1 / -1;
+    }
+
+    .footer-logo {
+        align-self: flex-start;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .footer-logo .logo-mark {
+        width: 52px;
+        height: 52px;
+        border-radius: 20px;
+    }
+
+    .footer-logo .logo-mark__img {
+        width: 34px;
+        height: 34px;
     }
 
     .footer-floating-bg__img--one,
@@ -1432,10 +1450,28 @@ section,
 
     .footer-brand {
         grid-column: 1;
+        align-items: flex-start;
     }
 
     .footer-contact {
         grid-column: 1;
+    }
+
+    .footer-logo {
+        align-self: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .footer-logo .logo-mark {
+        width: 46px;
+        height: 46px;
+        border-radius: 18px;
+    }
+
+    .footer-logo .logo-mark__img {
+        width: 30px;
+        height: 30px;
     }
 
     .footer-floating-bg__img {
