@@ -55,8 +55,8 @@
     height: 120px;
     border-radius: 26px;
     background: linear-gradient(135deg,
-            rgba(207, 118, 71, 0.14),
-            rgba(232, 187, 145, 0.18));
+            rgba(100, 60, 40, 0.18),
+            rgba(150, 100, 70, 0.22));
     z-index: -1;
 }
 
@@ -92,7 +92,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(207, 118, 71, 0.10);
+    background: rgba(100, 60, 40, 0.12);
     color: var(--color-primary-2);
     margin-bottom: 18px;
     font-size: 1.2rem;
@@ -145,8 +145,8 @@
 .request-form textarea:focus,
 .request-form select:focus {
     border-color: var(--color-primary-2);
-    background: #fff;
-    box-shadow: 0 0 0 3px rgba(207, 118, 71, 0.1);
+    background: var(--color-white);
+    box-shadow: 0 0 0 3px rgba(100, 60, 40, 0.12);
 }
 
 .request-form select {
@@ -202,7 +202,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(207, 118, 71, 0.10);
+    background: rgba(100, 60, 40, 0.12);
     color: var(--color-primary-2);
     margin-bottom: 16px;
     font-size: 1.2rem;

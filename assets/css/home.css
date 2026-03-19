@@ -29,10 +29,10 @@
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, 
-        rgba(61, 42, 34, 0.65) 0%,
-        rgba(61, 42, 34, 0.55) 50%,
-        rgba(139, 69, 69, 0.6) 100%);
+    background: linear-gradient(135deg,
+            rgba(35, 20, 12, 0.70) 0%,
+            rgba(35, 20, 12, 0.60) 50%,
+            rgba(139, 69, 69, 0.6) 100%);
     backdrop-filter: blur(2px);
 }
 
@@ -206,6 +206,7 @@
         font-size: 0.85rem;
     }
 }
+
 .hero {
     position: relative;
     overflow: hidden;
@@ -225,7 +226,7 @@
     height: 280px;
     top: 40px;
     right: -60px;
-    background: rgba(207, 118, 71, 0.16);
+    background: rgba(100, 60, 40, 0.20);
 }
 
 .hero-bg-orb--two {
@@ -233,13 +234,13 @@
     height: 240px;
     bottom: 20px;
     left: -60px;
-    background: rgba(232, 187, 145, 0.18);
+    background: rgba(150, 100, 70, 0.22);
 }
 
 .rotating-detail {
     position: absolute;
     border-radius: 50%;
-    border: 1px dashed rgba(207, 118, 71, 0.25);
+    border: 1px dashed rgba(125, 70, 50, 0.25);
     animation: rotateDetail 18s linear infinite;
     z-index: 0;
 }
@@ -355,7 +356,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(207, 118, 71, 0.10);
+    background: rgba(100, 60, 40, 0.12);
     color: var(--color-primary-2);
 }
 
@@ -430,7 +431,7 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(207, 118, 71, 0.12), transparent 70%);
+    background: radial-gradient(circle, rgba(100, 60, 40, 0.15), transparent 70%);
 }
 
 .insight-panel--large {
@@ -448,7 +449,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(207, 118, 71, 0.10);
+    background: rgba(100, 60, 40, 0.12);
     color: var(--color-primary-2);
     margin-bottom: 18px;
     font-size: 1.2rem;
@@ -469,7 +470,7 @@
 .insight-tags span {
     padding: 9px 12px;
     border-radius: 999px;
-    background: rgba(207, 118, 71, 0.08);
+    background: rgba(100, 60, 40, 0.10);
     color: var(--color-title);
     font-size: 13px;
     font-weight: 700;
@@ -543,7 +544,7 @@
     position: absolute;
     inset: auto 0 0 0;
     padding: 22px;
-    background: linear-gradient(180deg, rgba(61, 42, 34, 0), rgba(61, 42, 34, 0.64));
+    background: linear-gradient(180deg, rgba(35, 20, 12, 0), rgba(35, 20, 12, 0.68));
 }
 
 .rail-card__overlay h3 {
@@ -570,7 +571,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(207, 118, 71, 0.10);
+    background: rgba(100, 60, 40, 0.12);
     color: var(--color-primary-2);
     margin-bottom: 16px;
 }
@@ -587,7 +588,7 @@
     width: 100%;
     border: 1px solid var(--color-border);
     border-radius: 18px;
-    background: #fff;
+    background: var(--color-white);
     padding: 16px 18px;
 }
 
@@ -714,11 +715,15 @@
     }
 }
 
-.category-swiper {
+.services-carousel {
     padding: 6px 6px 58px;
 }
 
-.category-swiper .swiper-slide {
+.services-carousel.showcase-swiper {
+    padding: 18px 8px 78px;
+}
+
+.services-carousel .swiper-slide {
     height: auto;
 }
 
@@ -734,7 +739,7 @@
 
 .rail-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 30px 80px rgba(112, 77, 55, 0.2);
+    box-shadow: 0 30px 80px rgba(80, 45, 30, 0.25);
 }
 
 .rail-card img {
@@ -752,7 +757,7 @@
     inset: auto 0 0 0;
     padding: 24px;
     background:
-        linear-gradient(180deg, rgba(61, 42, 34, 0.04), rgba(61, 42, 34, 0.78));
+        linear-gradient(180deg, rgba(35, 20, 12, 0.05), rgba(35, 20, 12, 0.82));
 }
 
 .rail-card__eyebrow {
@@ -760,7 +765,7 @@
     margin-bottom: 10px;
     padding: 7px 10px;
     border-radius: 999px;
-    background: rgba(255, 247, 239, 0.18);
+    background: rgba(230, 200, 170, 0.18);
     color: #fff;
     font-size: 11px;
     font-weight: 800;
@@ -775,29 +780,70 @@
 }
 
 .rail-card__overlay p {
-    color: rgba(255, 247, 239, 0.86);
+    color: rgba(245, 240, 232, 0.86);
     max-width: 26ch;
 }
 
-.category-swiper .swiper-pagination {
+.services-carousel {
+    position: relative;
+}
+
+.services-carousel .swiper-pagination {
     bottom: 6px !important;
 }
 
-.category-swiper .swiper-button-prev,
-.category-swiper .swiper-button-next {
-    top: calc(100% - 22px);
+.services-carousel .swiper-button-prev,
+.services-carousel .swiper-button-next {
+    position: relative;
+    inset: auto;
+    transform: none;
+}
+
+.services-carousel .swiper-button-prev:hover,
+.services-carousel .swiper-button-next:hover {
+    transform: translateY(-2px);
+}
+
+.services-carousel .swiper-button-prev::after,
+.services-carousel .swiper-button-next::after {
+    font-size: 18px;
+}
+
+@media (max-width: 1099px) {
+
+    .services-carousel .swiper-button-prev,
+    .services-carousel .swiper-button-next {
+        width: 40px;
+        height: 40px;
+        background: rgba(95, 55, 35, 0.92);
+    }
+
+    .services-carousel .swiper-button-prev::after,
+    .services-carousel .swiper-button-next::after {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 767px) {
-    .rail-card {
-        height: 360px;
+    .services-carousel {
+        padding: 6px 6px 68px;
     }
 
-    .rail-card__overlay {
-        padding: 18px;
+    .services-carousel.showcase-swiper {
+        padding: 14px 8px 72px;
     }
 
-    .rail-card__overlay h3 {
-        font-size: 1.25rem;
+    .services-carousel .swiper-button-prev,
+    .services-carousel .swiper-button-next {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-left: 0;
+    }
+
+    .services-carousel .swiper-button-prev::after,
+    .services-carousel .swiper-button-next::after {
+        font-size: 16px;
     }
 }

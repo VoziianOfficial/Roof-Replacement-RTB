@@ -13,7 +13,7 @@
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(207, 118, 71, 0.12), transparent 70%);
+    background: radial-gradient(circle, rgba(100, 60, 40, 0.15), transparent 70%);
     filter: blur(10px);
 }
 
@@ -25,7 +25,7 @@
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    border: 1px dashed rgba(207, 118, 71, 0.22);
+    border: 1px dashed rgba(125, 70, 50, 0.25);
     animation: rotateDetail 16s linear infinite;
 }
 
@@ -66,7 +66,7 @@
     width: 110px;
     height: 110px;
     border-radius: 22px;
-    background: linear-gradient(135deg, rgba(207, 118, 71, 0.14), rgba(232, 187, 145, 0.18));
+    background: linear-gradient(135deg, rgba(100, 60, 40, 0.18), rgba(150, 100, 70, 0.22));
     z-index: -1;
 }
 
@@ -106,7 +106,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(207, 118, 71, 0.10), transparent 70%);
+    background: radial-gradient(circle, rgba(100, 60, 40, 0.12), transparent 70%);
 }
 
 .switcher-card:hover {
@@ -121,7 +121,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(207, 118, 71, 0.10);
+    background: rgba(100, 60, 40, 0.12);
     color: var(--color-primary-2);
     margin-bottom: 18px;
     font-size: 1.2rem;
@@ -196,7 +196,7 @@
 }
 
 .scenario-card--large {
-    background: linear-gradient(135deg, rgba(61, 42, 34, 0.72), rgba(61, 42, 34, 0.58)),
+    background: linear-gradient(135deg, rgba(35, 20, 12, 0.78), rgba(35, 20, 12, 0.62)),
         url('../images/roof-replacement/service-main.jpg');
     background-size: cover;
     background-position: center;
@@ -208,8 +208,8 @@
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(180deg, rgba(61, 42, 34, 0.02), rgba(61, 42, 34, 0.08)),
-        radial-gradient(circle at top right, rgba(207, 118, 71, 0.10), transparent 36%);
+        linear-gradient(180deg, rgba(35, 20, 12, 0.03), rgba(35, 20, 12, 0.10)),
+        radial-gradient(circle at top right, rgba(100, 60, 40, 0.12), transparent 36%);
     pointer-events: none;
 }
 
@@ -229,7 +229,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(207, 118, 71, 0.10);
+    background: rgba(100, 60, 40, 0.12);
     color: var(--color-primary-2);
     margin-bottom: 18px;
     font-size: 1.2rem;
@@ -330,7 +330,7 @@
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(207, 118, 71, 0.12), transparent 70%);
+    background: radial-gradient(circle, rgba(100, 60, 40, 0.15), transparent 70%);
 }
 
 .cta-box h2 {

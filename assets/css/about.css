@@ -18,8 +18,8 @@
     height: 120px;
     border-radius: 26px;
     background: linear-gradient(135deg,
-            rgba(207, 118, 71, 0.14),
-            rgba(232, 187, 145, 0.18));
+            rgba(100, 60, 40, 0.18),
+            rgba(150, 100, 70, 0.22));
     z-index: -1;
 }
 
@@ -50,9 +50,9 @@
     bottom: 0;
     width: 2px;
     background: linear-gradient(to bottom,
-            rgba(207, 118, 71, 0.16),
-            rgba(207, 118, 71, 0.86),
-            rgba(207, 118, 71, 0.16));
+            rgba(100, 60, 40, 0.20),
+            rgba(100, 60, 40, 0.90),
+            rgba(100, 60, 40, 0.20));
 }
 
 .storyline-step {
@@ -72,7 +72,7 @@
     height: 18px;
     border-radius: 50%;
     background: var(--gradient-main);
-    box-shadow: 0 0 0 8px rgba(207, 118, 71, 0.08);
+    box-shadow: 0 0 0 8px rgba(100, 60, 40, 0.10);
 }
 
 .storyline-step__content {

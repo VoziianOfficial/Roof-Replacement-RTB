@@ -1,17 +1,23 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="roofGradient" x1="10" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E39A63"/>
-      <stop offset="0.5" stop-color="#CF7647"/>
-      <stop offset="1" stop-color="#F0C6A1"/>
+    <linearGradient id="nobleGradient" x1="10" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3F2316" />
+      <stop offset="0.52" stop-color="#6B3141" />
+      <stop offset="1" stop-color="#B1764C" />
     </linearGradient>
   </defs>
 
-  <rect x="6" y="6" width="52" height="52" rx="18" fill="url(#roofGradient)"/>
+  <rect x="6" y="6" width="52" height="52" rx="18" fill="url(#nobleGradient)" />
 
-  <circle cx="32" cy="32" r="16" stroke="white" stroke-width="3.2" opacity="0.95"/>
-  <path d="M32 23L38 38L32 35L26 38L32 23Z" fill="#FFF7F0" fill-opacity="0.95"/>
+  <!-- Crown -->
+  <path
+    d="M22.5 25.2L26.4 29.4L32 23.2L37.6 29.4L41.5 25.2L44.2 33.8H19.8L22.5 25.2Z"
+    fill="#FFF7F0" opacity="0.96" />
+  <path d="M20.6 34.2H43.4" stroke="#FFF7F0" stroke-width="2.6" stroke-linecap="round" opacity="0.92" />
 
-  <path d="M20 35L32 24L44 35" stroke="white" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M24.5 33V42H39.5V33" stroke="white" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Roof -->
+  <path d="M18.8 38.8L32 28.6L45.2 38.8" stroke="#FFF7F0" stroke-width="3.4" stroke-linecap="round"
+    stroke-linejoin="round" opacity="0.95" />
+  <path d="M23.6 38.2V46.4H40.4V38.2" stroke="#FFF7F0" stroke-width="3.4" stroke-linecap="round"
+    stroke-linejoin="round" opacity="0.95" />
 </svg>

@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Request | RTB Roof Atlas</title>
+    <title>Request | NobleRoof</title>
     <meta name="description"
-        content="Submit a roofing-related request through RTB Roof Atlas. Share your contact details, property location, category preference, and request context." />
+        content="Submit a roofing-related request through NobleRoof. Share your contact details, property location, category preference, and request context." />
 
     <link rel="icon" type="image/svg+xml" href="assets/images/global/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,10 +28,10 @@
     <header class="site-header">
         <div class="container header-inner">
             <a href="index.html" class="logo">
-                <span class="logo-mark"><i class="fa-solid fa-compass"></i></span>
+                <span class="logo-mark"><img class="logo-mark__img" src="assets/images/global/logo-mark.svg" alt="" aria-hidden="true" /></span>
                 <span class="logo-text">
-                    <strong>RTB Roof Atlas</strong>
-                    <span>Roof request & planning platform</span>
+                    <strong>NobleRoof</strong>
+                    <span>Premium roofing guidance</span>
                 </span>
             </a>
 
@@ -60,6 +60,9 @@
                 <button class="search-toggle" type="button" aria-label="Open search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
+                <a href="tel:+12135551234" class="btn btn-primary" type="button" aria-label="Call now" title="Call Now">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
                 <a href="contact.html" class="btn btn-primary header-btn magnetic-btn">Start A Request</a>
                 <button class="mobile-toggle" type="button" aria-label="Open menu">
                     <span></span><span></span><span></span>
@@ -98,7 +101,7 @@
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <h3>Search RTB Roof Atlas</h3>
+            <h3>Search NobleRoof</h3>
             <p>Explore categories, planning pages, request steps, and legal information.</p>
 
             <div class="site-search">
@@ -120,6 +123,11 @@
         </div>
     </div>
 
+    <!-- Mobile floating call button -->
+    <a href="tel:+12135551234" class="mobile-call-btn" aria-label="Call now" title="Call Now">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
     <main>
         <section class="contact-hero section-padding parallax-section">
             <div class="glow-orb glow-orb--warm float-soft" style="width:220px;height:220px;left:-40px;top:70px;"></div>
@@ -129,16 +137,10 @@
             <div class="container contact-hero__grid">
                 <div class="contact-hero__content" data-aos="fade-up">
                     <span class="eyebrow">Request Form</span>
-                    <h1>Describe the roof situation, choose a likely category, and move toward the next step with more
-                        structure.</h1>
+                    <h1>Share the roof issue clearly and we will help guide the next step.</h1>
                     <p>
-                        Use the request form to share your property details, contact information, category preference,
-                        and the roofing context you want reviewed. The more specific and detailed you are about your
-                        situation — including when the issue started, what visible signs you've observed, whether
-                        weather was involved, and your intended timeline — the better contractors can understand your
-                        needs and provide accurate assessments. Whether you're submitting an urgent repair request,
-                        planning a replacement project, asking for a professional inspection, or dealing with storm
-                        damage, clear communication makes the difference.
+                        Give us the essentials: property details, the likely category, urgency, and what changed. A
+                        concise, specific request is the fastest way to start a productive conversation.
                     </p>
 
                     <div class="contact-points">
@@ -148,9 +150,9 @@
                         <span><i class="fa-solid fa-check"></i> Faster contractor response</span>
                     </div>
 
-                    <div class="site-disclaimer">
+                    <div>
                         <p>
-                            RTB Roof Atlas is an informational and request-routing platform. Request submission does not
+                            NobleRoof is an informational and request-routing platform. Request submission does not
                             guarantee provider acceptance, final scope, or scheduling. All matters are subject to
                             independent contractor review and availability in your area.
                         </p>
@@ -207,19 +209,19 @@
                 <div class="request-form-wrap blur-card gradient-overlay-card" data-aos="fade-right">
                     <div class="request-form-head">
                         <span class="eyebrow">Submit A Request</span>
-                        <h2>Tell RTB what's happening with the roof.</h2>
+                        <h2>Tell NobleRoof what's happening with the roof.</h2>
                     </div>
 
                     <form class="contact-form request-form">
                         <div class="cards-2">
-                            <input type="text" placeholder="Full Name" />
-                            <input type="email" placeholder="Email Address" />
-                            <input type="tel" placeholder="Phone Number" />
-                            <input type="text" placeholder="Property Address" />
+                            <input type="text" name="full_name" autocomplete="name" placeholder="Full Name" />
+                            <input type="email" name="email" autocomplete="email" placeholder="Email Address" />
+                            <input type="tel" name="phone" autocomplete="tel" placeholder="Phone Number" />
+                            <input type="text" name="address" autocomplete="street-address" placeholder="Property Address" />
                         </div>
 
                         <div class="cards-2 select-row">
-                            <select>
+                            <select name="category">
                                 <option selected disabled>Select Category</option>
                                 <option>Roof Replacement</option>
                                 <option>Roof Repair</option>
@@ -229,7 +231,7 @@
                                 <option>Not Sure Yet</option>
                             </select>
 
-                            <select>
+                            <select name="urgency">
                                 <option selected disabled>Urgency Level</option>
                                 <option>Low</option>
                                 <option>Medium</option>
@@ -238,10 +240,11 @@
                             </select>
                         </div>
 
-                        <textarea
+                        <textarea name="details"
                             placeholder="Describe the roofing situation, visible concerns, timing, and any planning context."></textarea>
 
                         <button type="submit" class="btn btn-primary magnetic-btn">Submit Request</button>
+                        <p class="inline-disclaimer">By submitting this form, you agree to be contacted about your request. Provider acceptance and timing are not guaranteed.</p>
                     </form>
                 </div>
 
@@ -326,6 +329,78 @@
     </main>
 
     <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-section footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-mark"><img class="logo-mark__img" src="assets/images/global/logo-mark.svg" alt="" aria-hidden="true" /></span>
+                    <span class="logo-text">
+                        <strong>NobleRoof</strong>
+                        <span>Premium roofing guidance</span>
+                    </span>
+                </a>
+                <div class="footer-brand__panel">
+                    <p>
+                        NobleRoof helps homeowners compare roofing paths, organize request details, and move toward a confident next step.
+                    </p>
+                    <p>
+                        NobleRoof provides guidance and request routing. It does not directly perform roofing work.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">All Categories</a></li>
+                    <li><a href="contact.html">Request</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="roof-replacement.html">Roof Replacement</a></li>
+                    <li><a href="roof-repair.html">Roof Repair</a></li>
+                    <li><a href="roof-installation.html">Roof Installation</a></li>
+                    <li><a href="roof-inspection.html">Roof Inspection</a></li>
+                    <li><a href="storm-damage-roofing.html">Storm Damage Roofing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms Of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-contact">
+                <h4>Get In Touch</h4>
+                <div class="footer-contact-info">
+                    <a href="tel:+12135551234" class="contact-link">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+1 (213) 555-1234</span>
+                    </a>
+                    <a href="mailto:info@rtbroofatlas.com" class="contact-link">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@rtbroofatlas.com</span>
+                    </a>
+                    <div class="contact-link">
+                        <i class="fa-solid fa-map-marker-alt"></i>
+                        <span>Los Angeles, CA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 NobleRoof. All rights reserved.</p>
+            <p class="footer-meta-note">Availability, pricing, response times, and final project recommendations depend on independent contractor review.</p>
+        </div>
         <div class="footer-floating-bg">
             <div class="footer-floating-bg__img footer-floating-bg__img--one">
                 <img src="assets/images/home/hero-main.jpg" alt="Roof background visual" />
@@ -339,56 +414,7 @@
             <div class="footer-floating-bg__img footer-floating-bg__img--four">
                 <img src="assets/images/storm-damage-roofing/service-main.jpg" alt="Roof background visual" />
             </div>
-        </div>
 
-        <div class="container footer-grid">
-            <div>
-                <a href="index.html" class="logo footer-logo">
-                    <span class="logo-mark"><i class="fa-solid fa-compass"></i></span>
-                    <span class="logo-text">
-                        <strong>RTB Roof Atlas</strong>
-                        <span>Roof request & planning platform</span>
-                    </span>
-                </a>
-                <p class="footer-copy">
-                    RTB Roof Atlas helps homeowners structure roofing-related requests
-                    with more clarity and stronger context.
-                </p>
-            </div>
-
-            <div>
-                <h4>Pages</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">All Categories</a></li>
-                    <li><a href="contact.html">Request</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4>Categories</h4>
-                <ul>
-                    <li><a href="roof-replacement.html">Roof Replacement</a></li>
-                    <li><a href="roof-repair.html">Roof Repair</a></li>
-                    <li><a href="roof-installation.html">Roof Installation</a></li>
-                    <li><a href="roof-inspection.html">Roof Inspection</a></li>
-                    <li><a href="storm-damage-roofing.html">Storm Damage Roofing</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                    <li><a href="terms-of-service.html">Terms Of Service</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="container footer-bottom">
-            <p>© 2026 RTB Roof Atlas. All rights reserved.</p>
         </div>
     </footer>
 
@@ -409,12 +435,7 @@
             </div>
         </div>
     </div>
-    <a href="tel:+12135551234" class="floating-call-btn magnetic-btn" aria-label="Call now">
-        <span class="floating-call-btn__icon">
-            <i class="fa-solid fa-phone"></i>
-        </span>
-        <span class="floating-call-btn__text">Call Now</span>
-    </a>
+
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>

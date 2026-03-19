@@ -6,11 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
     initSearchPanel();
     initFaq();
     initCookieBanner();
+    initFormModal();
     initForms();
     initParallaxSections();
     initMagneticButtons();
     initLoopingSwipers();
 });
+
+let formModalApi = null;
 
 function initAOS() {
     if (typeof AOS !== "undefined") {
@@ -108,8 +111,8 @@ function initSearchPanel() {
     if (!panel || !openBtn || !closeBtn || !overlay || !input || !searchBtn || !results) return;
 
     const pages = [
-        { title: "Home", url: "index.html", desc: "RTB homepage with request paths, platform notes and planning guidance.", keywords: ["home", "rtb", "roof atlas", "request", "planning"] },
-        { title: "About", url: "about.html", desc: "Learn what RTB is and how the platform works.", keywords: ["about", "platform", "rtb", "how it works"] },
+        { title: "Home", url: "index.html", desc: "NobleRoof homepage with request paths, platform notes and planning guidance.", keywords: ["home", "nobleroof", "roof", "request", "planning"] },
+        { title: "About", url: "about.html", desc: "Learn what NobleRoof is and how the platform works.", keywords: ["about", "platform", "nobleroof", "how it works"] },
         { title: "All Categories", url: "services.html", desc: "Browse all request categories and planning routes.", keywords: ["categories", "all categories", "services", "roofing requests"] },
         { title: "Request", url: "contact.html", desc: "Submit a request and share property details.", keywords: ["request", "contact", "form", "map"] },
         { title: "Roof Replacement", url: "roof-replacement.html", desc: "Explore the roof replacement request category.", keywords: ["replacement", "roof replacement"] },
@@ -216,7 +219,7 @@ function initCookieBanner() {
 
     if (!banner || !acceptBtn || !declineBtn) return;
 
-    const STORAGE_KEY = "rtb_cookie_choice";
+    const STORAGE_KEY = "nobleroof_cookie_choice";
     const currentChoice = localStorage.getItem(STORAGE_KEY);
 
     if (!currentChoice) {
@@ -273,14 +276,65 @@ function initForms() {
             });
 
             if (!isValid) {
-                alert("Please complete all fields correctly.");
+                const firstInvalidField = form.querySelector(".is-error");
+                if (firstInvalidField) firstInvalidField.focus();
                 return;
             }
 
-            alert("Thank you. Your request has been submitted.");
             form.reset();
+            if (formModalApi) {
+                formModalApi.open();
+            }
         });
     });
+}
+
+function initFormModal() {
+    const modal = document.createElement("div");
+    modal.className = "form-modal";
+    modal.setAttribute("aria-hidden", "true");
+    modal.innerHTML = `
+        <div class="form-modal__backdrop" data-form-modal-close></div>
+        <div class="form-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="formModalTitle">
+            <button class="form-modal__close" type="button" aria-label="Close message" data-form-modal-close>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="form-modal__icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 id="formModalTitle">Спасибо, мы с вами свяжемся</h3>
+            <p>Your request has been received. We will review the details and get back to you shortly.</p>
+            <div class="form-modal__actions">
+                <button class="btn btn-primary" type="button" data-form-modal-close>Close</button>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    const closers = modal.querySelectorAll("[data-form-modal-close]");
+
+    const open = () => {
+        modal.classList.add("is-active");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("form-modal-open");
+    };
+
+    const close = () => {
+        modal.classList.remove("is-active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("form-modal-open");
+    };
+
+    closers.forEach((button) => {
+        button.addEventListener("click", close);
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") close();
+    });
+
+    formModalApi = { open, close };
 }
 
 function initParallaxSections() {
@@ -325,6 +379,10 @@ function initMagneticButtons() {
     });
 }
 
+/**
+ * Initialize Swiper sliders with looping functionality
+ * Uses .js-loop-swiper selector for automatic initialization
+ */
 function initLoopingSwipers() {
     if (typeof Swiper === "undefined") return;
 
@@ -335,17 +393,32 @@ function initLoopingSwipers() {
         const pagination = slider.querySelector(".swiper-pagination");
         const nextBtn = slider.querySelector(".swiper-button-next");
         const prevBtn = slider.querySelector(".swiper-button-prev");
+        const progressBar = slider.querySelector("[data-swiper-progress]");
 
-        new Swiper(slider, {
+        const updateProgress = (swiper) => {
+            if (!progressBar) return;
+
+            const totalSlides = swiper.slides.length - swiper.loopedSlides * 2;
+            const currentIndex = swiper.realIndex + 1;
+            const progress = totalSlides > 1 ? (currentIndex / totalSlides) * 100 : 100;
+            progressBar.style.width = `${Math.min(progress, 100)}%`;
+        };
+
+        const swiper = new Swiper(slider, {
             loop: true,
-            speed: 700,
+            speed: 850,
             grabCursor: true,
-            spaceBetween: 18,
-            slidesPerView: 1.15,
+            spaceBetween: 22,
+            slidesPerView: 1,
             centeredSlides: false,
+            autoplay: {
+                delay: 4200,
+                disableOnInteraction: false
+            },
             pagination: pagination ? {
                 el: pagination,
-                clickable: true
+                clickable: true,
+                dynamicBullets: true
             } : undefined,
             navigation: nextBtn && prevBtn ? {
                 nextEl: nextBtn,
@@ -353,12 +426,22 @@ function initLoopingSwipers() {
             } : undefined,
             breakpoints: {
                 768: {
-                    slidesPerView: 2.1
+                    slidesPerView: 2
                 },
                 1100: {
-                    slidesPerView: 3.1
+                    slidesPerView: 3
+                }
+            },
+            on: {
+                init(instance) {
+                    updateProgress(instance);
+                },
+                slideChange(instance) {
+                    updateProgress(instance);
                 }
             }
         });
+
+        updateProgress(swiper);
     });
 }
