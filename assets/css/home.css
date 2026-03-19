@@ -808,10 +808,17 @@
     padding-right: 14px;
     background-image: none;
     cursor: pointer;
+    color: var(--color-title);
+    -webkit-text-fill-color: currentColor;
 }
 
 .contact-form select.form-control::-ms-expand {
     display: none;
+}
+
+.contact-form select.form-control:invalid {
+    color: var(--color-text-soft);
+    -webkit-text-fill-color: currentColor;
 }
 
 .contact-form select option {
