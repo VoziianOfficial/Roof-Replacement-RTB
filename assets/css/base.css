@@ -4,8 +4,8 @@
     --color-text-soft: #8a6b58;
     --color-title: #3d2a22;
 
-    --color-primary: #d07a4a;
-    --color-primary-2: #b86235;
+    --color-primary: #53270f;
+    --color-primary-2: #492c1c;
     --color-accent: #e8bb91;
     --color-accent-soft: #fbefe2;
     --color-brown-soft: #a77a5f;
@@ -13,8 +13,7 @@
     --color-surface: rgba(255, 250, 244, 0.84);
     --color-surface-strong: #fff8f1;
     --color-border: rgba(95, 70, 56, 0.12);
-
-    --gradient-main: linear-gradient(135deg, #e39a63 0%, #cf7647 48%, #f0c6a1 100%);
+    --gradient-main: linear-gradient(135deg, #4b2a1a 0%, #6a3d27 42%, #a56a43 100%);
     --gradient-soft: linear-gradient(135deg,
             rgba(227, 154, 99, 0.12),
             rgba(207, 118, 71, 0.08),
