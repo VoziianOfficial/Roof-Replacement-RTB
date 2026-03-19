@@ -89,6 +89,58 @@
     gap: 18px;
 }
 
+.cards-4>* {
+    position: relative;
+    overflow: hidden;
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cards-4>*::before {
+    content: "";
+    position: absolute;
+    inset: -65% -25%;
+    background: conic-gradient(from 180deg,
+            rgba(255, 255, 255, 0) 0deg,
+            rgba(255, 255, 255, 0.22) 65deg,
+            rgba(190, 145, 112, 0.18) 130deg,
+            rgba(255, 255, 255, 0) 250deg,
+            rgba(255, 255, 255, 0) 360deg);
+    opacity: 0.3;
+    transform: rotate(0deg);
+    animation: cards4GlowSpin 9s linear infinite;
+    pointer-events: none;
+}
+
+.cards-4>* > * {
+    position: relative;
+    z-index: 1;
+}
+
+.cards-4 i {
+    animation: cardIconBob 3.7s ease-in-out infinite;
+}
+
+.cards-4>*:hover i,
+.cards-4>*:focus-within i {
+    animation: cards4IconSpin 0.9s linear infinite;
+}
+
+.cards-4>*:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: var(--shadow-lg);
+}
+
+.cards-4>*:hover::before {
+    opacity: 0.44;
+}
+
+.cards-4>*:focus-within {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
 .cards-2 {
     counter-reset: categoryStats;
 }
@@ -114,6 +166,7 @@
     background:
         radial-gradient(circle at 82% 20%, rgba(255, 255, 255, 0.22), transparent 40%),
         radial-gradient(circle at 10% 86%, rgba(100, 60, 40, 0.12), transparent 44%);
+    animation: cardSurfaceDrift 7s ease-in-out infinite;
     pointer-events: none;
 }
 
@@ -146,6 +199,10 @@
     z-index: 1;
 }
 
+.cards-2 i {
+    animation: cardIconBob 3.4s ease-in-out infinite;
+}
+
 .cards-2 h3 {
     color: var(--color-title);
 }
@@ -172,6 +229,7 @@
     height: 100px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(100, 60, 40, 0.12), transparent 70%);
+    animation: switcherOrbDrift 7.8s ease-in-out infinite;
 }
 
 .switcher-card:hover {
@@ -190,6 +248,7 @@
     color: var(--color-primary-2);
     margin-bottom: 18px;
     font-size: 1.2rem;
+    animation: cardIconBob 3.6s ease-in-out infinite;
 }
 
 .switcher-card h3 {
@@ -307,6 +366,7 @@
         linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(35, 20, 12, 0.14)),
         radial-gradient(circle at 14% 12%, rgba(255, 255, 255, 0.34), transparent 42%),
         radial-gradient(circle at top right, rgba(100, 60, 40, 0.14), transparent 42%);
+    animation: cardSurfaceDrift 8.2s ease-in-out infinite;
     pointer-events: none;
 }
 
@@ -336,6 +396,7 @@
     line-height: 1;
     vertical-align: middle;
     transform: translateZ(30px);
+    animation: cardIconBob 3.8s ease-in-out infinite;
 }
 
 .scenario-card--large i {
@@ -499,6 +560,11 @@
         padding: 22px 18px;
     }
 
+    .cards-4>*:hover,
+    .cards-4>*:focus-within {
+        transform: scale(1.01);
+    }
+
     .cards-2>* {
         padding: 20px 16px;
     }
@@ -514,8 +580,87 @@
         transition: none;
     }
 
+    .cards-4>* {
+        transition: none;
+    }
+
+    .cards-4>*::before {
+        animation: none;
+    }
+
+    .cards-2>*::before,
+    .switcher-card::before,
+    .scenario-card::before,
+    .cards-2 i,
+    .cards-4 i,
+    .switcher-card i,
+    .scenario-card i {
+        animation: none;
+    }
+
     .scenario-card:hover,
     .scenario-card:nth-child(even):hover {
         transform: none;
+    }
+
+    .cards-4>*:hover,
+    .cards-4>*:focus-within {
+        transform: none;
+    }
+}
+
+@keyframes cards4GlowSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cards4IconSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cardIconBob {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes cardSurfaceDrift {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate3d(0, -6px, 0) scale(1.02);
+        opacity: 0.92;
+    }
+}
+
+@keyframes switcherOrbDrift {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: translate3d(-8px, -6px, 0) scale(1.06);
+        opacity: 1;
     }
 }
