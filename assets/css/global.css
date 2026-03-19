@@ -1242,6 +1242,70 @@ body.form-modal-open {
     gap: 12px;
 }
 
+.contact-box,
+.request-form-wrap {
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform;
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.contact-box::after,
+.request-form-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.26), transparent 52%),
+        radial-gradient(circle at 84% 86%, rgba(255, 255, 255, 0.14), transparent 54%);
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Keyboard/mobile-friendly state: lift without aggressive rotation */
+.contact-box:focus-within,
+.request-form-wrap:focus-within {
+    transform: perspective(1200px) translateY(-4px) scale(1.01);
+    box-shadow: var(--shadow-lg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    .contact-box:hover,
+    .request-form-wrap:hover {
+        transform: perspective(1200px) translateY(-6px) rotateX(4deg) rotateY(-3deg);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .contact-box:hover::after,
+    .request-form-wrap:hover::after {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-box,
+    .request-form-wrap {
+        transition: none;
+    }
+
+    .contact-box::after,
+    .request-form-wrap::after {
+        transition: none;
+    }
+
+    .contact-box:hover,
+    .request-form-wrap:hover,
+    .contact-box:focus-within,
+    .request-form-wrap:focus-within {
+        transform: none;
+    }
+}
+
 .form-grid {
     gap: 12px;
 }

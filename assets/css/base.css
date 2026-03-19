@@ -337,6 +337,8 @@ p {
 
 .cards-3 {
     grid-template-columns: repeat(3, 1fr);
+    perspective: 1200px;
+    transform-style: preserve-3d;
 }
 
 .cards-4 {
@@ -355,6 +357,72 @@ p {
     border-radius: 28px;
     background: rgba(255, 250, 244, 0.9);
     box-shadow: var(--shadow-sm);
+}
+
+.cards-3>* {
+    position: relative;
+    isolation: isolate;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border: 0;
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
+    transition: transform 0.45s ease, box-shadow 0.45s ease, border-color 0.45s ease;
+}
+
+.cards-3>*::before {
+    content: none;
+}
+
+.cards-3>*::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.95;
+    --dash-color: rgba(92, 61, 44, 0.88);
+    --dash-on: 12px;
+    --dash-off: 10px;
+    --dash-w: 2px;
+    background:
+        repeating-linear-gradient(90deg, var(--dash-color) 0 var(--dash-on), transparent var(--dash-on) calc(var(--dash-on) + var(--dash-off))) 0 0 / 100% var(--dash-w) no-repeat,
+        repeating-linear-gradient(180deg, var(--dash-color) 0 var(--dash-on), transparent var(--dash-on) calc(var(--dash-on) + var(--dash-off))) 100% 0 / var(--dash-w) 100% no-repeat,
+        repeating-linear-gradient(270deg, var(--dash-color) 0 var(--dash-on), transparent var(--dash-on) calc(var(--dash-on) + var(--dash-off))) 0 100% / 100% var(--dash-w) no-repeat,
+        repeating-linear-gradient(0deg, var(--dash-color) 0 var(--dash-on), transparent var(--dash-on) calc(var(--dash-on) + var(--dash-off))) 0 0 / var(--dash-w) 100% no-repeat;
+    animation: cards3DashClockwise 1.4s linear infinite;
+}
+
+.cards-3>*:hover {
+    transform: translateY(-7px) rotateX(4deg) rotateY(-3deg);
+    box-shadow: 0 14px 30px rgba(48, 28, 18, 0.14);
+}
+
+.cards-3>*:nth-child(even):hover {
+    transform: translateY(-7px) rotateX(4deg) rotateY(3deg);
+}
+
+.cards-3>*>* {
+    position: relative;
+    z-index: 2;
+    transform: translateZ(16px);
+}
+
+.cards-3 h3 {
+    color: var(--color-title);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.cards-3 p {
+    color: rgba(48, 31, 22, 0.94);
+}
+
+.cards-3 i,
+.cards-3 .step-card span {
+    transform: translateZ(28px);
 }
 
 .info-card i,
@@ -404,6 +472,11 @@ p {
     .cards-4 {
         grid-template-columns: 1fr 1fr;
     }
+
+    .cards-3>*:hover,
+    .cards-3>*:nth-child(even):hover {
+        transform: translateY(-5px);
+    }
 }
 
 @media (max-width: 767px) {
@@ -422,7 +495,37 @@ p {
         grid-template-columns: 1fr;
     }
 
+    .cards-3>*:hover,
+    .cards-3>*:nth-child(even):hover {
+        transform: none;
+    }
+
     .btn {
         width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cards-3>* {
+        transition: none;
+    }
+
+    .cards-3>*::after {
+        animation: none;
+    }
+
+    .cards-3>*:hover,
+    .cards-3>*:nth-child(even):hover {
+        transform: none;
+    }
+}
+
+@keyframes cards3DashClockwise {
+    to {
+        background-position:
+            44px 0,
+            100% 44px,
+            -44px 100%,
+            0 -44px;
     }
 }

@@ -33,7 +33,8 @@
             rgba(35, 20, 12, 0.70) 0%,
             rgba(35, 20, 12, 0.60) 50%,
             rgba(139, 69, 69, 0.6) 100%);
-    backdrop-filter: blur(2px);
+    /* Keep the photo crisp: backdrop blur makes the background look soft. */
+    backdrop-filter: none;
 }
 
 .hero-content-center {
@@ -654,10 +655,30 @@
 }
 
 .disclaimer-card {
+    position: relative;
     padding: 26px;
     border-radius: 26px;
-    background: rgba(255, 250, 244, 0.92);
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    color: #fff;
     box-shadow: var(--shadow-md);
+    background: rgba(18, 12, 8, 0.55);
+}
+
+.disclaimer-card--one {
+    --card-bg: url('../images/home/card-1.jpg');
+}
+
+.disclaimer-card--two {
+    --card-bg: url('../images/home/card-2.jpg');
+}
+
+.disclaimer-card--three {
+    --card-bg: url('../images/home/card-3.jpg');
 }
 
 .disclaimer-card i {
@@ -667,9 +688,76 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(100, 60, 40, 0.12);
-    color: var(--color-primary-2);
-    margin-bottom: 16px;
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+    margin-bottom: 8px;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+}
+
+.disclaimer-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--card-bg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.55;
+    transform: scale(1.02);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    z-index: 0;
+}
+
+.disclaimer-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(12, 8, 6, 0.25) 0%, rgba(12, 8, 6, 0.75) 100%);
+    z-index: 1;
+}
+
+.disclaimer-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+.disclaimer-card h3,
+.disclaimer-card p {
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.disclaimer-card h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.25;
+    font-weight: 850;
+    letter-spacing: -0.01em;
+    min-height: calc(1.25em * 2);
+    max-height: calc(1.25em * 2);
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.disclaimer-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    opacity: 0.92;
+    min-height: calc(1.55em * 3);
+    max-height: calc(1.55em * 3);
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.disclaimer-card:hover::before {
+    opacity: 0.65;
+    transform: scale(1.06);
 }
 
 .contact-box {
